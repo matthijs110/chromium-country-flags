@@ -1,0 +1,18 @@
+{
+  "name": "chrome-country-flags",
+  "version": "1.2.0",
+  "description": "The solution for Chrome users on Windows! Automatically replace mysterious abbreviations with the appropriate flag.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthijs110/chrome-country-flags.git"
+  },
+  "author": "matthijs110",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/matthijs110/chrome-country-flags/issues"
+  },
+  "homepage": "https://github.com/matthijs110/chrome-country-flags#readme",
+  "devDependencies": {
+    "country-flag-emoji-polyfill": "^0.1.1"
+  }
+}
