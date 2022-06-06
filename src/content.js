@@ -43,7 +43,7 @@ const updateChildNodes = (node) =>
 updateChildNodes(document);
 
 // Some elements can be ignored.
-const ignoredElements = ['script', 'svg', 'iframe'];
+const ignoredElements = ['script', 'svg'];
 
 /**
  *  Observe the document for updated elements (e.g. scroll loading).
