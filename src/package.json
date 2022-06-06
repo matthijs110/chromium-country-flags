@@ -7,7 +7,7 @@
     "url": "git+https://github.com/matthijs110/chrome-country-flags.git"
   },
   "author": "matthijs110",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/matthijs110/chrome-country-flags/issues"
   },
