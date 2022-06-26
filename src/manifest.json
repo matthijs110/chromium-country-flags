@@ -1,6 +1,6 @@
 {
     "name": "Country Flag Fixer",
-    "description": "The solution for Chromium users on Windows! Automatically replace mysterious abbreviations with the appropriate flag.",
+    "description": "The solution for Chromium users on Windows! Automatically replace mysterious abbreviations with the corresponding flag.",
     "version": "1.2.1",
     "manifest_version": 3,
     "content_scripts": [
