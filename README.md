@@ -4,7 +4,9 @@ The solution for Chromium users on Windows! Automatically replace mysterious abb
 Currently, Chromium users (using Chrome or Microsoft Edge) on Windows are not able to see the flag emoji's. An abbreviation is shown instrad. This extention will replace those abbreviations with its corresponding flag using a special font.
 
 ![](https://i.imgur.com/bAXYLWZ.jpg)
-![](https://i.imgur.com/dAgHxHQ.png)
+
+## Download
+This extention is available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/country-flag-fixer/jhcpefjbhmbkgjgipkhndplfbhdecijh) and will become available as Microsoft Edge Add-on soon!
 
 ## Attribution
 This extention uses the [Twemoji Country Flags](https://github.com/talkjs/country-flag-emoji-polyfill) font, which is based on [Twemoji](https://twitter.github.io/twemoji/) (licensed under [CC BY-ND 2.0](https://github.com/mozilla/twemoji-colr/blob/master/LICENSE.md)).
