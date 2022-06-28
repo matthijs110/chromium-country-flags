@@ -1,7 +1,5 @@
 # Country Flag Fixer | Chromium Extention
-The solution for Chromium users on Windows! Automatically replace mysterious abbreviations with the corresponding flag.
-
-Currently, Chromium users (using Chrome or Microsoft Edge) on Windows are not able to see the flag emoji's. An abbreviation is shown instead. This extention will replace those abbreviations with its corresponding flag using a special font.
+Currently, Chromium users (using Chrome or Microsoft Edge) on Windows are not able to see the flag emoji's. A country code is shown instead. This extention will replace those abbreviations with its corresponding flag using a special font.
 
 ![](https://i.imgur.com/ljxL6XW.png)
 
