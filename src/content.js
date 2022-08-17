@@ -17,6 +17,9 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Some elements can be ignored.
+const ignoredElements = ['script', 'svg'];
+
 /**
  * Update all children of the given node.
  */
@@ -24,6 +27,10 @@ const updateChildNodes = (node) =>
 {
     node.querySelectorAll('*').forEach((node) =>
     {
+        const tagName = node.tagName.toLowerCase();
+        if (ignoredElements.includes(tagName))
+            return;
+
         // Match any emoji within the Unicode range
         const regex = /[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g;
         const matches = node.innerHTML.match(regex);
@@ -44,9 +51,6 @@ const updateChildNodes = (node) =>
 
 // Execute the initial replacement
 updateChildNodes(document.body);
-
-// Some elements can be ignored.
-const ignoredElements = ['script', 'svg'];
 
 /**
  *  Observe the document for updated elements (e.g. scroll loading).
