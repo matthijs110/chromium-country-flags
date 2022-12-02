@@ -23,28 +23,28 @@ const ignoredElements = ['script', 'svg'];
 /**
  * Update all children of the given node.
  */
-const updateChildNodes = (node) => 
+const updateChildNodes = (startingPointNode) => 
 {
-    node.querySelectorAll('*').forEach((node) =>
+    startingPointNode.querySelectorAll('*').forEach((childNode) =>
     {
-        const tagName = node.tagName.toLowerCase();
+        const tagName = childNode.tagName.toLowerCase();
         if (ignoredElements.includes(tagName))
             return;
 
         // Match any emoji within the Unicode range
         const regex = /[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g;
-        const matches = node.innerHTML.match(regex);
+        const matches = childNode.innerHTML.match(regex);
         if (matches) 
         {
             // Get the original fonts to append later as fallback
-            const originalFont = window.getComputedStyle(node, null).fontFamily;
+            const originalFont = window.getComputedStyle(childNode, null).fontFamily;
 
             // Prevent any duplicated
             if (originalFont.toLowerCase().includes(fontName.toLowerCase())) 
                 return;
 
             // Override the font
-            node.style.fontFamily = `${fontName}, ${originalFont}`;
+            childNode.style.fontFamily = `${fontName}, ${originalFont}`;
         }
     });
 }
@@ -76,4 +76,5 @@ let observer = new MutationObserver(mutations =>
     }   
 });
 
+// Observe the children of the document DOM-element and every newly added element (descendants)
 observer.observe(document, { childList: true, subtree: true });
