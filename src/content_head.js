@@ -13,6 +13,14 @@ style.setAttribute("id", "country-flag-fixer-ext");
 style.textContent = `
     @font-face {
         font-family: "${fontName}";
+        font-style: normal;
+        src: url('${fontUrl}') format('woff2');
+        unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+    }
+
+    @font-face {
+        font-family: "${fontName}";
+        font-style: italic; /* Defined to prevent italic styled flags */
         src: url('${fontUrl}') format('woff2');
         unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
     }
