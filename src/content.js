@@ -85,17 +85,22 @@ const observer = new MutationObserver((mutations) =>
     // Only focus on <link> and <style> elements.
     mutation.addedNodes.forEach(node => 
     {
+      if (node.id === extentionStyleTagId)
+        return;
+
       const isStylesheet = node.nodeName === 'LINK' && node.rel === 'stylesheet';
       const isStyleNode = node.nodeName === 'STYLE'
 
-      if (isStylesheet || isStyleNode) {
-        const newStylesheetIdentifier = isStylesheet ? node.href : node.textContent;
+      if (!isStylesheet && !isStyleNode)
+        return;
 
-        if (!lastStyleSheets.has(newStylesheetIdentifier)) {
-          stylesheetChanged = true;
-          lastStyleSheets.add(newStylesheetIdentifier);
-        }
-      }
+      const newStylesheetIdentifier = isStylesheet ? node.href : node.textContent;
+
+      if (lastStyleSheets.has(newStylesheetIdentifier))
+        return;
+
+      stylesheetChanged = true;
+      lastStyleSheets.add(newStylesheetIdentifier);
     });
   });
 
