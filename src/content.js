@@ -17,7 +17,11 @@ const updateChildNodes = (startingPointNode) =>
             
         // Match any emoji within the Unicode range
         const regex = /[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]|[\uD83C]\uDDEC[\uD83C][\uDDA7\uDDAC\uDDA9\uDDAF\uDDA8\uDDB3\uDDB4]|\u200D?\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62(?:\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73|\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74|\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67)\uDB40\uDCA7?\uFE0F?/g;
-        const matches = childNode.innerHTML.match(regex);
+        
+        // Prefer the textContent value to prevent matches on parent level, rather then the acutal element containing the match.
+        const content = typeof childNode.textContent == 'string' ? childNode.textContent : childNode.innerText;
+        
+        const matches = content.match(regex);
         if (matches) 
         {
             // Get the original fonts to append later as fallback
