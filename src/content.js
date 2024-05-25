@@ -4,60 +4,106 @@ const replacementFontName = "Twemoji Country Flags";
 // Some elements can be ignored.
 const ignoredElements = ["style", "script", "svg"];
 
-/**
- * Update all children of the given node.
- */
-const updateChildNodes = (startingPointNode) => 
+// The id the element containing all overwritten font families.
+const extentionStyleTagId = "country-flag-fixer-ext";
+
+const extractFontFamilyRules = () => 
 {
-    startingPointNode.querySelectorAll('*').forEach((childNode) =>
+  const fontFamilyRules = [];
+
+  for (const sheet of document.styleSheets) {
+
+    if (sheet.ownerNode.id == extentionStyleTagId) 
+      continue;
+
+    try {
+      
+      // Loop through every CSS selector in the stylesheet
+      for (const rule of sheet.cssRules) {
+
+        if (!rule.style || !rule.style?.fontFamily) 
+          continue;
+
+        const selectorText = rule.selectorText;
+        const fontFamily = rule.style.fontFamily;
+
+        // Already modified CSS selectors may be ignored.
+        if (fontFamily.toLowerCase().includes(replacementFontName.toLowerCase())) 
+          continue;
+
+        fontFamilyRules.push({ selectorText, fontFamily });
+      }
+    }
+    catch (e) {
+      // Some stylesheets might not be accessible due to CORS restrictions; ignore them.
+    }
+  }
+
+  return fontFamilyRules;
+};
+
+const createNewStyleTag = (fontFamilyRules) => 
+{
+  const style = document.createElement("style");
+  style.setAttribute("type", "text/css");
+  style.setAttribute("id", extentionStyleTagId);
+
+  fontFamilyRules.forEach((rule) => {
+    // Set the Country Flags font as main property; set the original font(s) as 'fallback'
+    style.textContent += `${rule.selectorText} { font-family: '${replacementFontName}', ${rule.fontFamily} !important; }\n`;
+  });
+
+  return style;
+};
+
+const applyCustomFontStyles = () => 
+{
+  var existingSheet = document.getElementById(extentionStyleTagId);
+
+  const fontFamilyRules = extractFontFamilyRules();
+  const newStyleTag = createNewStyleTag(fontFamilyRules);
+
+  // Completely rewrite the overriden styles, if applicable.
+  if (existingSheet != null) {
+    existingSheet.parentNode.removeChild(existingSheet);
+  }
+
+  if (document.head == null) 
+    return;
+
+  document.head.appendChild(newStyleTag);
+};
+
+// Observe the document for dynamically added elements
+let lastStyleSheets = new Set(Array.from(document.styleSheets).map(sheet => sheet.href || sheet.ownerNode.textContent));
+const observer = new MutationObserver((mutations) => 
+{
+  let stylesheetChanged = false;
+
+  mutations.forEach(mutation => 
+  {  
+    // Only focus on <link> and <style> elements.
+    mutation.addedNodes.forEach(node => 
     {
-        const tagName = childNode.tagName.toLowerCase();
-        if (ignoredElements.includes(tagName))
-            return;
-            
-        // Match any emoji within the Unicode range
-        const regex = /[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]|[\uD83C]\uDDEC[\uD83C][\uDDA7\uDDAC\uDDA9\uDDAF\uDDA8\uDDB3\uDDB4]|\u200D?\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62(?:\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73|\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74|\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67)\uDB40\uDCA7?\uFE0F?/g;
-        
-        // Prefer the textContent value to prevent matches on parent level, rather then the acutal element containing the match.
-        const content = typeof childNode.textContent == 'string' ? childNode.textContent : childNode.innerText;
-        
-        const matches = content.match(regex);
-        if (matches) 
-        {
-            // Get the original fonts to append later as fallback
-            const originalFont = window.getComputedStyle(childNode, null).fontFamily;
+      const isStylesheet = node.nodeName === 'LINK' && node.rel === 'stylesheet';
+      const isStyleNode = node.nodeName === 'STYLE'
 
-            // Prevent any duplicated
-            if (originalFont.toLowerCase().includes(replacementFontName.toLowerCase())) 
-                return;
+      if (isStylesheet || isStyleNode) {
+        const newStylesheetIdentifier = isStylesheet ? node.href : node.textContent;
 
-            // Override the font
-            childNode.style.fontFamily = `${replacementFontName}, ${originalFont}`;
+        if (!lastStyleSheets.has(newStylesheetIdentifier)) {
+          stylesheetChanged = true;
+          lastStyleSheets.add(newStylesheetIdentifier);
         }
+      }
     });
-}
+  });
 
-/**
- *  Observe the document for updated elements (e.g. scroll loading).
- */
-let observer = new MutationObserver(mutations => 
-{ 
-    for (let mutation of mutations) 
-    {
-        for (let addedNode of mutation.addedNodes) 
-        {
-            if (addedNode != null && addedNode.tagName != null)
-            {
-                // Prevent searching within the ignored elements like SVG
-                const tagName = addedNode.tagName.toLowerCase();
-                if (ignoredElements.includes(tagName))
-                    continue;
-
-                updateChildNodes(addedNode);
-            }
-        }
-    }   
+  if (stylesheetChanged) {
+    applyCustomFontStyles();
+  }
 });
 
-// Observe the children of the document DOM-element and every newly added element (descendants)
+// Observe the children of the document DOM-element and every newly added element
+// This may be a <link> element in the head, or any <style> sheet in the document.
 observer.observe(document, { childList: true, subtree: true });
