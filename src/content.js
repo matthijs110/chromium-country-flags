@@ -1,9 +1,6 @@
 // Source: https://github.com/talkjs/country-flag-emoji-polyfill
 const replacementFontName = "Twemoji Country Flags";
 
-// Some elements can be ignored.
-const ignoredElements = ["style", "script", "svg"];
-
 // The id the element containing all overwritten font families.
 const extentionStyleTagId = "country-flag-fixer-ext";
 
