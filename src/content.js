@@ -95,7 +95,6 @@ const observer = new MutationObserver((mutations) =>
         return;
 
       const newStylesheetIdentifier = isStylesheet ? node.href : node.textContent;
-
       if (lastStyleSheets.has(newStylesheetIdentifier))
         return;
 
