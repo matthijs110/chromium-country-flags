@@ -71,7 +71,8 @@ const applyCustomFontStyles = () =>
   document.head.appendChild(newStyleTag);
 };
 
-const preserveCustomFonts = (element) => {
+const preserveCustomFonts = (element) => 
+{
   if (element == undefined)
     return;
 
