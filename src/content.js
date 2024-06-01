@@ -76,6 +76,7 @@ const preserveCustomFonts = (element) =>
   if (element == undefined)
     return;
 
+  // Ignore elements without style attribute or any font-family property.
   const inlineStyle = element.getAttribute('style');
   if (!inlineStyle || !inlineStyle.includes('font-family'))
     return;
@@ -84,7 +85,7 @@ const preserveCustomFonts = (element) =>
   const fontFamilyRegex = /font-family\s*:\s*([^;]+?)(\s*!important)?\s*(;|$)/;
   const match = fontFamilyRegex.exec(inlineStyle);
     
-  // Cancel if the style does not contain any font-family property.
+  // Cancel if there is no match for any reason.
   if (!match)
     return;
 
