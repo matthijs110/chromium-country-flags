@@ -61,7 +61,7 @@ const applyCustomFontStyles = () =>
   const newStyleTag = createNewStyleTag(fontFamilyRules);
 
   // Completely rewrite the overriden styles, if applicable.
-  if (existingSheet != null) {
+  if (existingSheet) {
     existingSheet.parentNode.removeChild(existingSheet);
   }
 
@@ -71,14 +71,39 @@ const applyCustomFontStyles = () =>
   document.head.appendChild(newStyleTag);
 };
 
-// Observe the document for dynamically added elements
+const preserveCustomFonts = (element) => 
+{
+  if (element == undefined)
+    return;
+
+  const inlineStyle = element.getAttribute('style');
+  if (!inlineStyle || !inlineStyle.includes('font-family'))
+    return;
+
+  // Font family regex matching the font (group 1) and the !important modifier (group 2).
+  const fontFamilyRegex = /font-family\s*:\s*([^;]+?)(\s*!important)?\s*(;|$)/;
+  const match = fontFamilyRegex.exec(inlineStyle);
+    
+  // Cancel if the style does not contain any font-family property.
+  if (!match)
+    return;
+
+  const hasIsImportant = match[2] && match[2].includes('!important');
+  if (hasIsImportant)
+    return;
+
+  const currentFontFamily = match[1].trim();
+  element.style.setProperty('font-family', currentFontFamily, 'important');
+}
+
+// Observe the document for dynamically added styles
 let lastStyleSheets = new Set(Array.from(document.styleSheets).map(sheet => sheet.href || sheet.ownerNode.textContent));
 const observer = new MutationObserver((mutations) => 
 {
   let stylesheetChanged = false;
 
   mutations.forEach(mutation => 
-  {  
+  {
     // Only focus on <link> and <style> elements.
     mutation.addedNodes.forEach(node => 
     {
@@ -87,7 +112,6 @@ const observer = new MutationObserver((mutations) =>
 
       const isStylesheet = node.nodeName === 'LINK' && node.rel === 'stylesheet';
       const isStyleNode = node.nodeName === 'STYLE'
-
       if (!isStylesheet && !isStyleNode)
         return;
 
@@ -103,6 +127,9 @@ const observer = new MutationObserver((mutations) =>
   if (stylesheetChanged) {
     applyCustomFontStyles();
   }
+
+  // Preserve font families set using the style attribute on any HTML element.
+  document.querySelectorAll('*').forEach(preserveCustomFonts);
 });
 
 // Observe the children of the document DOM-element and every newly added element
