@@ -10,7 +10,13 @@ const extractFontFamilyRules = () =>
 
   for (const sheet of document.styleSheets) {
 
+    // Ignore the styles set by this extention.
     if (sheet.ownerNode.id == extentionStyleTagId) 
+      continue;
+
+    // Ignore any non-screen stylesheets.
+    const sheetMediaBlacklist = ['print', 'speech', 'aural', 'braille', 'handheld', 'projection', 'tty'];
+    if (sheetMediaBlacklist.includes(sheet.media.mediaText))
       continue;
 
     try {
@@ -23,6 +29,10 @@ const extractFontFamilyRules = () =>
 
         const selectorText = rule.selectorText;
         const fontFamily = rule.style.fontFamily;
+
+        // The 'inherit' value cannot be combined with other fonts; ignore it.
+        if (fontFamily == 'inherit')
+          continue;
 
         // Already modified CSS selectors may be ignored.
         if (fontFamily.toLowerCase().includes(replacementFontName.toLowerCase())) 
