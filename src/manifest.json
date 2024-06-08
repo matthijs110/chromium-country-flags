@@ -28,7 +28,7 @@
     "web_accessible_resources": [
         {
             "matches": ["<all_urls>"],
-            "resources": ["assets/TwemojiCountryFlags.woff2"]
+            "resources": ["assets/fonts/TwemojiCountryFlags.woff2"]
         }
     ],
     "icons": { 
