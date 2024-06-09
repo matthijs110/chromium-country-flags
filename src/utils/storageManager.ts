@@ -57,15 +57,15 @@ export const storeSite = (url: string): Promise<IgnoredSite> =>
       .then((ignoredSites) => 
       {
         const id = generateRandomId();
-        const site = new IgnoredSite(id, confirmedUrl.hostname);
-        if (ignoredSites.some((ignoredSite: any) => ignoredSite.url === site.getUrl())) 
+        const newSite = new IgnoredSite(id, confirmedUrl.hostname);
+        if (ignoredSites.some((site: IgnoredSite) => site.getUrl() === newSite.getUrl())) 
         {
-          reject(`The website '${site.getUrl()}' is already being ignored. Please try another website.`);
+          reject(`The website '${newSite.getUrl()}' is already being ignored. Please try another website.`);
           return;
         }
     
         // Append the site to the storage
-        setStorage({ [STORAGE_KEY]: [...ignoredSites, site] }).then(() => resolve(site));
+        setStorage({ [STORAGE_KEY]: [...ignoredSites, newSite] }).then(() => resolve(newSite));
       })
       .catch(() => reject('Could not get the currenly ignored sites.'));
   });
