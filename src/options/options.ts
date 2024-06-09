@@ -15,15 +15,16 @@ const setPageTitle = () => {
   document.getElementById('options-title').innerText = optionsPageTitle;
 };
 
-const handleFormSubmit = (event: any) => {
+const handleFormSubmit = (event: SubmitEvent) => {
   event.preventDefault();
 
   clearValidationMessage();
 
-  const data = new FormData(event.target);
+  const form = event.target as HTMLFormElement;
+  const data = new FormData(form);
   storeSite(data.get('url').toString())
-    .then(appendRow)
-    .catch(setValidationMessage);
+    .then((site: IgnoredSite) => renderTable())
+    .catch((error: string) => setValidationMessage(error));
 };
 
 const validationMessageElement = document.getElementById('validation-message');
