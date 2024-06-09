@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-base;
+}
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-xl font-semibold;
+}
+
+/* Table */
+table {
+  @apply min-w-full;
+}
+
+th, td {
+  @apply text-right;
+  @apply py-2 px-4;
+}
+
+tr:not(:last-child) th,
+tr:not(:last-child) td {
+  @apply border-b;
+}
+
+/* Form */
+input {
+  @apply flex-1;
+  @apply rounded;
+  @apply px-4 py-2;
+  @apply shadow-sm;
+  @apply ring-1 focus:ring-2 ring-slate-900/10 hover:ring-slate-300 focus:ring-blue-300;
+  @apply transition-shadow;
+  @apply outline-none;
+}
+
+.add-domain-button {
+  @apply py-2 px-4;
+  @apply text-white bg-green-600 hover:bg-green-500;
+  @apply font-bold;
+  @apply rounded;
+  @apply shadow-sm;
+  @apply ml-4;
+}
+
+.delete-domain-button {
+  @apply text-sm;
+  @apply py-1 px-2;
+  @apply text-white bg-red-600 hover:bg-red-500;
+  @apply font-bold;
+  @apply rounded;
+  @apply shadow-sm;
+  @apply ml-4;
+}
+
+.info-alert {
+  @apply p-4;
+  @apply rounded;
+  @apply bg-sky-100;
+  @apply text-sky-600;
+  @apply border-l-4 border-sky-600;
+}
+
+#validation-message {
+  @apply hidden;
+  @apply mt-1;
+  @apply text-red-600;
+}

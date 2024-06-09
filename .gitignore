@@ -1,1 +1,4 @@
 Releases
+dist
+node_modules
+public/css/dist.css

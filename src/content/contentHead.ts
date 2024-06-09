@@ -1,6 +1,6 @@
 // Source: https://github.com/talkjs/country-flag-emoji-polyfill
 const fontName = "Twemoji Country Flags";
-const fontUrl = chrome.runtime.getURL("assets/fonts/TwemojiCountryFlags.woff2");
+const fontUrl = chrome.runtime.getURL("fonts/TwemojiCountryFlags.woff2");
 
 /**
  * Register the custom font-face to load the emoji-font for certain unicodes

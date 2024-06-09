@@ -1,17 +1,24 @@
+import { shouldIgnoreSite } from "../utils/storageManager";
+
 // Source: https://github.com/talkjs/country-flag-emoji-polyfill
 const replacementFontName = "Twemoji Country Flags";
 
 // The id the element containing all overwritten font families.
 const extentionStyleTagId = "country-flag-fixer-ext";
 
-const extractFontFamilyRules = () => 
+interface FontFamilyRule {
+  selectorText: string;
+  fontFamily: string;
+}
+
+const extractFontFamilyRules = (): FontFamilyRule[] => 
 {
   const fontFamilyRules = [];
 
   for (const sheet of document.styleSheets) {
 
-    // Ignore the styles set by this extention.
-    if (sheet.ownerNode.id == extentionStyleTagId) 
+    // Ignore the styles set by this extension.
+    if ((sheet.ownerNode as HTMLElement).id === extentionStyleTagId)
       continue;
 
     // Ignore any non-screen stylesheets.
@@ -24,7 +31,7 @@ const extractFontFamilyRules = () =>
       // Loop through every CSS selector in the stylesheet
       for (const rule of sheet.cssRules) {
 
-        if (!rule.style || !rule.style?.fontFamily) 
+        if (!(rule instanceof CSSStyleRule) || !rule.style || !rule.style.fontFamily)
           continue;
 
         const selectorText = rule.selectorText;
@@ -49,7 +56,7 @@ const extractFontFamilyRules = () =>
   return fontFamilyRules;
 };
 
-const createNewStyleTag = (fontFamilyRules) => 
+const createNewStyleTag = (fontFamilyRules: FontFamilyRule[]) => 
 {
   const style = document.createElement("style");
   style.setAttribute("type", "text/css");
@@ -81,7 +88,7 @@ const applyCustomFontStyles = () =>
   document.head.appendChild(newStyleTag);
 };
 
-const preserveCustomFonts = (element) => 
+const preserveCustomFonts = (element: HTMLElement | null) => 
 {
   if (element == undefined)
     return;
@@ -118,15 +125,16 @@ const observer = new MutationObserver((mutations) =>
     // Only focus on <link> and <style> elements.
     mutation.addedNodes.forEach(node => 
     {
-      if (node.id === extentionStyleTagId)
+      const element = node as HTMLElement;
+      if (element.id === extentionStyleTagId)
         return;
 
-      const isStylesheet = node.nodeName === 'LINK' && node.rel === 'stylesheet';
-      const isStyleNode = node.nodeName === 'STYLE'
+      const isStylesheet = (node as HTMLLinkElement).nodeName === 'LINK' && (node as HTMLLinkElement).rel === 'stylesheet';
+      const isStyleNode = (node as HTMLElement).nodeName === 'STYLE';
       if (!isStylesheet && !isStyleNode)
         return;
 
-      const newStylesheetIdentifier = isStylesheet ? node.href : node.textContent;
+      const newStylesheetIdentifier = isStylesheet ? (node as HTMLLinkElement).href : (node as HTMLStyleElement).textContent;
       if (lastStyleSheets.has(newStylesheetIdentifier))
         return;
 
@@ -143,6 +151,8 @@ const observer = new MutationObserver((mutations) =>
   document.querySelectorAll('*').forEach(preserveCustomFonts);
 });
 
-// Observe the children of the document DOM-element and every newly added element
-// This may be a <link> element in the head, or any <style> sheet in the document.
-observer.observe(document, { childList: true, subtree: true });
+if (! shouldIgnoreSite(location.href)) {
+  // Observe the children of the document DOM-element and every newly added element
+  // This may be a <link> element in the head, or any <style> sheet in the document.
+  observer.observe(document, { childList: true, subtree: true });
+}

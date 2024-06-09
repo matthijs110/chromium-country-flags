@@ -2,10 +2,53 @@
 <html>
   <head>
     <title>Country Flag Fixer | Settings</title>
-  </head>
-  <body>
-    <!-- TODO: Content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="options.js"></script>
+    <link rel="icon48" href="../icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/dist.css" />
+  </head>
+  <body class="bg-slate-50">
+
+    <header class="md:container md:mx-auto mx-6 py-6">
+      <div class="flex items-center">
+        <img src="../icons/icon48.png" alt="Country Flag Fixer logo" class="mr-4">
+        <div class="flex flex-col">
+          <h1>Country Flag Fixer</span></h1>
+          <h2 class="text-gray-500" id="options-title">Settings</span></h2>
+        </div>
+      </div>
+    </header>
+
+    <main class="md:container md:mx-auto mx-6 px-16 py-6">
+      <!-- Section heading -->
+      <div class="flex mb-4 flex-col">
+        <div class="flex-col mb-4">
+          <!-- TODO: i18n + better text -->
+          <h2>Ignored websites</h2>
+          <p>This extention may cause some issues on certain sites.</p>
+        </div>
+
+        <form id="add-domain-form" class="flex flex-col">
+          <div class="flex items-center w-full">
+            <input name="url" placeholder="Example: google.com" type="text" />
+            <button class="add-domain-button" type="submit">
+              <span>Add</span>
+            </button>
+          </div>
+
+          <span id="validation-message"></span>
+        </form>
+      </div>
+
+      <!-- Section content -->
+      <div id="list-view" class="p-4 bg-white border border-gray-200 rounded mb-4 hidden">
+        <table id="sites-table" class="table-auto"></table>
+      </div>
+
+      <div id="no-domains-alert" class="info-alert hidden">The list with ignored websites is empty.</div>
+    </main>
+
+    <script src="options.js" type="module"></script>
   </body>
 </html>
