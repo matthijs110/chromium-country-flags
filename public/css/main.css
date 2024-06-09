@@ -21,7 +21,7 @@ table {
 
 th, td {
   @apply text-left;
-  @apply py-2 px-4;
+  @apply py-3 px-4;
 }
 
 tr > td:nth-child(2) {
@@ -45,6 +45,7 @@ input {
 }
 
 .add-domain-button {
+  @apply flex items-center;
   @apply py-2 px-4;
   @apply text-white bg-green-600 hover:bg-green-500;
   @apply font-bold;
@@ -54,6 +55,7 @@ input {
 }
 
 .delete-domain-button {
+  @apply flex items-center;
   @apply text-sm;
   @apply py-1 px-2;
   @apply text-white bg-red-600 hover:bg-red-500;
@@ -64,6 +66,7 @@ input {
 }
 
 .info-alert {
+  @apply flex items-center;
   @apply p-4;
   @apply rounded;
   @apply bg-sky-100;

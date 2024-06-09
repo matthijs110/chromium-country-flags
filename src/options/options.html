@@ -33,6 +33,9 @@
           <div class="flex items-center w-full">
             <input name="url" placeholder="Example: google.com" type="text" />
             <button class="add-domain-button" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 mr-1">
+                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+              </svg>                       
               <span>Add</span>
             </button>
           </div>
@@ -46,7 +49,13 @@
         <table id="sites-table" class="table-auto"></table>
       </div>
 
-      <div id="no-domains-alert" class="info-alert hidden">The list with ignored websites is empty.</div>
+      <div id="no-domains-alert" class="info-alert hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 mr-3">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
+        </svg>
+        
+        <span>The list with ignored websites is empty.</span>
+      </div>
     </main>
 
     <script src="options.js" type="module"></script>
