@@ -1,0 +1,210 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Country Flag Fixer regression fixture</title>
+<style>
+  @font-face {
+    font-family: "Twemoji Country Flags";
+    src: url('../src/assets/TwemojiCountryFlags.woff2') format('woff2');
+    unicode-range: U+1F1E6-1F1FF;
+  }
+  /* Nested rules are deliberately outside the global rule extractor's coverage. */
+  @media screen {
+    .fallback { font-family: Georgia, serif !important; }
+  }
+  .global { font-family: monospace; }
+</style>
+<p id="existing" class="fallback">Existing: 🇵🇪</p>
+<p id="multiple" class="fallback">🇲🇽 🇯🇵 🇵🇪</p>
+<p id="inline" style="font-family: Georgia, serif">Inline: 🇯🇵</p>
+<p id="important" style="font-family: Courier New, monospace !important">Important: 🇲🇽</p>
+<p id="late-font" style='font-family: "Example, Font", serif, "Twemoji Country Flags" !important'>Existing late font: 🇵🇪</p>
+<p id="plain" class="fallback">Unrelated text</p>
+<p id="single" class="fallback">🇵</p>
+<p id="stream" class="fallback"></p>
+<p id="global" class="global">Global font handling</p>
+<textarea id="input">🇵🇪</textarea>
+<p id="restore-normal" style="font-family: Georgia, serif; color: red">🇵🇪</p>
+<p id="restore-important" style="font-family: Courier New, monospace !important">🇲🇽</p>
+<div id="editor" contenteditable="true" class="fallback"><span id="editor-text" style="font-family: Georgia, serif">🇵🇪</span><span id="editor-island" contenteditable="false">🇯🇵</span></div>
+<div id="plaintext-editor" contenteditable="plaintext-only" class="fallback">🇲🇽</div>
+<pre id="results">RUNNING</pre>
+<script src="../src/content.js"></script>
+<script>
+(async () => {
+  const results = [];
+  const check = (condition, label) => {
+    results.push(`${condition ? 'PASS' : 'FAIL'}: ${label}`);
+  };
+  const settle = () => new Promise(resolve => setTimeout(resolve, 0));
+  const get = id => document.getElementById(id);
+  const hasFlagFont = element => getComputedStyle(element).fontFamily.startsWith('"Twemoji Country Flags"');
+  const count = element => (element.style.fontFamily.match(/Twemoji Country Flags/g) || []).length;
+
+  try {
+    check(hasFlagFont(get('existing')), 'flags present at initialization');
+    check(hasFlagFont(get('multiple')) && count(get('multiple')) === 1, 'multiple flags');
+    check(hasFlagFont(get('inline')) && get('inline').style.fontFamily.includes('Georgia'), 'inline fallback preserved');
+    check(hasFlagFont(get('important')) && get('important').style.fontFamily.includes('Courier New') &&
+      get('important').style.getPropertyPriority('font-family') === 'important', 'inline important override');
+    check(get('existing').style.fontFamily.includes('Georgia'), 'computed fallback preserved');
+    check(hasFlagFont(get('late-font')) && count(get('late-font')) === 1 &&
+      get('late-font').style.fontFamily.includes('"Example, Font"'), 'existing flag font moved first without splitting quoted font names');
+    check(!get('plain').hasAttribute('style') && !hasFlagFont(get('plain')), 'unrelated content and font untouched');
+    check(!get('single').hasAttribute('style'), 'isolated regional indicator untouched');
+    check(!get('input').hasAttribute('style'), 'non-content text untouched');
+    check(hasFlagFont(get('global')), 'existing global stylesheet handling');
+
+    const wrapper = document.createElement('section');
+    wrapper.innerHTML = '<p class="fallback">Inserted: 🇵🇪</p><p>No flags</p>';
+    document.body.appendChild(wrapper);
+    await settle();
+    check(hasFlagFont(wrapper.firstChild) && !wrapper.lastChild.hasAttribute('style'), 'inserted subtree targets flag container only');
+
+    const text = document.createTextNode('Streaming ');
+    get('stream').appendChild(text);
+    await settle();
+    text.data += '🇯';
+    await settle();
+    check(!get('stream').hasAttribute('style'), 'incomplete streamed flag untouched');
+    text.data += '🇵';
+    await settle();
+    check(hasFlagFont(get('stream')), 'characterData completes streamed flag');
+    let styleWrites = 0;
+    const watch = new MutationObserver(records => styleWrites += records.length);
+    watch.observe(get('stream'), { attributes: true, attributeFilter: ['style'] });
+    for (let i = 0; i < 20; i++) {
+      text.data += ' 🇲🇽';
+      await settle();
+    }
+    watch.disconnect();
+    check(count(get('stream')) === 1 && styleWrites === 0, 'repeated updates cause no duplicate font or style writes');
+
+    const lateStyle = document.createElement('style');
+    lateStyle.textContent = '.late-global { font-family: Verdana, sans-serif; }';
+    document.head.appendChild(lateStyle);
+    const late = document.createElement('p');
+    late.className = 'late-global';
+    late.textContent = 'Late global font handling';
+    document.body.appendChild(late);
+    await settle();
+    check(hasFlagFont(late) && getComputedStyle(late).fontFamily.includes('Verdana'), 'new stylesheet global handling');
+    check(document.querySelectorAll('#country-flag-fixer-ext').length === 1, 'single generated stylesheet');
+    check(get('existing').textContent === 'Existing: 🇵🇪', 'text content preserved');
+
+    get('restore-normal').firstChild.data = 'Ordinary text';
+    get('restore-important').replaceChildren();
+    await settle();
+    check(get('restore-normal').style.fontFamily === 'Georgia, serif' &&
+      get('restore-normal').style.getPropertyPriority('font-family') === '' &&
+      get('restore-normal').style.color === 'red', 'restore original normal inline declaration and unrelated styles');
+    get('restore-normal').firstChild.data += ' more ordinary text';
+    await settle();
+    check(get('restore-normal').style.getPropertyPriority('font-family') === '', 'subsequent ordinary text updates retain restored priority');
+    check(get('restore-important').style.fontFamily === '"Courier New", monospace' &&
+      get('restore-important').style.getPropertyPriority('font-family') === 'important', 'restore important inline declaration after removing all children');
+    text.data = 'No flags';
+    await settle();
+    check(!get('stream').style.fontFamily, 'remove injected declaration when original inline font was absent');
+    get('stream').className = '';
+    get('stream').style.fontFamily = 'Verdana';
+    check(getComputedStyle(get('stream')).fontFamily === 'Verdana', 'subsequent font change is not pinned by stale important declaration');
+
+    const shared = document.createElement('p');
+    shared.className = 'fallback';
+    const first = document.createTextNode('🇵🇪');
+    const second = document.createTextNode('🇯🇵');
+    shared.append(first, second);
+    document.body.appendChild(shared);
+    await settle();
+    first.data = 'Ordinary';
+    await settle();
+    check(count(shared) === 1, 'retain font while another direct text node has a flag');
+    second.remove();
+    await settle();
+    check(!shared.style.fontFamily, 'restore after removing final flag text node');
+    shared.textContent = '🇲🇽';
+    await settle();
+    shared.replaceChildren(document.createTextNode('Ordinary replacement'));
+    await settle();
+    check(!shared.style.fontFamily, 'restore on content replacement');
+
+    shared.textContent = '🇵🇪';
+    await settle();
+    shared.style.setProperty('font-family', 'Tahoma', '');
+    shared.firstChild.data += ' more';
+    await settle();
+    check(shared.style.fontFamily === 'Tahoma' && shared.style.getPropertyPriority('font-family') === '', 'host font change remains untouched while flags remain');
+    shared.textContent = 'Ordinary';
+    await settle();
+    check(shared.style.fontFamily === 'Tahoma' && shared.style.getPropertyPriority('font-family') === '', 'restoration does not overwrite host font change');
+
+    check(get('editor-text').style.fontFamily === 'Georgia, serif' &&
+      get('editor-text').style.getPropertyPriority('font-family') === '', 'editor inline font untouched at initialization');
+    check(!get('editor-island').hasAttribute('style') && !get('plaintext-editor').hasAttribute('style'), 'editor islands and plaintext-only editors excluded');
+    get('editor-text').firstChild.data += ' 🇲🇽';
+    const editorChild = document.createElement('span');
+    editorChild.textContent = '🇯🇵';
+    get('editor').appendChild(editorChild);
+    await settle();
+    check(!editorChild.hasAttribute('style') && get('editor-text').style.fontFamily === 'Georgia, serif', 'streaming and inserted editor content untouched');
+    shared.textContent = '🇵🇪';
+    await settle();
+    shared.setAttribute('contenteditable', 'true');
+    await settle();
+    check(shared.style.fontFamily === 'Tahoma' && shared.style.getPropertyPriority('font-family') === '', 'restore injected font when element becomes editable');
+    shared.removeAttribute('contenteditable');
+    await settle();
+    check(count(shared) === 1, 'resume flag handling when element stops being editable');
+
+    const owned = document.createElement('div');
+    owned.className = 'fallback';
+    owned.innerHTML = '<span>🇵🇪</span><span>🇲🇽</span>';
+    document.body.appendChild(owned);
+    await settle();
+    const originalOwnedValue = owned.firstChild.style.fontFamily;
+    owned.firstChild.style.setProperty('font-family', originalOwnedValue, '');
+    owned.firstChild.textContent = 'Ordinary';
+    owned.lastChild.style.color = 'blue';
+    owned.lastChild.textContent = 'Ordinary';
+    await settle();
+    check(owned.firstChild.style.fontFamily === originalOwnedValue &&
+      owned.firstChild.style.getPropertyPriority('font-family') === '', 'host priority-only font change remains untouched');
+    check(!owned.lastChild.style.fontFamily && owned.lastChild.style.color === 'blue', 'unrelated host style changes survive restoration');
+
+    owned.lastChild.textContent = '🇯🇵';
+    await settle();
+    const moved = owned.lastChild;
+    get('editor').appendChild(moved);
+    await settle();
+    check(!moved.style.fontFamily && moved.style.color === 'blue', 'moving styled content into an editor restores original declaration');
+    get('editor').removeChild(moved);
+    moved.textContent = 'Ordinary';
+    document.body.appendChild(moved);
+    await settle();
+    check(!moved.style.fontFamily, 'reinserted ordinary content is not pinned');
+
+    const designEditor = document.createElement('p');
+    designEditor.className = 'fallback';
+    designEditor.textContent = '🇵🇪';
+    document.designMode = 'on';
+    document.body.appendChild(designEditor);
+    await settle();
+    check(!designEditor.style.fontFamily, 'designMode editor excludes inline fallback');
+    document.designMode = 'off';
+    designEditor.firstChild.data += ' 🇲🇽';
+    await settle();
+    check(count(designEditor) === 1, 'flag handling resumes after designMode on next content update');
+    const readOnly = document.createElement('p');
+    readOnly.setAttribute('contenteditable', 'false');
+    readOnly.className = 'fallback';
+    readOnly.textContent = '🇯🇵';
+    document.body.appendChild(readOnly);
+    await settle();
+    check(count(readOnly) === 1, 'contenteditable false outside editor still handled');
+  } catch (error) {
+    results.push(`FAIL: ${error.stack}`);
+  }
+  get('results').textContent = results.join('\n');
+  document.title = results.some(result => result.startsWith('FAIL')) ? 'FAIL' : 'PASS';
+})();
+</script>
