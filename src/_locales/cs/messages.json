@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Oprava vlajek funguje s podporovaným textem DOM. Upravitelný text, vykreslování canvas, uzavřené shadow roots a stránky omezené prohlížečem se nezpracovávají."
+  },
+  "privacyPolicy": {
+    "message": "Zásady ochrany osobních údajů"
   }
 }

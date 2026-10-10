@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Poprawianie flag dotyczy obsługiwanego tekstu DOM. Edytowalna treść, renderowanie canvas, zamknięte shadow roots i strony ograniczone przez przeglądarkę nie są przetwarzane."
+  },
+  "privacyPolicy": {
+    "message": "Polityka prywatności"
   }
 }

@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Sửa hiển thị cờ áp dụng cho văn bản DOM được hỗ trợ. Nội dung có thể chỉnh sửa, hiển thị canvas, shadow root đóng và trang bị trình duyệt hạn chế không được xử lý."
+  },
+  "privacyPolicy": {
+    "message": "Chính sách quyền riêng tư"
   }
 }

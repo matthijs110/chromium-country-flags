@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Popravljanje zastav velja za podprto besedilo DOM. Vsebina za urejanje, izris canvas, zaprti shadow roots in strani z omejitvami brskalnika se ne obdelujejo."
+  },
+  "privacyPolicy": {
+    "message": "Pravilnik o zasebnosti"
   }
 }

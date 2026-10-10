@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Die Flaggenkorrektur gilt für unterstützten DOM-Text. Bearbeitbare Inhalte, Canvas-Darstellung, geschlossene Shadow Roots und vom Browser eingeschränkte Seiten werden nicht verarbeitet."
+  },
+  "privacyPolicy": {
+    "message": "Datenschutzerklärung"
   }
 }

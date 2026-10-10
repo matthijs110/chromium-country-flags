@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Lippujen korjaus koskee tuettua DOM-tekstiä. Muokattavaa tekstiä, canvas-piirtoa, suljettuja shadow root -rakenteita ja selaimen rajoittamia sivuja ei käsitellä."
+  },
+  "privacyPolicy": {
+    "message": "Tietosuojakäytäntö"
   }
 }

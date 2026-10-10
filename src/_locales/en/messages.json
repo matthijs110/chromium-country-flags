@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Flag fixing applies to supported DOM text. Editable content, canvas rendering, closed shadow roots and browser-restricted pages are not processed."
+  },
+  "privacyPolicy": {
+    "message": "Privacy policy"
   }
 }

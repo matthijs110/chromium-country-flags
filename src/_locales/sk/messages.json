@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Oprava vlajok sa vzťahuje na podporovaný text DOM. Upraviteľný obsah, vykresľovanie canvas, uzavreté shadow roots a stránky obmedzené prehliadačom sa nespracúvajú."
+  },
+  "privacyPolicy": {
+    "message": "Zásady ochrany osobných údajov"
   }
 }

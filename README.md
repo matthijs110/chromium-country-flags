@@ -10,6 +10,10 @@ This extention uses the [Twemoji Country Flags](https://github.com/talkjs/countr
 
 <a href="https://www.flaticon.com/free-icons/world" title="world icons">World icons created by turkkub - Flaticon</a>
 
+## Privacy
+
+See the [privacy policy](PRIVACY.md) for details about local website processing, saved exclusions and browser-managed synchronization. The extension has no analytics or developer-controlled data collection service.
+
 ## Development
 
 Existing users upgrading from an older release to 2.1.0 see a one-time update tab with release highlights and a Settings button. The notice is tracked per device and does not appear on fresh installs, same-version reloads or later releases. A fully disabled extension cannot display it. The update page is translated into all 35 existing locales.

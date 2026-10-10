@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Flaggkorrigering gäller DOM-text som stöds. Redigerbart innehåll, canvas-rendering, stängda shadow roots och sidor med webbläsarbegränsningar bearbetas inte."
+  },
+  "privacyPolicy": {
+    "message": "Integritetspolicy"
   }
 }

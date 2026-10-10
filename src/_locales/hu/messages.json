@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "A zászlójavítás támogatott DOM-szövegre vonatkozik. A szerkeszthető tartalom, canvas-megjelenítés, zárt shadow root elemek és böngésző által korlátozott oldalak nem kerülnek feldolgozásra."
+  },
+  "privacyPolicy": {
+    "message": "Adatvédelmi tájékoztató"
   }
 }

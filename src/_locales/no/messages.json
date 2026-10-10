@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Flaggkorrigering gjelder støttet DOM-tekst. Redigerbart innhold, canvas-visning, lukkede shadow roots og sider med nettleserbegrensninger behandles ikke."
+  },
+  "privacyPolicy": {
+    "message": "Personvernerklæring"
   }
 }

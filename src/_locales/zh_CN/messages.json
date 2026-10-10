@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "旗帜显示修正适用于受支持的 DOM 文本。可编辑内容、canvas 绘制、封闭的 shadow root 和受浏览器限制的页面不会被处理。"
+  },
+  "privacyPolicy": {
+    "message": "隐私政策"
   }
 }

@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Bayrak düzeltmesi desteklenen DOM metnine uygulanır. Düzenlenebilir içerik, canvas çizimi, kapalı shadow roots ve tarayıcının kısıtladığı sayfalar işlenmez."
+  },
+  "privacyPolicy": {
+    "message": "Gizlilik politikası"
   }
 }

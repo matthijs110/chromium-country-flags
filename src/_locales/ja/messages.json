@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "国旗の表示補正は対応する DOM テキストに適用されます。編集可能な内容、canvas 描画、閉じた shadow root、ブラウザーが制限するページは処理されません。"
+  },
+  "privacyPolicy": {
+    "message": "プライバシーポリシー"
   }
 }

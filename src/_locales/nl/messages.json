@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Vlagcorrectie werkt op ondersteunde DOM-tekst. Bewerkbare tekst, canvasweergave, gesloten shadow roots en browserpagina's met beperkingen worden niet verwerkt."
+  },
+  "privacyPolicy": {
+    "message": "Privacyverklaring"
   }
 }

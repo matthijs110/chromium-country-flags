@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Perbaikan bendera berlaku pada teks DOM yang didukung. Konten yang dapat diedit, rendering canvas, shadow root tertutup, dan halaman yang dibatasi browser tidak diproses."
+  },
+  "privacyPolicy": {
+    "message": "Kebijakan privasi"
   }
 }

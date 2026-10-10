@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Karogu labošana attiecas uz atbalstītu DOM tekstu. Rediģējams saturs, canvas attēlojums, slēgti shadow roots un pārlūka ierobežotas lapas netiek apstrādātas."
+  },
+  "privacyPolicy": {
+    "message": "Privātuma politika"
   }
 }

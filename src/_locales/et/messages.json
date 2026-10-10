@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Lippude parandamine kehtib toetatud DOM-tekstile. Muudetavat teksti, canvas-kuvamist, suletud shadow roots'e ja brauseri piiratud lehti ei töödelda."
+  },
+  "privacyPolicy": {
+    "message": "Privaatsuspoliitika"
   }
 }

@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "국기 표시 보정은 지원되는 DOM 텍스트에 적용됩니다. 편집 가능한 콘텐츠, canvas 렌더링, 닫힌 shadow root, 브라우저가 제한하는 페이지는 처리하지 않습니다."
+  },
+  "privacyPolicy": {
+    "message": "개인정보 처리방침"
   }
 }

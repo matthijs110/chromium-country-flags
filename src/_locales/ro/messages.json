@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "Corectarea se aplică textului DOM acceptat. Conținutul editabil, redarea canvas, shadow roots închise și paginile restricționate de browser nu sunt procesate."
+  },
+  "privacyPolicy": {
+    "message": "Politica de confidențialitate"
   }
 }

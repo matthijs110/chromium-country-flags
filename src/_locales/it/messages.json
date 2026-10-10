@@ -95,5 +95,8 @@
   },
   "updateLimits": {
     "message": "La correzione si applica al testo DOM supportato. Contenuti modificabili, rendering canvas, shadow roots chiusi e pagine limitate dal browser non vengono elaborati."
+  },
+  "privacyPolicy": {
+    "message": "Informativa sulla privacy"
   }
 }
