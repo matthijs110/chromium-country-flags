@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Ladda om sidan efter att du har ändrat inställningen. Undantaget gäller det här värdnamnet och dess underdomäner."
+  },
+  "updateTitle": {
+    "message": "Nytt i 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Tillförlitligare flaggvisning, mer kontroll"
+  },
+  "updateRendering": {
+    "message": "Förbättrad flaggvisning i dynamiskt inläst text, inklusive England, Skottland och Wales."
+  },
+  "updatePerformance": {
+    "message": "Riktad bearbetning ersätter globala teckensnittsändringar och upprepade genomsökningar av hela sidor, vilket minskar påverkan på webbplatsers teckensnitt och redigerbar text."
+  },
+  "updateControls": {
+    "message": "Använd popupfönstret i verktygsfältet för att ignorera webbplatsen eller aktivera flaggkorrigering igen. Hantera domäner och underdomäner i Inställningar."
+  },
+  "updateReload": {
+    "message": "Ladda om öppna sidor för att använda det uppdaterade tillägget. Dina inställningar förblir sparade."
+  },
+  "updateLimits": {
+    "message": "Flaggkorrigering gäller DOM-text som stöds. Redigerbart innehåll, canvas-rendering, stängda shadow roots och sidor med webbläsarbegränsningar bearbetas inte."
   }
 }

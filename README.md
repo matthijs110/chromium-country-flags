@@ -12,6 +12,8 @@ This extention uses the [Twemoji Country Flags](https://github.com/talkjs/countr
 
 ## Development
 
+Existing users upgrading from an older release to 2.1.0 see a one-time update tab with release highlights and a Settings button. The notice is tracked per device and does not appear on fresh installs, same-version reloads or later releases. A fully disabled extension cannot display it. The update page is translated into all 35 existing locales.
+
 The project uses pnpm 12.10.1. pnpm installs a project-local Node 22 runtime; your system-wide Node installation does not need to be replaced. If installing pnpm through npm, use Node 22.13 or newer for that initial installation.
 
 ```sh

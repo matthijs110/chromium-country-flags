@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Ayarı değiştirdikten sonra bu sayfayı yeniden yükleyin. Hariç tutma bu ana makine adı ve alt alan adları için geçerlidir."
+  },
+  "updateTitle": {
+    "message": "2.1.0 sürümündeki yenilikler"
+  },
+  "updateHeading": {
+    "message": "Daha güvenilir bayrak gösterimi, daha fazla kontrol"
+  },
+  "updateRendering": {
+    "message": "Dinamik yüklenen metinlerde İngiltere, İskoçya ve Galler dahil daha iyi bayrak gösterimi."
+  },
+  "updatePerformance": {
+    "message": "Hedefli işleme, genel yazı tipi değişikliklerinin ve tüm sayfanın tekrar tekrar taranmasının yerini alarak site yazı tipleri ve düzenlenebilir içerik üzerindeki etkileri azaltır."
+  },
+  "updateControls": {
+    "message": "Araç çubuğu açılır penceresinden mevcut siteyi yok sayabilir veya bayrak düzeltmesini yeniden etkinleştirebilirsiniz. Alan adlarını ve alt alan adlarını Ayarlar'da yönetin."
+  },
+  "updateReload": {
+    "message": "Güncellenmiş uzantıyı kullanmak için açık sayfaları yeniden yükleyin. Ayarlarınız kayıtlı kalır."
+  },
+  "updateLimits": {
+    "message": "Bayrak düzeltmesi desteklenen DOM metnine uygulanır. Düzenlenebilir içerik, canvas çizimi, kapalı shadow roots ve tarayıcının kısıtladığı sayfalar işlenmez."
   }
 }

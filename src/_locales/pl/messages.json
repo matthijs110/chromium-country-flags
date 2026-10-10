@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Po zmianie ustawienia odśwież tę stronę. Wykluczenie dotyczy tej nazwy hosta i jej subdomen."
+  },
+  "updateTitle": {
+    "message": "Nowości w wersji 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Pewniejsze wyświetlanie flag, większa kontrola"
+  },
+  "updateRendering": {
+    "message": "Lepsze wyświetlanie flag w dynamicznie ładowanym tekście, w tym flag Anglii, Szkocji i Walii."
+  },
+  "updatePerformance": {
+    "message": "Przetwarzanie wybranych elementów zastępuje globalne zmiany czcionek i wielokrotne skanowanie całych stron, ograniczając wpływ na czcionki witryn i edytowalną treść."
+  },
+  "updateControls": {
+    "message": "W oknie na pasku narzędzi możesz ignorować bieżącą witrynę lub ponownie włączyć poprawianie flag. Domenami i subdomenami zarządzaj w Ustawieniach."
+  },
+  "updateReload": {
+    "message": "Odśwież otwarte strony, aby korzystać ze zaktualizowanego rozszerzenia. Ustawienia pozostają zapisane."
+  },
+  "updateLimits": {
+    "message": "Poprawianie flag dotyczy obsługiwanego tekstu DOM. Edytowalna treść, renderowanie canvas, zamknięte shadow roots i strony ograniczone przez przeglądarkę nie są przetwarzane."
   }
 }

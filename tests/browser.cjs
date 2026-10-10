@@ -283,6 +283,14 @@ window.chrome = {
     label: 'popup preserves parent-domain exclusion and explains settings',
   });
 
+  // The update announcement is a packaged extension page with localized release text.
+  await call('Page.navigate', { url: base + '/dist/update/update.html' });
+  await delay(200);
+  results.push({
+    passed: await evaluate(`document.title.includes('Nieuw in 2.1.0') && document.querySelectorAll('li').length === 3 && document.getElementById('open-settings').textContent === 'Instellingen'`),
+    label: 'update announcement loads localized release text and settings control',
+  });
+
   for (const result of results) {
     console.log(`${result.passed ? 'PASS' : 'FAIL'}: ${result.label}`);
   }

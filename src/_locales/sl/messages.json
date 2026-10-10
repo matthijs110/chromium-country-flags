@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Po spremembi nastavitve znova naložite stran. Izključitev velja za to ime gostitelja in njegove poddomene."
+  },
+  "updateTitle": {
+    "message": "Novosti v različici 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Zanesljivejši prikaz zastav, več nadzora"
+  },
+  "updateRendering": {
+    "message": "Izboljšan prikaz zastav v dinamično naloženem besedilu, vključno z Anglijo, Škotsko in Walesom."
+  },
+  "updatePerformance": {
+    "message": "Ciljna obdelava nadomešča globalne spremembe pisav in ponavljajoče preglede celotnih strani ter zmanjšuje vpliv na pisave spletnih mest in besedilo za urejanje."
+  },
+  "updateControls": {
+    "message": "V oknu orodne vrstice prezrite trenutno spletno mesto ali znova omogočite popravljanje zastav. Domene in poddomene upravljajte v nastavitvah."
+  },
+  "updateReload": {
+    "message": "Znova naložite odprte strani, da uporabite posodobljeno razširitev. Vaše nastavitve ostanejo shranjene."
+  },
+  "updateLimits": {
+    "message": "Popravljanje zastav velja za podprto besedilo DOM. Vsebina za urejanje, izris canvas, zaprti shadow roots in strani z omejitvami brskalnika se ne obdelujejo."
   }
 }

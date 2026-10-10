@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Reload this page after changing its setting. An exclusion applies to this hostname and its subdomains."
+  },
+  "updateTitle": {
+    "message": "New in 2.1.0"
+  },
+  "updateHeading": {
+    "message": "More reliable flags, more control"
+  },
+  "updateRendering": {
+    "message": "Improved flag rendering in dynamically loaded text, including England, Scotland and Wales."
+  },
+  "updatePerformance": {
+    "message": "Targeted processing replaces global font overrides and repeated whole-page scans, reducing interference with website fonts and editable content."
+  },
+  "updateControls": {
+    "message": "Use the toolbar popup to ignore the current website or enable flag fixing again. Manage domains and their subdomains in Settings."
+  },
+  "updateReload": {
+    "message": "Reload pages that were already open to use the updated extension. Your settings remain saved."
+  },
+  "updateLimits": {
+    "message": "Flag fixing applies to supported DOM text. Editable content, canvas rendering, closed shadow roots and browser-restricted pages are not processed."
   }
 }

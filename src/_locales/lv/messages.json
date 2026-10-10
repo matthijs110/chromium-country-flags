@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Pēc iestatījuma maiņas pārlādējiet šo lapu. Izņēmums attiecas uz šo resursdatora nosaukumu un tā apakšdomēniem."
+  },
+  "updateTitle": {
+    "message": "Jaunumi versijā 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Uzticamāka karogu attēlošana, vairāk kontroles"
+  },
+  "updateRendering": {
+    "message": "Uzlabota karogu attēlošana dinamiski ielādētā tekstā, tostarp Anglijas, Skotijas un Velsas karogiem."
+  },
+  "updatePerformance": {
+    "message": "Mērķtiecīga apstrāde aizstāj globālas fontu izmaiņas un atkārtotu visas lapas skenēšanu, samazinot ietekmi uz vietņu fontiem un rediģējamu tekstu."
+  },
+  "updateControls": {
+    "message": "Izmantojiet rīkjoslas uznirstošo logu, lai ignorētu pašreizējo vietni vai atkal ieslēgtu karogu labošanu. Pārvaldiet domēnus un apakšdomēnus iestatījumos."
+  },
+  "updateReload": {
+    "message": "Pārlādējiet atvērtās lapas, lai izmantotu atjaunināto paplašinājumu. Iestatījumi paliek saglabāti."
+  },
+  "updateLimits": {
+    "message": "Karogu labošana attiecas uz atbalstītu DOM tekstu. Rediģējams saturs, canvas attēlojums, slēgti shadow roots un pārlūka ierobežotas lapas netiek apstrādātas."
   }
 }

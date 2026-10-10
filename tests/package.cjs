@@ -21,6 +21,8 @@ const files = [
   manifest.options_ui.page,
   manifest.action.default_popup,
   'popup/popup.js',
+  'update/update.html',
+  'update/update.js',
   'css/dist.css',
   ...manifest.content_scripts.flatMap((script) => script.js),
   ...Object.values(manifest.icons),
@@ -45,7 +47,7 @@ for (const key of Object.keys(en)) {
 }
 
 // Catch bundler settings that introduce eval, which Manifest V3 disallows.
-for (const script of ['content.js', 'contentHead.js', 'background.js', 'options/options.js', 'popup/popup.js']) {
+for (const script of ['content.js', 'contentHead.js', 'background.js', 'options/options.js', 'popup/popup.js', 'update/update.js']) {
   assert.ok(
     !/\beval\(/.test(fs.readFileSync(path.join('dist', script), 'utf8')),
     'No eval in ' + script,

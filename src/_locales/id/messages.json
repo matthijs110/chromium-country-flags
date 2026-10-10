@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Muat ulang halaman ini setelah mengubah pengaturan. Pengecualian berlaku untuk nama host ini dan subdomainnya."
+  },
+  "updateTitle": {
+    "message": "Baru di 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Tampilan bendera lebih andal, lebih banyak kendali"
+  },
+  "updateRendering": {
+    "message": "Tampilan bendera yang lebih baik dalam teks yang dimuat secara dinamis, termasuk Inggris, Skotlandia, dan Wales."
+  },
+  "updatePerformance": {
+    "message": "Pemrosesan terarah menggantikan perubahan font global dan pemindaian seluruh halaman berulang, sehingga mengurangi gangguan pada font situs dan teks yang dapat diedit."
+  },
+  "updateControls": {
+    "message": "Gunakan popup bilah alat untuk mengabaikan situs saat ini atau mengaktifkan kembali perbaikan bendera. Kelola domain dan subdomain di Pengaturan."
+  },
+  "updateReload": {
+    "message": "Muat ulang halaman yang sudah terbuka untuk menggunakan ekstensi yang diperbarui. Pengaturan Anda tetap tersimpan."
+  },
+  "updateLimits": {
+    "message": "Perbaikan bendera berlaku pada teks DOM yang didukung. Konten yang dapat diedit, rendering canvas, shadow root tertutup, dan halaman yang dibatasi browser tidak diproses."
   }
 }

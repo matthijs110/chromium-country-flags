@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Reîncarcă pagina după modificarea setării. Excluderea se aplică acestui nume de gazdă și subdomeniilor sale."
+  },
+  "updateTitle": {
+    "message": "Noutăți în versiunea 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Afișare mai fiabilă a steagurilor, mai mult control"
+  },
+  "updateRendering": {
+    "message": "Afișare îmbunătățită a steagurilor în textul încărcat dinamic, inclusiv Anglia, Scoția și Țara Galilor."
+  },
+  "updatePerformance": {
+    "message": "Procesarea țintită înlocuiește modificările globale ale fonturilor și scanările repetate ale întregii pagini, reducând interferențele cu fonturile site-urilor și conținutul editabil."
+  },
+  "updateControls": {
+    "message": "Folosește fereastra din bara de instrumente pentru a ignora site-ul curent sau a reactiva corectarea steagurilor. Gestionează domeniile și subdomeniile în Setări."
+  },
+  "updateReload": {
+    "message": "Reîncarcă paginile deja deschise pentru a utiliza extensia actualizată. Setările tale rămân salvate."
+  },
+  "updateLimits": {
+    "message": "Corectarea se aplică textului DOM acceptat. Conținutul editabil, redarea canvas, shadow roots închise și paginile restricționate de browser nu sunt procesate."
   }
 }

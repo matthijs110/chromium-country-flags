@@ -17,10 +17,18 @@ let saved = {},
   failRead = false,
   failWrite = false;
 let listener;
+let installedListener;
+let localSaved = {};
+const openedTabs = [];
+let extensionVersion = '2.1.0';
 
 // Delayed reads catch exclusions that return before storage has finished.
 const chrome = {
   storage: {
+    local: {
+      get: async () => localSaved,
+      set: async (data) => { localSaved = { ...localSaved, ...data }; },
+    },
     sync: {
       get: async () => {
         await new Promise((resolve) => setTimeout(resolve, 5));
@@ -40,12 +48,16 @@ const chrome = {
     },
   },
   runtime: {
+    getManifest: () => ({ version: extensionVersion }),
+    getURL: (file) => `chrome-extension://test/${file}`,
+    onInstalled: { addListener: (value) => { installedListener = value; } },
     onMessage: {
       addListener: (value) => {
         listener = value;
       },
     },
   },
+  tabs: { create: async (tab) => { openedTabs.push(tab); } },
 };
 
 // Execute real TypeScript modules in an isolated context with the Chrome mock.
@@ -119,6 +131,24 @@ function load(file) {
   assert.equal(saved.cfIgnoredSites.length, 0);
   await storage.storeSite('example.com');
   load('src/background.ts');
+
+  // The announcement must appear once for an upgrade, never for fresh installs or reloads.
+  await installedListener({ reason: 'install' });
+  await installedListener({ reason: 'update', previousVersion: '2.1.0' });
+  await installedListener({ reason: 'chrome_update', previousVersion: '2.0.2' });
+  assert.equal(openedTabs.length, 0);
+
+  await installedListener({ reason: 'update', previousVersion: '2.0.2' });
+  assert.equal(openedTabs.length, 1);
+  assert.equal(openedTabs[0].url, 'chrome-extension://test/update/update.html');
+  await installedListener({ reason: 'update', previousVersion: '2.0.2' });
+  assert.equal(openedTabs.length, 1);
+
+  extensionVersion = '2.2.0';
+  localSaved = {};
+  await installedListener({ reason: 'update', previousVersion: '2.0.2' });
+  assert.equal(openedTabs.length, 1);
+  extensionVersion = '2.1.0';
 
   // Exercise the real message listener with parent and cross-origin frame URLs.
   const checkFrame = (sender) =>

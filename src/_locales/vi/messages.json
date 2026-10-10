@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Tải lại trang này sau khi thay đổi cài đặt. Việc loại trừ áp dụng cho tên máy chủ này và các tên miền phụ của nó."
+  },
+  "updateTitle": {
+    "message": "Điểm mới trong 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Hiển thị cờ đáng tin cậy hơn, kiểm soát tốt hơn"
+  },
+  "updateRendering": {
+    "message": "Cải thiện hiển thị cờ trong văn bản được tải động, bao gồm Anh, Scotland và Wales."
+  },
+  "updatePerformance": {
+    "message": "Xử lý có mục tiêu thay thế thay đổi phông chữ toàn cục và việc quét lại toàn bộ trang, giảm ảnh hưởng đến phông chữ của trang web và nội dung có thể chỉnh sửa."
+  },
+  "updateControls": {
+    "message": "Dùng cửa sổ trên thanh công cụ để bỏ qua trang web hiện tại hoặc bật lại sửa hiển thị cờ. Quản lý tên miền và tên miền phụ trong Cài đặt."
+  },
+  "updateReload": {
+    "message": "Tải lại các trang đang mở để sử dụng tiện ích đã cập nhật. Cài đặt của bạn vẫn được lưu."
+  },
+  "updateLimits": {
+    "message": "Sửa hiển thị cờ áp dụng cho văn bản DOM được hỗ trợ. Nội dung có thể chỉnh sửa, hiển thị canvas, shadow root đóng và trang bị trình duyệt hạn chế không được xử lý."
   }
 }

@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Last inn siden på nytt etter at du har endret innstillingen. Unntaket gjelder dette vertsnavnet og underdomenene."
+  },
+  "updateTitle": {
+    "message": "Nytt i 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Mer pålitelig flaggvisning, mer kontroll"
+  },
+  "updateRendering": {
+    "message": "Bedre flaggvisning i dynamisk innlastet tekst, inkludert England, Skottland og Wales."
+  },
+  "updatePerformance": {
+    "message": "Målrettet behandling erstatter globale skriftendringer og gjentatte skanninger av hele sider, og reduserer påvirkningen på nettsteders skrifter og redigerbar tekst."
+  },
+  "updateControls": {
+    "message": "Bruk popupvinduet på verktøylinjen til å ignorere nettstedet eller aktivere flaggkorrigering igjen. Administrer domener og underdomener i Innstillinger."
+  },
+  "updateReload": {
+    "message": "Last inn åpne sider på nytt for å bruke den oppdaterte utvidelsen. Innstillingene dine forblir lagret."
+  },
+  "updateLimits": {
+    "message": "Flaggkorrigering gjelder støttet DOM-tekst. Redigerbart innhold, canvas-visning, lukkede shadow roots og sider med nettleserbegrensninger behandles ikke."
   }
 }

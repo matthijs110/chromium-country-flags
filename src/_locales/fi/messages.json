@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Lataa sivu uudelleen asetuksen muuttamisen jälkeen. Poikkeus koskee tätä isäntänimeä ja sen aliverkkotunnuksia."
+  },
+  "updateTitle": {
+    "message": "Uutta versiossa 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Luotettavampi lippujen näyttö, enemmän hallintaa"
+  },
+  "updateRendering": {
+    "message": "Parempi lippujen näyttö dynaamisesti ladatussa tekstissä, mukaan lukien Englanti, Skotlanti ja Wales."
+  },
+  "updatePerformance": {
+    "message": "Kohdennettu käsittely korvaa yleiset fonttimuutokset ja koko sivun toistuvat tarkistukset, mikä vähentää vaikutuksia sivustojen fontteihin ja muokattavaan tekstiin."
+  },
+  "updateControls": {
+    "message": "Ohita nykyinen sivusto tai ota lippujen korjaus uudelleen käyttöön työkalupalkin ponnahdusikkunasta. Hallitse verkkotunnuksia ja aliverkkotunnuksia asetuksissa."
+  },
+  "updateReload": {
+    "message": "Lataa avoimet sivut uudelleen käyttääksesi päivitettyä laajennusta. Asetuksesi säilyvät tallennettuina."
+  },
+  "updateLimits": {
+    "message": "Lippujen korjaus koskee tuettua DOM-tekstiä. Muokattavaa tekstiä, canvas-piirtoa, suljettuja shadow root -rakenteita ja selaimen rajoittamia sivuja ei käsitellä."
   }
 }

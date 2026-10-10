@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Vuelve a cargar esta página después de cambiar la configuración. La exclusión se aplica a este nombre de host y sus subdominios."
+  },
+  "updateTitle": {
+    "message": "Novedades de 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Banderas más fiables, más control"
+  },
+  "updateRendering": {
+    "message": "Mejor visualización de banderas en texto cargado dinámicamente, incluidas Inglaterra, Escocia y Gales."
+  },
+  "updatePerformance": {
+    "message": "El procesamiento específico sustituye los cambios globales de fuentes y los análisis repetidos de páginas completas, reduciendo la interferencia con las fuentes de los sitios y el contenido editable."
+  },
+  "updateControls": {
+    "message": "Utiliza la ventana emergente de la barra de herramientas para ignorar el sitio actual o volver a activar la corrección de banderas. Gestiona dominios y subdominios en Configuración."
+  },
+  "updateReload": {
+    "message": "Vuelve a cargar las páginas abiertas para utilizar la extensión actualizada. Tu configuración permanece guardada."
+  },
+  "updateLimits": {
+    "message": "La corrección se aplica al texto DOM compatible. No se procesan contenido editable, renderizado canvas, shadow roots cerrados ni páginas restringidas por el navegador."
   }
 }

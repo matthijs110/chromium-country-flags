@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Po zmene nastavenia stránku znova načítajte. Výnimka platí pre tento názov hostiteľa a jeho subdomény."
+  },
+  "updateTitle": {
+    "message": "Novinky vo verzii 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Spoľahlivejšie zobrazenie vlajok, viac kontroly"
+  },
+  "updateRendering": {
+    "message": "Lepšie zobrazenie vlajok v dynamicky načítanom texte vrátane Anglicka, Škótska a Walesu."
+  },
+  "updatePerformance": {
+    "message": "Cielené spracovanie nahrádza globálne zmeny písiem a opakované skenovanie celej stránky, čím obmedzuje zásahy do písiem webov a upraviteľného textu."
+  },
+  "updateControls": {
+    "message": "Pomocou okna na paneli nástrojov ignorujte aktuálny web alebo znovu zapnite opravu vlajok. Domény a subdomény spravujte v Nastaveniach."
+  },
+  "updateReload": {
+    "message": "Znova načítajte otvorené stránky, aby ste použili aktualizované rozšírenie. Nastavenia zostanú uložené."
+  },
+  "updateLimits": {
+    "message": "Oprava vlajok sa vzťahuje na podporovaný text DOM. Upraviteľný obsah, vykresľovanie canvas, uzavreté shadow roots a stránky obmedzené prehliadačom sa nespracúvajú."
   }
 }

@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Pärast sätte muutmist laadi leht uuesti. Välistus kehtib sellele hostinimele ja selle alamdomeenidele."
+  },
+  "updateTitle": {
+    "message": "Uut versioonis 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Usaldusväärsem lipukuvamine, rohkem kontrolli"
+  },
+  "updateRendering": {
+    "message": "Parem lippude kuvamine dünaamiliselt laaditud tekstis, sealhulgas Inglismaa, Šotimaa ja Walesi lipud."
+  },
+  "updatePerformance": {
+    "message": "Sihitud töötlemine asendab globaalsed fondimuudatused ja korduvad kogu lehe skannimised, vähendades mõju veebisaitide fontidele ja muudetavale tekstile."
+  },
+  "updateControls": {
+    "message": "Kasuta tööriistariba hüpikakent praeguse veebisaidi eiramiseks või lippude parandamise uuesti lubamiseks. Halda domeene ja alamdomeene seadetes."
+  },
+  "updateReload": {
+    "message": "Uuendatud laienduse kasutamiseks laadi avatud lehed uuesti. Sinu sätted jäävad salvestatuks."
+  },
+  "updateLimits": {
+    "message": "Lippude parandamine kehtib toetatud DOM-tekstile. Muudetavat teksti, canvas-kuvamist, suletud shadow roots'e ja brauseri piiratud lehti ei töödelda."
   }
 }

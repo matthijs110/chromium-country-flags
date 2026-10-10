@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Ricarica questa pagina dopo aver modificato l’impostazione. L’esclusione si applica a questo nome host e ai suoi sottodomini."
+  },
+  "updateTitle": {
+    "message": "Novità della versione 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Bandiere più affidabili, più controllo"
+  },
+  "updateRendering": {
+    "message": "Visualizzazione migliorata delle bandiere nel testo caricato dinamicamente, comprese Inghilterra, Scozia e Galles."
+  },
+  "updatePerformance": {
+    "message": "L’elaborazione mirata sostituisce le modifiche globali ai font e le scansioni ripetute di pagine intere, riducendo le interferenze con i font dei siti e i contenuti modificabili."
+  },
+  "updateControls": {
+    "message": "Usa il popup nella barra degli strumenti per ignorare il sito attuale o riattivare la correzione delle bandiere. Gestisci domini e sottodomini nelle Impostazioni."
+  },
+  "updateReload": {
+    "message": "Ricarica le pagine già aperte per utilizzare l’estensione aggiornata. Le impostazioni rimangono salvate."
+  },
+  "updateLimits": {
+    "message": "La correzione si applica al testo DOM supportato. Contenuti modificabili, rendering canvas, shadow roots chiusi e pagine limitate dal browser non vengono elaborati."
   }
 }

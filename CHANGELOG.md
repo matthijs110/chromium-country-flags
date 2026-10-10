@@ -3,6 +3,7 @@
 ## 2.1.0 — Fix flag rendering, reduce page interference and introduced site exclusions
 
 - Apply AI-assisted troubleshooting.
+- Show a one-time update page when existing users upgrade to 2.1.0, explaining the changes and linking to Settings.
 - Add a toolbar popup to ignore or re-enable the current website. Exclusions inherited from a parent domain can be managed through the settings link.
 - Migrate the extension to TypeScript.
 - Introduce an ignored-websites options page with input validation, accessible controls, storage errors and synchronized lists.

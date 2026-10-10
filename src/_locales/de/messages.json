@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Lade diese Seite nach einer Änderung der Einstellung neu. Der Ausschluss gilt für diesen Hostnamen und seine Subdomains."
+  },
+  "updateTitle": {
+    "message": "Neu in 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Zuverlässigere Flaggenanzeige, mehr Kontrolle"
+  },
+  "updateRendering": {
+    "message": "Verbesserte Flaggenanzeige in dynamisch geladenem Text, einschließlich England, Schottland und Wales."
+  },
+  "updatePerformance": {
+    "message": "Gezielte Verarbeitung ersetzt globale Schriftänderungen und wiederholte Scans ganzer Seiten. Dadurch werden Eingriffe in Website-Schriften und bearbeitbare Inhalte reduziert."
+  },
+  "updateControls": {
+    "message": "Über das Popup in der Symbolleiste kannst du die aktuelle Website ignorieren oder die Flaggenkorrektur wieder aktivieren. Domains und Subdomains verwaltest du in den Einstellungen."
+  },
+  "updateReload": {
+    "message": "Lade bereits geöffnete Seiten neu, um die aktualisierte Erweiterung zu verwenden. Deine Einstellungen bleiben gespeichert."
+  },
+  "updateLimits": {
+    "message": "Die Flaggenkorrektur gilt für unterstützten DOM-Text. Bearbeitbare Inhalte, Canvas-Darstellung, geschlossene Shadow Roots und vom Browser eingeschränkte Seiten werden nicht verarbeitet."
   }
 }

@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Herlaad deze pagina nadat je de instelling wijzigt. Een uitsluiting geldt voor deze domeinnaam en de subdomeinen daarvan."
+  },
+  "updateTitle": {
+    "message": "Nieuw in 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Betrouwbaardere vlagweergave, meer controle"
+  },
+  "updateRendering": {
+    "message": "Verbeterde vlagweergave in dynamisch geladen tekst, inclusief Engeland, Schotland en Wales."
+  },
+  "updatePerformance": {
+    "message": "Gerichte verwerking vervangt algemene fontaanpassingen en herhaalde scans van hele pagina's. Zo beperken we invloed op websitefonts en bewerkbare tekst."
+  },
+  "updateControls": {
+    "message": "Negeer de huidige website of schakel vlagcorrectie weer in via de werkbalkpopup. Beheer domeinen en hun subdomeinen in Instellingen."
+  },
+  "updateReload": {
+    "message": "Herlaad pagina's die al openstonden om de bijgewerkte extensie te gebruiken. Je instellingen blijven bewaard."
+  },
+  "updateLimits": {
+    "message": "Vlagcorrectie werkt op ondersteunde DOM-tekst. Bewerkbare tekst, canvasweergave, gesloten shadow roots en browserpagina's met beperkingen worden niet verwerkt."
   }
 }

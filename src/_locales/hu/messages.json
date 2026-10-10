@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "A beállítás módosítása után töltsd újra az oldalt. A kizárás erre a gépnévre és az aldomainjeire vonatkozik."
+  },
+  "updateTitle": {
+    "message": "Újdonságok a 2.1.0-ban"
+  },
+  "updateHeading": {
+    "message": "Megbízhatóbb zászlómegjelenítés, több kontroll"
+  },
+  "updateRendering": {
+    "message": "Jobb zászlómegjelenítés a dinamikusan betöltött szövegben, Anglia, Skócia és Wales zászlóival együtt."
+  },
+  "updatePerformance": {
+    "message": "A célzott feldolgozás felváltja a globális betűtípus-módosításokat és a teljes oldalak ismételt átvizsgálását, csökkentve a webhelyek betűtípusaira és a szerkeszthető szövegre gyakorolt hatást."
+  },
+  "updateControls": {
+    "message": "Az eszköztár felugró ablakában figyelmen kívül hagyhatod az aktuális webhelyet, vagy újra bekapcsolhatod a zászlójavítást. A domaineket és aldomaineket a Beállításokban kezelheted."
+  },
+  "updateReload": {
+    "message": "A frissített bővítmény használatához töltsd újra a megnyitott oldalakat. A beállításaid megmaradnak."
+  },
+  "updateLimits": {
+    "message": "A zászlójavítás támogatott DOM-szövegre vonatkozik. A szerkeszthető tartalom, canvas-megjelenítés, zárt shadow root elemek és böngésző által korlátozott oldalak nem kerülnek feldolgozásra."
   }
 }

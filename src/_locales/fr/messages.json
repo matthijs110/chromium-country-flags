@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Rechargez cette page après avoir modifié le réglage. L’exclusion s’applique à ce nom d’hôte et à ses sous-domaines."
+  },
+  "updateTitle": {
+    "message": "Nouveautés de la version 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Des drapeaux mieux affichés, plus de contrôle"
+  },
+  "updateRendering": {
+    "message": "Affichage amélioré des drapeaux dans le texte chargé dynamiquement, notamment ceux de l’Angleterre, de l’Écosse et du pays de Galles."
+  },
+  "updatePerformance": {
+    "message": "Le traitement ciblé remplace les modifications globales de polices et les analyses répétées de pages entières, limitant les interférences avec les polices des sites et le contenu modifiable."
+  },
+  "updateControls": {
+    "message": "Utilisez la fenêtre de la barre d’outils pour ignorer le site actuel ou réactiver la correction des drapeaux. Gérez les domaines et sous-domaines dans les paramètres."
+  },
+  "updateReload": {
+    "message": "Rechargez les pages déjà ouvertes pour utiliser l’extension mise à jour. Vos paramètres restent enregistrés."
+  },
+  "updateLimits": {
+    "message": "La correction s’applique au texte DOM pris en charge. Le contenu modifiable, le rendu canvas, les shadow roots fermés et les pages restreintes par le navigateur ne sont pas traités."
   }
 }

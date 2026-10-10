@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "Genindlæs siden efter at have ændret indstillingen. Undtagelsen gælder dette værtsnavn og dets underdomæner."
+  },
+  "updateTitle": {
+    "message": "Nyt i 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Mere pålidelig flagvisning, mere kontrol"
+  },
+  "updateRendering": {
+    "message": "Forbedret flagvisning i dynamisk indlæst tekst, inklusive England, Skotland og Wales."
+  },
+  "updatePerformance": {
+    "message": "Målrettet behandling erstatter globale skrifttypeændringer og gentagne scanninger af hele siden og begrænser påvirkningen af websteders skrifttyper og redigerbar tekst."
+  },
+  "updateControls": {
+    "message": "Brug popupvinduet på værktøjslinjen til at ignorere det aktuelle websted eller aktivere flagkorrektion igen. Administrer domæner og underdomæner i Indstillinger."
+  },
+  "updateReload": {
+    "message": "Genindlæs åbne sider for at bruge den opdaterede udvidelse. Dine indstillinger bevares."
+  },
+  "updateLimits": {
+    "message": "Flagkorrektion gælder understøttet DOM-tekst. Redigerbar tekst, canvas, lukkede shadow roots og sider med browserbegrænsninger behandles ikke."
   }
 }

@@ -74,5 +74,26 @@
   },
   "popupReload": {
     "message": "更改设置后，请重新加载此页面。排除设置适用于此主机名及其子域名。"
+  },
+  "updateTitle": {
+    "message": "2.1.0 版本的新功能"
+  },
+  "updateHeading": {
+    "message": "更可靠的旗帜显示，更多控制"
+  },
+  "updateRendering": {
+    "message": "改进了动态加载文本中的旗帜显示，包括英格兰、苏格兰和威尔士旗帜。"
+  },
+  "updatePerformance": {
+    "message": "针对性处理取代全局字体修改和反复扫描整个页面，减少对网站字体和可编辑内容的影响。"
+  },
+  "updateControls": {
+    "message": "使用工具栏弹出窗口忽略当前网站或重新启用旗帜显示修正。在设置中管理域名及其子域名。"
+  },
+  "updateReload": {
+    "message": "请重新加载已打开的页面，以使用更新后的扩展程序。您的设置仍会保存。"
+  },
+  "updateLimits": {
+    "message": "旗帜显示修正适用于受支持的 DOM 文本。可编辑内容、canvas 绘制、封闭的 shadow root 和受浏览器限制的页面不会被处理。"
   }
 }
