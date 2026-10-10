@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "将神秘的国家代码自动替换为相应的国旗。为Windows上的Chromium用户提供解决方案!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "ignoredHeading": {
+    "message": "被忽略的网站"
+  },
+  "ignoredHelp": {
+    "message": "在您添加的域名及其所有子域名上，国旗修正功能将被禁用。如果您输入网站 URL，系统仅会保存其主机名。路径不会影响被排除的页面范围。"
+  },
+  "ignoredExample": {
+    "message": "<strong>示例：</strong> <code>example.com</code> 还会禁用 <code>www.example.com</code> 和 <code>blog.example.com</code> 上的国旗修正功能。仅添加 <code>blog.example.com</code> 则 <code>example.com</code> 和 <code>www.example.com</code> 仍保持启用状态。<code>https://example.com/page</code> 适用于整个 <code>example.com</code> 网站，而不仅仅是 <code>/page</code>。"
+  },
+  "reloadHelp": {
+    "message": "修改此列表后，请重新加载已打开的页面。被忽略网站上的嵌入内容也将被排除在外。"
+  },
+  "domainLabel": {
+    "message": "域名或网站网址"
+  },
+  "domainPlaceholder": {
+    "message": "例如：example.com"
+  },
+  "addDomain": {
+    "message": "添加网站"
+  },
+  "deleteDomain": {
+    "message": "移除"
+  },
+  "deleteDomainLabel": {
+    "message": "将 $1 从被忽略的网站列表中移除"
+  },
+  "loading": {
+    "message": "正在加载被忽略的网站……"
+  },
+  "noDomains": {
+    "message": "没有被忽略的网站。"
+  },
+  "invalidDomain": {
+    "message": "请输入有效的域名或 HTTP(S) 网站网址。"
+  },
+  "duplicateDomain": {
+    "message": "该域名已列入列表。"
+  },
+  "storageError": {
+    "message": "无法读取或保存您的设置。请重试。"
+  },
+  "domainAdded": {
+    "message": "已添加网站。请刷新该网站的已打开页面以应用此设置。"
+  },
+  "domainRemoved": {
+    "message": "网站已移除。请重新加载该网站的已打开页面，以启用国旗修正功能。"
+  },
+  "popupIgnore": {
+    "message": "忽略此网站"
+  },
+  "popupEnable": {
+    "message": "启用旗帜显示修正"
+  },
+  "popupActive": {
+    "message": "此网站已启用旗帜显示修正。"
+  },
+  "popupIgnored": {
+    "message": "此网站已被忽略。"
+  },
+  "popupParent": {
+    "message": "由于排除了 $1，此网站已被忽略。请在设置中修改该域名，以在此处启用旗帜显示修正。"
+  },
+  "popupUnavailable": {
+    "message": "此页面不是受支持的网站，或无法获取其地址。"
+  },
+  "popupReload": {
+    "message": "更改设置后，请重新加载此页面。排除设置适用于此主机名及其子域名。"
+  },
+  "updateTitle": {
+    "message": "2.1.0 版本的新功能"
+  },
+  "updateHeading": {
+    "message": "更可靠的旗帜显示，更多控制"
+  },
+  "updateRendering": {
+    "message": "改进了动态加载文本中的旗帜显示，包括英格兰、苏格兰和威尔士旗帜。"
+  },
+  "updatePerformance": {
+    "message": "针对性处理取代全局字体修改和反复扫描整个页面，减少对网站字体和可编辑内容的影响。"
+  },
+  "updateControls": {
+    "message": "使用工具栏弹出窗口忽略当前网站或重新启用旗帜显示修正。在设置中管理域名及其子域名。"
+  },
+  "updateReload": {
+    "message": "请重新加载已打开的页面，以使用更新后的扩展程序。您的设置仍会保存。"
+  },
+  "updateLimits": {
+    "message": "旗帜显示修正适用于受支持的 DOM 文本。可编辑内容、canvas 绘制、封闭的 shadow root 和受浏览器限制的页面不会被处理。"
+  },
+  "privacyPolicy": {
+    "message": "隐私政策"
   }
 }

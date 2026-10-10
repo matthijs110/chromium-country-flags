@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country Flag Fixer</title>
+
+    <link rel="stylesheet" href="../css/dist.css" />
+    <script src="popup.js" defer></script>
+  </head>
+
+  <body class="w-80 bg-slate-50 p-5 text-slate-900">
+    <header class="mb-4 flex items-center gap-3">
+      <img src="../icons/icon48.png" width="32" height="32" alt="" />
+      <h1 class="font-bold">Country Flag Fixer</h1>
+    </header>
+
+    <!-- The hostname is displayed as text, never interpreted as page markup. -->
+    <p id="hostname" class="mb-3 break-all font-mono text-sm"></p>
+    <p id="status" role="status" aria-live="polite" class="mb-4 text-sm text-slate-600"></p>
+
+    <button id="toggle" type="button" disabled
+      class="mb-3 w-full rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800"></button>
+
+    <!-- Changes take effect after reloading the page; do not reload a user's work automatically. -->
+    <p id="help" class="mb-4 text-sm text-slate-600"></p>
+    <button id="options" type="button" class="text-sm text-blue-700 underline"></button>
+  </body>
+</html>

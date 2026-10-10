@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Automaticky nahradí záhadné kódy zemí odpovídající vlajkou. Řešení pro uživatele Chromu v systému Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Nastavení"
+  },
+  "ignoredHeading": {
+    "message": "Ignorované webové stránky"
+  },
+  "ignoredHelp": {
+    "message": "Opravování vlajek je deaktivováno na doméně, kterou přidáte, a na všech jejích subdoménách. Pokud zadáte adresu URL webové stránky, uloží se pouze její název hostitele. Cesta nemá vliv na to, které stránky budou vyloučeny."
+  },
+  "ignoredExample": {
+    "message": "<strong>Příklad:</strong> <code>example.com</code> také zakáže opravu vlajek na stránkách <code>www.example.com</code> a <code>blog.example.com</code>. Přidání pouze <code>blog.example.com</code> ponechá stránky <code>example.com</code> a <code>www.example.com</code> aktivní. <code>https://example.com/page</code> se vztahuje na všechny stránky <code>example.com</code>, nejen na <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Po změně tohoto seznamu znovu načtěte otevřené stránky. Vyloučen je také vložený obsah na ignorované webové stránce."
+  },
+  "domainLabel": {
+    "message": "Doména nebo URL webové stránky"
+  },
+  "domainPlaceholder": {
+    "message": "Například: example.com"
+  },
+  "addDomain": {
+    "message": "Přidat webovou stránku"
+  },
+  "deleteDomain": {
+    "message": "Odstranit"
+  },
+  "deleteDomainLabel": {
+    "message": "Odeberte $1 ze seznamu ignorovaných webových stránek"
+  },
+  "loading": {
+    "message": "Načítání ignorovaných webových stránek…"
+  },
+  "noDomains": {
+    "message": "Žádné webové stránky nejsou ignorovány."
+  },
+  "invalidDomain": {
+    "message": "Zadejte platnou doménu nebo adresu URL webové stránky v protokolu HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Tato doména již je na seznamu."
+  },
+  "storageError": {
+    "message": "Nepodařilo se načíst ani uložit vaše nastavení. Zkuste to prosím znovu."
+  },
+  "domainAdded": {
+    "message": "Webová stránka byla přidána. Pro uplatnění tohoto nastavení znovu načtěte její otevřené stránky."
+  },
+  "domainRemoved": {
+    "message": "Webová stránka byla odstraněna. Obnovte její otevřené stránky, aby bylo možné opravit vlajky."
+  },
+  "popupIgnore": {
+    "message": "Ignorovat tento web"
+  },
+  "popupEnable": {
+    "message": "Zapnout opravu vlajek"
+  },
+  "popupActive": {
+    "message": "Oprava vlajek je na tomto webu zapnutá."
+  },
+  "popupIgnored": {
+    "message": "Tento web je ignorován."
+  },
+  "popupParent": {
+    "message": "Tento web je ignorován kvůli doméně $1. Upravte tuto doménu v nastavení a zapněte zde opravu vlajek."
+  },
+  "popupUnavailable": {
+    "message": "Tato stránka není podporovaným webem nebo její adresa není dostupná."
+  },
+  "popupReload": {
+    "message": "Po změně nastavení stránku znovu načtěte. Výjimka platí pro tento název hostitele a jeho subdomény."
+  },
+  "updateTitle": {
+    "message": "Novinky ve verzi 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Spolehlivější zobrazení vlajek, více kontroly"
+  },
+  "updateRendering": {
+    "message": "Lepší zobrazení vlajek v dynamicky načítaném textu, včetně Anglie, Skotska a Walesu."
+  },
+  "updatePerformance": {
+    "message": "Cílené zpracování nahrazuje globální změny písem a opakované skenování celé stránky a omezuje zásahy do písem webů a upravitelného textu."
+  },
+  "updateControls": {
+    "message": "Pomocí nabídky na panelu nástrojů ignorujte aktuální web nebo znovu zapněte opravu vlajek. Domény a subdomény spravujte v nastavení."
+  },
+  "updateReload": {
+    "message": "Znovu načtěte otevřené stránky, abyste použili aktualizované rozšíření. Vaše nastavení zůstává uložené."
+  },
+  "updateLimits": {
+    "message": "Oprava vlajek funguje s podporovaným textem DOM. Upravitelný text, vykreslování canvas, uzavřené shadow roots a stránky omezené prohlížečem se nezpracovávají."
+  },
+  "privacyPolicy": {
+    "message": "Zásady ochrany osobních údajů"
   }
 }

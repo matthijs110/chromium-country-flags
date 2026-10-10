@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "מחליף אוטומטית את קודי המדינה המסתוריים בדגל המתאים. הפתרון למשתמשי Chromium ב-Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "הגדרות"
+  },
+  "ignoredHeading": {
+    "message": "אתרי אינטרנט שלא נכללים"
+  },
+  "ignoredHelp": {
+    "message": "תיקון הדגלים מושבת בדומיין שתוסיף ובכל תתי-הדומיינים של אותו דומיין. אם תזין כתובת URL של אתר, רק שם המארח שלו יישמר. הנתיב אינו משפיע על הדפים שיוחרגו."
+  },
+  "ignoredExample": {
+    "message": "<strong>דוגמה:</strong> <code>example.com</code> מבטל גם את תיקון הדגלים ב-<code>www.example.com</code> וב-<code>blog.example.com</code>. הוספת <code>blog.example.com</code> בלבד משאירה את <code>example.com</code> ו-<code>www.example.com</code> פעילים. <code>https://example.com/page</code> חל על כל <code>example.com</code>, ולא רק על <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "טען מחדש את הדפים הפתוחים לאחר שינוי רשימה זו. תוכן מוטמע באתר אינטרנט שמוחרג נכלל גם הוא."
+  },
+  "domainLabel": {
+    "message": "דומיין או כתובת URL של אתר"
+  },
+  "domainPlaceholder": {
+    "message": "לדוגמה: example.com"
+  },
+  "addDomain": {
+    "message": "הוסף אתר"
+  },
+  "deleteDomain": {
+    "message": "הסר"
+  },
+  "deleteDomainLabel": {
+    "message": "הסר את $1 מרשימת האתרים המוזנחים"
+  },
+  "loading": {
+    "message": "טוען את האתרים שהוחרגו…"
+  },
+  "noDomains": {
+    "message": "אין אתרים שמוחרגים."
+  },
+  "invalidDomain": {
+    "message": "הזן דומיין תקף או כתובת URL של אתר אינטרנט ב-HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "דומיין זה כבר נמצא ברשימה."
+  },
+  "storageError": {
+    "message": "לא ניתן לקרוא או לשמור את ההגדרות שלך. אנא נסה שוב."
+  },
+  "domainAdded": {
+    "message": "האתר נוסף. יש לטעון מחדש את הדפים הפתוחים בו כדי להחיל הגדרה זו."
+  },
+  "domainRemoved": {
+    "message": "האתר הוסר. יש לטעון מחדש את הדפים הפתוחים שלו כדי לאפשר תיקון הדגלים."
+  },
+  "popupIgnore": {
+    "message": "התעלמות מהאתר הזה"
+  },
+  "popupEnable": {
+    "message": "הפעלת תיקון דגלים"
+  },
+  "popupActive": {
+    "message": "תיקון הדגלים מופעל באתר הזה."
+  },
+  "popupIgnored": {
+    "message": "האתר הזה מוחרג."
+  },
+  "popupParent": {
+    "message": "האתר הזה מוחרג בגלל $1. יש לערוך את הדומיין הזה בהגדרות כדי להפעיל כאן את תיקון הדגלים."
+  },
+  "popupUnavailable": {
+    "message": "הדף הזה אינו אתר נתמך, או שהכתובת שלו אינה זמינה."
+  },
+  "popupReload": {
+    "message": "יש לטעון מחדש את הדף לאחר שינוי ההגדרה. ההחרגה חלה על שם המארח הזה ועל תתי-הדומיין שלו."
+  },
+  "updateTitle": {
+    "message": "חדש בגרסה 2.1.0"
+  },
+  "updateHeading": {
+    "message": "הצגת דגלים אמינה יותר, יותר שליטה"
+  },
+  "updateRendering": {
+    "message": "שיפור הצגת דגלים בטקסט שנטען באופן דינמי, כולל אנגליה, סקוטלנד וויילס."
+  },
+  "updatePerformance": {
+    "message": "עיבוד ממוקד מחליף שינויי גופנים כלליים וסריקות חוזרות של עמודים שלמים, ומפחית הפרעות לגופני אתרים ולטקסט הניתן לעריכה."
+  },
+  "updateControls": {
+    "message": "אפשר להחריג את האתר הנוכחי או להפעיל שוב את תיקון הדגלים דרך החלון שבסרגל הכלים. ניהול דומיינים ותתי-דומיין זמין בהגדרות."
+  },
+  "updateReload": {
+    "message": "יש לטעון מחדש עמודים פתוחים כדי להשתמש בתוסף המעודכן. ההגדרות נשמרות."
+  },
+  "updateLimits": {
+    "message": "תיקון הדגלים חל על טקסט DOM נתמך. תוכן הניתן לעריכה, ציור canvas, שורשי shadow סגורים ועמודים מוגבלים בדפדפן אינם מעובדים."
+  },
+  "privacyPolicy": {
+    "message": "מדיניות פרטיות"
   }
 }

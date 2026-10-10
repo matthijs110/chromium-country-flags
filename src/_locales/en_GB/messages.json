@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Replaces mysterious country codes automatically with the corresponding flag. The solution for Chromium users on Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "ignoredHeading": {
+    "message": "Ignored websites"
+  },
+  "ignoredHelp": {
+    "message": "Flag fixing is disabled on the domain you add and all subdomains of that domain. If you enter a website URL, only its hostname is saved. The path does not affect which pages are excluded."
+  },
+  "ignoredExample": {
+    "message": "<strong>Example:</strong> <code>example.com</code> also disables flag fixing on <code>www.example.com</code> and <code>blog.example.com</code>. Adding only <code>blog.example.com</code> leaves <code>example.com</code> and <code>www.example.com</code> active. <code>https://example.com/page</code> applies to all of <code>example.com</code>, not just <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Reload open pages after changing this list. Embedded content on an ignored website is also excluded."
+  },
+  "domainLabel": {
+    "message": "Domain or website URL"
+  },
+  "domainPlaceholder": {
+    "message": "For example: example.com"
+  },
+  "addDomain": {
+    "message": "Add website"
+  },
+  "deleteDomain": {
+    "message": "Remove"
+  },
+  "deleteDomainLabel": {
+    "message": "Remove $1 from ignored websites"
+  },
+  "loading": {
+    "message": "Loading ignored websites…"
+  },
+  "noDomains": {
+    "message": "No websites are ignored."
+  },
+  "invalidDomain": {
+    "message": "Enter a valid domain or HTTP(S) website URL."
+  },
+  "duplicateDomain": {
+    "message": "This domain is already on the list."
+  },
+  "storageError": {
+    "message": "Could not read or save your settings. Please try again."
+  },
+  "domainAdded": {
+    "message": "Website added. Reload its open pages to apply this setting."
+  },
+  "domainRemoved": {
+    "message": "Website removed. Reload its open pages to enable flag fixing."
+  },
+  "popupIgnore": {
+    "message": "Ignore this website"
+  },
+  "popupEnable": {
+    "message": "Enable flag fixing"
+  },
+  "popupActive": {
+    "message": "Flag fixing is enabled on this website."
+  },
+  "popupIgnored": {
+    "message": "This website is ignored."
+  },
+  "popupParent": {
+    "message": "This website is ignored through $1. Manage that domain in Settings to enable flag fixing here."
+  },
+  "popupUnavailable": {
+    "message": "This page is not a supported website, or access to its address is unavailable."
+  },
+  "popupReload": {
+    "message": "Reload this page after changing its setting. An exclusion applies to this hostname and its subdomains."
+  },
+  "updateTitle": {
+    "message": "New in 2.1.0"
+  },
+  "updateHeading": {
+    "message": "More reliable flag rendering, more control"
+  },
+  "updateRendering": {
+    "message": "Improved flag rendering in dynamically loaded text, including England, Scotland and Wales."
+  },
+  "updatePerformance": {
+    "message": "Targeted processing replaces global font overrides and repeated whole-page scans, reducing interference with website fonts and editable content."
+  },
+  "updateControls": {
+    "message": "Use the toolbar popup to ignore the current website or enable flag fixing again. Manage domains and their subdomains in Settings."
+  },
+  "updateReload": {
+    "message": "Reload pages that were already open to use the updated extension. Your settings remain saved."
+  },
+  "updateLimits": {
+    "message": "Flag fixing applies to supported DOM text. Editable content, canvas rendering, closed shadow roots and browser-restricted pages are not processed."
+  },
+  "privacyPolicy": {
+    "message": "Privacy policy"
   }
 }

@@ -1,32 +1,45 @@
 {
-    "name": "Country Flag Fixer",
-    "default_locale": "en",
-    "description": "__MSG_extDesc__",
-    "version": "2.0.2",
-    "manifest_version": 3,
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content_head.js"],
-            "run_at": "document_idle",
-            "all_frames": true
-        },
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"],
-            "run_at": "document_start",
-            "all_frames": true
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "matches": ["<all_urls>"],
-            "resources": ["assets/TwemojiCountryFlags.woff2"]
-        }
-    ],
-    "icons": { 
-        "16": "assets/icons/icon16.png",
-        "48": "assets/icons/icon48.png",
-       "128": "assets/icons/icon128.png" 
+  "name": "Country Flag Fixer",
+  "default_locale": "en",
+  "description": "__MSG_extDesc__",
+  "version": "2.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Country Flag Fixer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentHead.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
     }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["fonts/TwemojiCountryFlags.woff2"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"]
 }

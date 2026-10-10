@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Erstatter automatisk mystiske landekoder med det tilsvarende flag. Løsningen for Chromium-brugere på Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Indstillinger"
+  },
+  "ignoredHeading": {
+    "message": "Ignorerede websteder"
+  },
+  "ignoredHelp": {
+    "message": "Flagkorrektion er deaktiveret på det domæne, du tilføjer, samt alle underdomæner til dette domæne. Hvis du indtaster en webadresses URL, gemmes kun dens værtsnavn. Stien har ingen indflydelse på, hvilke sider der udelukkes."
+  },
+  "ignoredExample": {
+    "message": "<strong>Eksempel:</strong> <code>example.com</code> deaktiverer også flagkorrektion på <code>www.example.com</code> og <code>blog.example.com</code>. Hvis man kun tilføjer <code>blog.example.com</code>, forbliver <code>example.com</code> og <code>www.example.com</code> aktive. <code>https://example.com/page</code> gælder for hele <code>example.com</code>, ikke kun <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Genindlæs åbne sider, når du har ændret denne liste. Indlejret indhold på et udeladt websted udelades også."
+  },
+  "domainLabel": {
+    "message": "Domæne eller webadressen"
+  },
+  "domainPlaceholder": {
+    "message": "For eksempel: example.com"
+  },
+  "addDomain": {
+    "message": "Tilføj websted"
+  },
+  "deleteDomain": {
+    "message": "Fjern"
+  },
+  "deleteDomainLabel": {
+    "message": "Fjern $1 fra listen over ignorerede websteder"
+  },
+  "loading": {
+    "message": "Indlæser ignorerede websteder…"
+  },
+  "noDomains": {
+    "message": "Ingen hjemmesider ignoreres."
+  },
+  "invalidDomain": {
+    "message": "Indtast et gyldigt domæne eller en HTTP(S)-webadressen."
+  },
+  "duplicateDomain": {
+    "message": "Dette domæne er allerede på listen."
+  },
+  "storageError": {
+    "message": "Det var ikke muligt at læse eller gemme dine indstillinger. Prøv igen."
+  },
+  "domainAdded": {
+    "message": "Websted tilføjet. Genindlæs de åbne sider for at anvende denne indstilling."
+  },
+  "domainRemoved": {
+    "message": "Webstedet er fjernet. Genindlæs de åbne sider for at aktivere flagkorrektion."
+  },
+  "popupIgnore": {
+    "message": "Ignorer dette websted"
+  },
+  "popupEnable": {
+    "message": "Aktivér flagkorrektion"
+  },
+  "popupActive": {
+    "message": "Flagkorrektion er aktiveret på dette websted."
+  },
+  "popupIgnored": {
+    "message": "Dette websted ignoreres."
+  },
+  "popupParent": {
+    "message": "Dette websted ignoreres på grund af $1. Rediger dette domæne i Indstillinger for at aktivere flagkorrektion her."
+  },
+  "popupUnavailable": {
+    "message": "Denne side er ikke et understøttet websted, eller adressen er ikke tilgængelig."
+  },
+  "popupReload": {
+    "message": "Genindlæs siden efter at have ændret indstillingen. Undtagelsen gælder dette værtsnavn og dets underdomæner."
+  },
+  "updateTitle": {
+    "message": "Nyt i 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Mere pålidelig flagvisning, mere kontrol"
+  },
+  "updateRendering": {
+    "message": "Forbedret flagvisning i dynamisk indlæst tekst, inklusive England, Skotland og Wales."
+  },
+  "updatePerformance": {
+    "message": "Målrettet behandling erstatter globale skrifttypeændringer og gentagne scanninger af hele siden og begrænser påvirkningen af websteders skrifttyper og redigerbar tekst."
+  },
+  "updateControls": {
+    "message": "Brug popupvinduet på værktøjslinjen til at ignorere det aktuelle websted eller aktivere flagkorrektion igen. Administrer domæner og underdomæner i Indstillinger."
+  },
+  "updateReload": {
+    "message": "Genindlæs åbne sider for at bruge den opdaterede udvidelse. Dine indstillinger bevares."
+  },
+  "updateLimits": {
+    "message": "Flagkorrektion gælder understøttet DOM-tekst. Redigerbar tekst, canvas, lukkede shadow roots og sider med browserbegrænsninger behandles ikke."
+  },
+  "privacyPolicy": {
+    "message": "Privatlivspolitik"
   }
 }

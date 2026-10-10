@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Tự động thay thế mã quốc gia bí ẩn bằng cờ tương ứng. Giải pháp cho người dùng Chromium trên Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Cài đặt"
+  },
+  "ignoredHeading": {
+    "message": "Các trang web bị bỏ qua"
+  },
+  "ignoredHelp": {
+    "message": "Tính năng sửa cờ sẽ bị vô hiệu hóa trên tên miền bạn thêm vào và tất cả các tên miền con của tên miền đó. Nếu bạn nhập URL của một trang web, chỉ tên máy chủ của trang web đó mới được lưu lại. Đường dẫn không ảnh hưởng đến việc các trang nào sẽ bị loại trừ."
+  },
+  "ignoredExample": {
+    "message": "<strong>Ví dụ:</strong> <code>example.com</code> cũng vô hiệu hóa tính năng sửa cờ trên <code>www.example.com</code> và <code>blog.example.com</code>. Chỉ thêm <code>blog.example.com</code> sẽ giữ nguyên tính năng hoạt động trên <code>example.com</code> và <code>www.example.com</code>. <code>https://example.com/page</code> áp dụng cho toàn bộ <code>example.com</code>, không chỉ riêng <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Tải lại các trang đang mở sau khi thay đổi danh sách này. Nội dung nhúng trên trang web bị bỏ qua cũng sẽ bị loại trừ."
+  },
+  "domainLabel": {
+    "message": "Tên miền hoặc URL trang web"
+  },
+  "domainPlaceholder": {
+    "message": "Ví dụ: example.com"
+  },
+  "addDomain": {
+    "message": "Thêm trang web"
+  },
+  "deleteDomain": {
+    "message": "Xóa"
+  },
+  "deleteDomainLabel": {
+    "message": "Xóa $1 khỏi danh sách các trang web bị bỏ qua"
+  },
+  "loading": {
+    "message": "Đang tải các trang web bị bỏ qua…"
+  },
+  "noDomains": {
+    "message": "Không có trang web nào bị bỏ qua."
+  },
+  "invalidDomain": {
+    "message": "Nhập tên miền hợp lệ hoặc URL trang web HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Tên miền này đã có trong danh sách."
+  },
+  "storageError": {
+    "message": "Không thể đọc hoặc lưu cài đặt của bạn. Vui lòng thử lại."
+  },
+  "domainAdded": {
+    "message": "Đã thêm trang web. Vui lòng tải lại các trang đang mở của trang web đó để áp dụng cài đặt này."
+  },
+  "domainRemoved": {
+    "message": "Trang web đã bị loại bỏ. Vui lòng tải lại các trang đang mở để kích hoạt tính năng sửa cờ."
+  },
+  "popupIgnore": {
+    "message": "Bỏ qua trang web này"
+  },
+  "popupEnable": {
+    "message": "Bật sửa hiển thị cờ"
+  },
+  "popupActive": {
+    "message": "Sửa hiển thị cờ đang bật trên trang web này."
+  },
+  "popupIgnored": {
+    "message": "Trang web này đang bị bỏ qua."
+  },
+  "popupParent": {
+    "message": "Trang web này bị bỏ qua do tên miền $1 bị loại trừ. Hãy chỉnh sửa tên miền đó trong Cài đặt để bật sửa hiển thị cờ tại đây."
+  },
+  "popupUnavailable": {
+    "message": "Trang này không phải là trang web được hỗ trợ hoặc không thể truy cập địa chỉ của trang."
+  },
+  "popupReload": {
+    "message": "Tải lại trang này sau khi thay đổi cài đặt. Việc loại trừ áp dụng cho tên máy chủ này và các tên miền phụ của nó."
+  },
+  "updateTitle": {
+    "message": "Điểm mới trong 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Hiển thị cờ đáng tin cậy hơn, kiểm soát tốt hơn"
+  },
+  "updateRendering": {
+    "message": "Cải thiện hiển thị cờ trong văn bản được tải động, bao gồm Anh, Scotland và Wales."
+  },
+  "updatePerformance": {
+    "message": "Xử lý có mục tiêu thay thế thay đổi phông chữ toàn cục và việc quét lại toàn bộ trang, giảm ảnh hưởng đến phông chữ của trang web và nội dung có thể chỉnh sửa."
+  },
+  "updateControls": {
+    "message": "Dùng cửa sổ trên thanh công cụ để bỏ qua trang web hiện tại hoặc bật lại sửa hiển thị cờ. Quản lý tên miền và tên miền phụ trong Cài đặt."
+  },
+  "updateReload": {
+    "message": "Tải lại các trang đang mở để sử dụng tiện ích đã cập nhật. Cài đặt của bạn vẫn được lưu."
+  },
+  "updateLimits": {
+    "message": "Sửa hiển thị cờ áp dụng cho văn bản DOM được hỗ trợ. Nội dung có thể chỉnh sửa, hiển thị canvas, shadow root đóng và trang bị trình duyệt hạn chế không được xử lý."
+  },
+  "privacyPolicy": {
+    "message": "Chính sách quyền riêng tư"
   }
 }

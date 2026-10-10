@@ -1,1 +1,7 @@
 Releases
+dist
+node_modules
+
+# Local, one-off translation tools.
+/scripts/translate-options.cjs
+/tests/translation.cjs

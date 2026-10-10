@@ -1,0 +1,6 @@
+# Dependencies do not need lifecycle scripts; native Tailwind binaries are
+# provided as platform-specific packages. Keep scripts blocked during install.
+allowBuilds: {}
+
+# Require the pinned CLI instead of launching a nested package-manager install.
+pmOnFail: error

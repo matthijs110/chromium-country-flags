@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Ersetzt mysteriöse Ländercodes automatisch durch die entsprechende Flagge. Die Lösung für Chromium-Nutzer unter Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "ignoredHeading": {
+    "message": "Ignorierte Websites"
+  },
+  "ignoredHelp": {
+    "message": "Die Flaggenkorrektur ist auf der von Ihnen hinzugefügten Domain und allen Subdomains dieser Domain deaktiviert. Wenn Sie die URL einer Website eingeben, wird nur deren Hostname gespeichert. Der Pfad hat keinen Einfluss darauf, welche Seiten ausgeschlossen werden."
+  },
+  "ignoredExample": {
+    "message": "<strong>Beispiel:</strong> <code>example.com</code> deaktiviert die Flaggenkorrektur auch auf <code>www.example.com</code> und <code>blog.example.com</code>. Wenn nur <code>blog.example.com</code> hinzugefügt wird, bleiben <code>example.com</code> und <code>www.example.com</code> aktiv. <code>https://example.com/page</code> gilt für die gesamte Domain <code>example.com</code>, nicht nur für <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Laden Sie geöffnete Seiten nach dem Ändern dieser Liste neu. Eingebettete Inhalte auf einer ignorierten Website werden ebenfalls ausgeschlossen."
+  },
+  "domainLabel": {
+    "message": "Domain oder Website-URL"
+  },
+  "domainPlaceholder": {
+    "message": "Beispiel: example.com"
+  },
+  "addDomain": {
+    "message": "Website hinzufügen"
+  },
+  "deleteDomain": {
+    "message": "Entfernen"
+  },
+  "deleteDomainLabel": {
+    "message": "Entfernen Sie $1 aus der Liste der ignorierten Websites"
+  },
+  "loading": {
+    "message": "Ignorierte Websites werden geladen…"
+  },
+  "noDomains": {
+    "message": "Es werden keine Websites ignoriert."
+  },
+  "invalidDomain": {
+    "message": "Geben Sie eine gültige Domain oder eine HTTP(S)-URL einer Website ein."
+  },
+  "duplicateDomain": {
+    "message": "Diese Domain ist bereits in der Liste enthalten."
+  },
+  "storageError": {
+    "message": "Ihre Einstellungen konnten nicht gelesen oder gespeichert werden. Bitte versuchen Sie es erneut."
+  },
+  "domainAdded": {
+    "message": "Website hinzugefügt. Laden Sie die geöffneten Seiten neu, um diese Einstellung zu übernehmen."
+  },
+  "domainRemoved": {
+    "message": "Website entfernt. Laden Sie die geöffneten Seiten neu, um die Flaggenkorrektur zu aktivieren."
+  },
+  "popupIgnore": {
+    "message": "Diese Website ignorieren"
+  },
+  "popupEnable": {
+    "message": "Flaggenkorrektur aktivieren"
+  },
+  "popupActive": {
+    "message": "Die Flaggenkorrektur ist auf dieser Website aktiviert."
+  },
+  "popupIgnored": {
+    "message": "Diese Website wird ignoriert."
+  },
+  "popupParent": {
+    "message": "Diese Website wird aufgrund von $1 ignoriert. Bearbeite diese Domain in den Einstellungen, um die Flaggenkorrektur hier zu aktivieren."
+  },
+  "popupUnavailable": {
+    "message": "Diese Seite ist keine unterstützte Website oder ihre Adresse ist nicht verfügbar."
+  },
+  "popupReload": {
+    "message": "Lade diese Seite nach einer Änderung der Einstellung neu. Der Ausschluss gilt für diesen Hostnamen und seine Subdomains."
+  },
+  "updateTitle": {
+    "message": "Neu in 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Zuverlässigere Flaggenanzeige, mehr Kontrolle"
+  },
+  "updateRendering": {
+    "message": "Verbesserte Flaggenanzeige in dynamisch geladenem Text, einschließlich England, Schottland und Wales."
+  },
+  "updatePerformance": {
+    "message": "Gezielte Verarbeitung ersetzt globale Schriftänderungen und wiederholte Scans ganzer Seiten. Dadurch werden Eingriffe in Website-Schriften und bearbeitbare Inhalte reduziert."
+  },
+  "updateControls": {
+    "message": "Über das Popup in der Symbolleiste kannst du die aktuelle Website ignorieren oder die Flaggenkorrektur wieder aktivieren. Domains und Subdomains verwaltest du in den Einstellungen."
+  },
+  "updateReload": {
+    "message": "Lade bereits geöffnete Seiten neu, um die aktualisierte Erweiterung zu verwenden. Deine Einstellungen bleiben gespeichert."
+  },
+  "updateLimits": {
+    "message": "Die Flaggenkorrektur gilt für unterstützten DOM-Text. Bearbeitbare Inhalte, Canvas-Darstellung, geschlossene Shadow Roots und vom Browser eingeschränkte Seiten werden nicht verarbeitet."
+  },
+  "privacyPolicy": {
+    "message": "Datenschutzerklärung"
   }
 }

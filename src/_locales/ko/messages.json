@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "신비한 국가 코드를 해당 플래그로 자동 교체합니다. Windows의 Chromium 사용자를 위한 솔루션!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "ignoredHeading": {
+    "message": "제외 대상 웹사이트"
+  },
+  "ignoredHelp": {
+    "message": "추가한 도메인과 해당 도메인의 모든 하위 도메인에서는 국기 수정 기능이 비활성화됩니다. 웹사이트 URL을 입력하면 호스트 이름만 저장됩니다. 경로는 제외될 페이지에 영향을 미치지 않습니다."
+  },
+  "ignoredExample": {
+    "message": "<strong>예시:</strong>, <code>example.com</code>을 추가하면 <code>www.example.com</code> 및 <code>blog.example.com</code>에서도 국기 자동 수정 기능이 비활성화됩니다. <code>blog.example.com</code>만 추가하면 <code>example.com</code> 및 <code>www.example.com</code>은 계속 활성화됩니다. <code>https://example.com/page</code>을 추가하면 <code>/page</code>뿐만 아니라 <code>example.com</code> 전체에 적용됩니다."
+  },
+  "reloadHelp": {
+    "message": "이 목록을 변경한 후 열려 있는 페이지를 새로 고침하십시오. 무시 대상 웹사이트에 포함된 임베디드 콘텐츠도 제외됩니다."
+  },
+  "domainLabel": {
+    "message": "도메인 또는 웹사이트 URL"
+  },
+  "domainPlaceholder": {
+    "message": "예: example.com"
+  },
+  "addDomain": {
+    "message": "웹사이트 추가"
+  },
+  "deleteDomain": {
+    "message": "제거"
+  },
+  "deleteDomainLabel": {
+    "message": "무시 대상 웹사이트 목록에서 $1을 제거합니다."
+  },
+  "loading": {
+    "message": "무시된 웹사이트를 불러오는 중…"
+  },
+  "noDomains": {
+    "message": "무시되는 웹사이트가 없습니다."
+  },
+  "invalidDomain": {
+    "message": "유효한 도메인 또는 HTTP(S) 웹사이트 URL을 입력하세요."
+  },
+  "duplicateDomain": {
+    "message": "이 도메인은 이미 목록에 포함되어 있습니다."
+  },
+  "storageError": {
+    "message": "설정을 읽거나 저장할 수 없습니다. 다시 시도해 주세요."
+  },
+  "domainAdded": {
+    "message": "웹사이트가 추가되었습니다. 이 설정을 적용하려면 해당 웹사이트의 열려 있는 페이지를 새로 고침하십시오."
+  },
+  "domainRemoved": {
+    "message": "웹사이트가 제거되었습니다. 열려 있는 페이지를 새로 고침하면 국기 자동 수정 기능이 활성화됩니다."
+  },
+  "popupIgnore": {
+    "message": "이 웹사이트 제외"
+  },
+  "popupEnable": {
+    "message": "국기 표시 보정 켜기"
+  },
+  "popupActive": {
+    "message": "이 웹사이트에서 국기 표시 보정이 켜져 있습니다."
+  },
+  "popupIgnored": {
+    "message": "이 웹사이트는 제외되어 있습니다."
+  },
+  "popupParent": {
+    "message": "$1 제외 설정으로 인해 이 웹사이트가 제외되어 있습니다. 여기서 국기 표시 보정을 켜려면 설정에서 해당 도메인을 수정하세요."
+  },
+  "popupUnavailable": {
+    "message": "지원되지 않는 페이지이거나 페이지 주소를 확인할 수 없습니다."
+  },
+  "popupReload": {
+    "message": "설정을 변경한 후 이 페이지를 새로고침하세요. 제외 설정은 이 호스트 이름과 하위 도메인에 적용됩니다."
+  },
+  "updateTitle": {
+    "message": "2.1.0의 새로운 기능"
+  },
+  "updateHeading": {
+    "message": "더 안정적인 국기 표시, 더 많은 제어"
+  },
+  "updateRendering": {
+    "message": "동적으로 불러오는 텍스트의 국기 표시가 개선되었으며 잉글랜드, 스코틀랜드, 웨일스도 포함됩니다."
+  },
+  "updatePerformance": {
+    "message": "대상을 한정한 처리가 전체 글꼴 변경과 반복적인 페이지 전체 스캔을 대체하여 사이트 글꼴과 편집 가능한 콘텐츠에 미치는 영향을 줄입니다."
+  },
+  "updateControls": {
+    "message": "도구 모음 팝업에서 현재 사이트를 제외하거나 국기 표시 보정을 다시 켤 수 있습니다. 설정에서 도메인과 하위 도메인을 관리하세요."
+  },
+  "updateReload": {
+    "message": "업데이트된 확장 프로그램을 사용하려면 이미 열려 있던 페이지를 새로고침하세요. 설정은 그대로 저장됩니다."
+  },
+  "updateLimits": {
+    "message": "국기 표시 보정은 지원되는 DOM 텍스트에 적용됩니다. 편집 가능한 콘텐츠, canvas 렌더링, 닫힌 shadow root, 브라우저가 제한하는 페이지는 처리하지 않습니다."
+  },
+  "privacyPolicy": {
+    "message": "개인정보 처리방침"
   }
 }

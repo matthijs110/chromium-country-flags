@@ -1,0 +1,40 @@
+name: Build and tests
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    # Test on Windows, where the extension's flag rendering is needed.
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v6
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build and verify in Chrome
+        run: pnpm run verify
+      - name: Verify in Edge
+        env:
+          BROWSER_PATH: C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+        run: |
+          pnpm run test:browser
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          pnpm run test:integration
+      - name: Audit dependencies
+        run: pnpm audit

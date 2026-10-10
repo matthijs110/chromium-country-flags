@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Remplace automatiquement les codes pays mystérieux par le drapeau correspondant. La solution pour les utilisateurs de Chromium sur Windows !",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "ignoredHeading": {
+    "message": "Sites web ignorés"
+  },
+  "ignoredHelp": {
+    "message": "La correction des drapeaux est désactivée sur le domaine que vous ajoutez et sur tous ses sous-domaines. Si vous saisissez l'URL d'un site web, seul son nom d'hôte est enregistré. Le chemin d'accès n'a aucune incidence sur les pages exclues."
+  },
+  "ignoredExample": {
+    "message": "<strong>Exemple :</strong> <code>example.com</code> désactive également la correction des drapeaux sur <code>www.example.com</code> et <code>blog.example.com</code>. L'ajout de <code>blog.example.com</code> seul laisse <code>example.com</code> et <code>www.example.com</code> actifs. <code>https://example.com/page</code> s'applique à l'ensemble de <code>example.com</code>, et pas seulement à <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Rechargez les pages ouvertes après avoir modifié cette liste. Le contenu intégré à un site web ignoré est également exclu."
+  },
+  "domainLabel": {
+    "message": "Domaine ou URL du site web"
+  },
+  "domainPlaceholder": {
+    "message": "Par exemple : example.com"
+  },
+  "addDomain": {
+    "message": "Ajouter un site web"
+  },
+  "deleteDomain": {
+    "message": "Supprimer"
+  },
+  "deleteDomainLabel": {
+    "message": "Supprimer $1 de la liste des sites web ignorés"
+  },
+  "loading": {
+    "message": "Chargement des sites web ignorés…"
+  },
+  "noDomains": {
+    "message": "Aucun site web n'est ignoré."
+  },
+  "invalidDomain": {
+    "message": "Saisissez un domaine valide ou l'URL d'un site web HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Ce domaine figure déjà dans la liste."
+  },
+  "storageError": {
+    "message": "Impossible de lire ou d'enregistrer vos paramètres. Veuillez réessayer."
+  },
+  "domainAdded": {
+    "message": "Site web ajouté. Actualisez ses pages ouvertes pour appliquer ce paramètre."
+  },
+  "domainRemoved": {
+    "message": "Site web supprimé. Actualisez ses pages ouvertes pour activer la correction des drapeaux."
+  },
+  "popupIgnore": {
+    "message": "Ignorer ce site"
+  },
+  "popupEnable": {
+    "message": "Activer la correction des drapeaux"
+  },
+  "popupActive": {
+    "message": "La correction des drapeaux est activée sur ce site."
+  },
+  "popupIgnored": {
+    "message": "Ce site est ignoré."
+  },
+  "popupParent": {
+    "message": "Ce site est ignoré en raison de l’exclusion de $1. Modifiez ce domaine dans les paramètres pour activer la correction des drapeaux ici."
+  },
+  "popupUnavailable": {
+    "message": "Cette page n’est pas un site pris en charge ou son adresse n’est pas disponible."
+  },
+  "popupReload": {
+    "message": "Rechargez cette page après avoir modifié le réglage. L’exclusion s’applique à ce nom d’hôte et à ses sous-domaines."
+  },
+  "updateTitle": {
+    "message": "Nouveautés de la version 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Des drapeaux mieux affichés, plus de contrôle"
+  },
+  "updateRendering": {
+    "message": "Affichage amélioré des drapeaux dans le texte chargé dynamiquement, notamment ceux de l’Angleterre, de l’Écosse et du pays de Galles."
+  },
+  "updatePerformance": {
+    "message": "Le traitement ciblé remplace les modifications globales de polices et les analyses répétées de pages entières, limitant les interférences avec les polices des sites et le contenu modifiable."
+  },
+  "updateControls": {
+    "message": "Utilisez la fenêtre de la barre d’outils pour ignorer le site actuel ou réactiver la correction des drapeaux. Gérez les domaines et sous-domaines dans les paramètres."
+  },
+  "updateReload": {
+    "message": "Rechargez les pages déjà ouvertes pour utiliser l’extension mise à jour. Vos paramètres restent enregistrés."
+  },
+  "updateLimits": {
+    "message": "La correction s’applique au texte DOM pris en charge. Le contenu modifiable, le rendu canvas, les shadow roots fermés et les pages restreintes par le navigateur ne sont pas traités."
+  },
+  "privacyPolicy": {
+    "message": "Politique de confidentialité"
   }
 }

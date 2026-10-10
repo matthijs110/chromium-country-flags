@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country Flag Fixer | Settings</title>
+
+    <link rel="icon" href="../icons/icon48.png" />
+    <link rel="stylesheet" href="../css/dist.css" />
+    <script src="options.js" defer></script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900">
+    <main class="mx-auto max-w-3xl px-4 py-10 sm:px-8">
+      <header class="mb-8 flex items-center gap-4">
+        <img src="../icons/icon48.png" width="48" height="48" alt="" />
+        <div>
+          <h1 class="text-2xl font-bold">Country Flag Fixer</h1>
+          <p id="options-title" class="text-slate-600" data-i18n="settings"></p>
+        </div>
+      </header>
+
+      <section
+        class="rounded-xl border border-slate-200 bg-white p-5 shadow-xs sm:p-8"
+        aria-labelledby="ignored-heading"
+      >
+        <h2 id="ignored-heading" class="mb-2 text-xl font-semibold" data-i18n="ignoredHeading">Ignored websites</h2>
+        <!-- Text is localized by options.js; explain scope before requesting input. -->
+        <p id="domain-help" class="mb-3 text-slate-600" data-i18n="ignoredHelp"></p>
+        <p id="domain-example" class="mb-4 text-sm text-slate-600 leading-6" data-i18n="ignoredExample"></p>
+        <p class="mb-6 rounded-lg bg-blue-50 p-3 text-sm text-blue-900 leading-6" data-i18n="reloadHelp"></p>
+
+        <form id="add-domain-form" class="mb-6">
+          <label for="domain-input" class="mb-2 block font-medium" data-i18n="domainLabel"></label>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <input
+              id="domain-input"
+              name="url"
+              type="text"
+              required
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="domain-help domain-example form-message"
+              class="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2"
+              data-i18n-placeholder="domainPlaceholder"
+            />
+
+            <button
+              type="submit"
+              class="rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800"
+              data-i18n="addDomain"
+            ></button>
+          </div>
+        </form>
+
+        <!-- Separate live regions announce form feedback and list updates. -->
+        <p id="form-message" role="status" aria-live="polite" class="mb-4 text-sm"></p>
+        <p id="list-status" role="status" aria-live="polite" class="text-slate-600"></p>
+
+        <!-- options.js renders saved domains and their remove buttons here. -->
+        <ul id="sites-list" class="divide-y divide-slate-200"></ul>
+      </section>
+
+      <!-- Open the public policy separately so the settings page remains available. -->
+      <footer class="mt-6 text-sm">
+        <a href="https://github.com/matthijs110/chromium-country-flags/blob/master/PRIVACY.md"
+          target="_blank" rel="noopener noreferrer"
+          class="text-blue-700 underline hover:text-blue-800" data-i18n="privacyPolicy"></a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Gizemli ülke kodlarını otomatik olarak ilgili bayrakla değiştirir. Windows'ta Chromium kullanıcıları için çözüm!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "ignoredHeading": {
+    "message": "Yoksayılan web siteleri"
+  },
+  "ignoredHelp": {
+    "message": "Eklediğiniz etki alanında ve bu etki alanının tüm alt etki alanlarında bayrak düzeltme devre dışı bırakılır. Bir web sitesi URL'si girerseniz, yalnızca ana bilgisayar adı kaydedilir. Yol, hangi sayfaların hariç tutulacağını etkilemez."
+  },
+  "ignoredExample": {
+    "message": "<strong>Örnek:</strong> <code>example.com</code>, <code>www.example.com</code> ve <code>blog.example.com</code> adreslerinde de bayrak düzeltme özelliğini devre dışı bırakır. Yalnızca <code>blog.example.com</code> eklenirse, <code>example.com</code> ve <code>www.example.com</code> adresleri aktif kalır. <code>https://example.com/page</code>, yalnızca <code>/page</code> adresini değil, <code>example.com</code> adresinin tamamını kapsar."
+  },
+  "reloadHelp": {
+    "message": "Bu listeyi değiştirdikten sonra açık sayfaları yeniden yükleyin. Yoksayılan bir web sitesindeki gömülü içerik de hariç tutulur."
+  },
+  "domainLabel": {
+    "message": "Etki alanı veya web sitesi URL'si"
+  },
+  "domainPlaceholder": {
+    "message": "Örneğin: example.com"
+  },
+  "addDomain": {
+    "message": "Web sitesi ekle"
+  },
+  "deleteDomain": {
+    "message": "Kaldır"
+  },
+  "deleteDomainLabel": {
+    "message": "$1'u göz ardı edilen web siteleri listesinden kaldırın"
+  },
+  "loading": {
+    "message": "Yoksayılan web siteleri yükleniyor…"
+  },
+  "noDomains": {
+    "message": "Hiçbir web sitesi göz ardı edilmez."
+  },
+  "invalidDomain": {
+    "message": "Geçerli bir etki alanı veya HTTP(S) web sitesi URL'si girin."
+  },
+  "duplicateDomain": {
+    "message": "Bu alan adı zaten listede yer almaktadır."
+  },
+  "storageError": {
+    "message": "Ayarlarınızı okuyamadık veya kaydedemedik. Lütfen tekrar deneyin."
+  },
+  "domainAdded": {
+    "message": "Web sitesi eklendi. Bu ayarın uygulanması için açık sayfaları yeniden yükleyin."
+  },
+  "domainRemoved": {
+    "message": "Web sitesi kaldırıldı. Bayrak düzeltme özelliğini etkinleştirmek için açık sayfaları yeniden yükleyin."
+  },
+  "popupIgnore": {
+    "message": "Bu web sitesini yok say"
+  },
+  "popupEnable": {
+    "message": "Bayrak düzeltmesini etkinleştir"
+  },
+  "popupActive": {
+    "message": "Bu web sitesinde bayrak düzeltmesi etkin."
+  },
+  "popupIgnored": {
+    "message": "Bu web sitesi yok sayılıyor."
+  },
+  "popupParent": {
+    "message": "Bu web sitesi, $1 hariç tutulduğu için yok sayılıyor. Burada bayrak düzeltmesini etkinleştirmek için Ayarlar'da bu alan adını düzenleyin."
+  },
+  "popupUnavailable": {
+    "message": "Bu sayfa desteklenen bir web sitesi değil veya adresine erişilemiyor."
+  },
+  "popupReload": {
+    "message": "Ayarı değiştirdikten sonra bu sayfayı yeniden yükleyin. Hariç tutma bu ana makine adı ve alt alan adları için geçerlidir."
+  },
+  "updateTitle": {
+    "message": "2.1.0 sürümündeki yenilikler"
+  },
+  "updateHeading": {
+    "message": "Daha güvenilir bayrak gösterimi, daha fazla kontrol"
+  },
+  "updateRendering": {
+    "message": "Dinamik yüklenen metinlerde İngiltere, İskoçya ve Galler dahil daha iyi bayrak gösterimi."
+  },
+  "updatePerformance": {
+    "message": "Hedefli işleme, genel yazı tipi değişikliklerinin ve tüm sayfanın tekrar tekrar taranmasının yerini alarak site yazı tipleri ve düzenlenebilir içerik üzerindeki etkileri azaltır."
+  },
+  "updateControls": {
+    "message": "Araç çubuğu açılır penceresinden mevcut siteyi yok sayabilir veya bayrak düzeltmesini yeniden etkinleştirebilirsiniz. Alan adlarını ve alt alan adlarını Ayarlar'da yönetin."
+  },
+  "updateReload": {
+    "message": "Güncellenmiş uzantıyı kullanmak için açık sayfaları yeniden yükleyin. Ayarlarınız kayıtlı kalır."
+  },
+  "updateLimits": {
+    "message": "Bayrak düzeltmesi desteklenen DOM metnine uygulanır. Düzenlenebilir içerik, canvas çizimi, kapalı shadow roots ve tarayıcının kısıtladığı sayfalar işlenmez."
+  },
+  "privacyPolicy": {
+    "message": "Gizlilik politikası"
   }
 }

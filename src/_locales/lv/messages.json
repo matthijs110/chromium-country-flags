@@ -2,5 +2,101 @@
   "extDesc": {
     "message": "Paslaptingus šalių kodus automatiškai pakeičia atitinkama vėliava. Sprendimas \"Chromium\" naudotojams \"Windows\" sistemoje!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Iestatījumi"
+  },
+  "ignoredHeading": {
+    "message": "Ignorētās tīmekļa vietnes"
+  },
+  "ignoredHelp": {
+    "message": "Karogu fiksēšana ir atspējota pievienotajā domēnā un visos šī domēna apakšdomēnos. Ja ievadāt tīmekļa vietnes URL, tiek saglabāts tikai tās uzņēmuma nosaukums. Celiņš neietekmē to, kuras lapas tiek izslēgtas."
+  },
+  "ignoredExample": {
+    "message": "<strong>Piemērs:</strong> <code>example.com</code> atspējo karogu fiksēšanu arī vietnēs <code>www.example.com</code> un <code>blog.example.com</code>. Pievienojot tikai <code>blog.example.com</code>, <code>example.com</code> un <code>www.example.com</code> paliek aktīvas. <code>https://example.com/page</code> attiecas uz visu <code>example.com</code>, nevis tikai uz <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Pēc šī saraksta izmaiņu veikšanas atjauniniet atvērtās lapas. Tiek izslēgts arī ignorētajā tīmekļa vietnē iegultais saturs."
+  },
+  "domainLabel": {
+    "message": "Domēns vai tīmekļa vietnes URL"
+  },
+  "domainPlaceholder": {
+    "message": "Piemēram: example.com"
+  },
+  "addDomain": {
+    "message": "Pievienot tīmekļa vietni"
+  },
+  "deleteDomain": {
+    "message": "Noņemt"
+  },
+  "deleteDomainLabel": {
+    "message": "No ignorēto tīmekļa vietņu saraksta izņemiet $1"
+  },
+  "loading": {
+    "message": "Tiek ielādētas ignorētās tīmekļa vietnes…"
+  },
+  "noDomains": {
+    "message": "Netiek ignorēta neviena tīmekļa vietne."
+  },
+  "invalidDomain": {
+    "message": "Ievadiet derīgu domēnu vai HTTP(S) tīmekļa vietnes URL."
+  },
+  "duplicateDomain": {
+    "message": "Šis domēns jau ir sarakstā."
+  },
+  "storageError": {
+    "message": "Neizdevās nolasīt vai saglabāt jūsu iestatījumus. Lūdzu, mēģiniet vēlreiz."
+  },
+  "domainAdded": {
+    "message": "Tīmekļa vietne pievienota. Lai piemērotu šo iestatījumu, atjauniniet tās atvērtās lapas."
+  },
+  "domainRemoved": {
+    "message": "Tīmekļa vietne ir noņemta. Atjauniniet tās atvērtās lapas, lai aktivizētu karogu fiksēšanu."
+  },
+  "popupIgnore": {
+    "message": "Ignorēt šo vietni"
+  },
+  "popupEnable": {
+    "message": "Ieslēgt karogu labošanu"
+  },
+  "popupActive": {
+    "message": "Šajā vietnē karogu labošana ir ieslēgta."
+  },
+  "popupIgnored": {
+    "message": "Šī vietne tiek ignorēta."
+  },
+  "popupParent": {
+    "message": "Šī vietne tiek ignorēta domēna $1 izņēmuma dēļ. Mainiet šo domēnu iestatījumos, lai šeit ieslēgtu karogu labošanu."
+  },
+  "popupUnavailable": {
+    "message": "Šī lapa nav atbalstīta vietne vai tās adrese nav pieejama."
+  },
+  "popupReload": {
+    "message": "Pēc iestatījuma maiņas pārlādējiet šo lapu. Izņēmums attiecas uz šo resursdatora nosaukumu un tā apakšdomēniem."
+  },
+  "updateTitle": {
+    "message": "Jaunumi versijā 2.1.0"
+  },
+  "updateHeading": {
+    "message": "Uzticamāka karogu attēlošana, vairāk kontroles"
+  },
+  "updateRendering": {
+    "message": "Uzlabota karogu attēlošana dinamiski ielādētā tekstā, tostarp Anglijas, Skotijas un Velsas karogiem."
+  },
+  "updatePerformance": {
+    "message": "Mērķtiecīga apstrāde aizstāj globālas fontu izmaiņas un atkārtotu visas lapas skenēšanu, samazinot ietekmi uz vietņu fontiem un rediģējamu tekstu."
+  },
+  "updateControls": {
+    "message": "Izmantojiet rīkjoslas uznirstošo logu, lai ignorētu pašreizējo vietni vai atkal ieslēgtu karogu labošanu. Pārvaldiet domēnus un apakšdomēnus iestatījumos."
+  },
+  "updateReload": {
+    "message": "Pārlādējiet atvērtās lapas, lai izmantotu atjaunināto paplašinājumu. Iestatījumi paliek saglabāti."
+  },
+  "updateLimits": {
+    "message": "Karogu labošana attiecas uz atbalstītu DOM tekstu. Rediģējams saturs, canvas attēlojums, slēgti shadow roots un pārlūka ierobežotas lapas netiek apstrādātas."
+  },
+  "privacyPolicy": {
+    "message": "Privātuma politika"
   }
 }
