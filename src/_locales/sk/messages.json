@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Záhadné kódy krajín automaticky nahradí príslušnou vlajkou. Riešenie pre používateľov Chromium v systéme Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Nastavenia"
+  },
+  "ignoredHeading": {
+    "message": "Ignorované webové stránky"
+  },
+  "ignoredHelp": {
+    "message": "Opravovanie vlajok je deaktivované na doméne, ktorú pridáte, a na všetkých jej subdoménach. Ak zadáte URL webovej stránky, uloží sa len jej názov hostiteľa. Cesta nemá vplyv na to, ktoré stránky sú vylúčené."
+  },
+  "ignoredExample": {
+    "message": "<strong>Príklad:</strong> <code>example.com</code> tiež deaktivuje opravu vlajok na stránkach <code>www.example.com</code> a <code>blog.example.com</code>. Pridaním iba <code>blog.example.com</code> zostanú stránky <code>example.com</code> a <code>www.example.com</code> aktívne. <code>https://example.com/page</code> sa vzťahuje na všetky stránky <code>example.com</code>, nielen na <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Po zmene tohto zoznamu sa otvorené stránky znovu načítajú. Vylúčený je aj vložený obsah na ignorovanej webovej stránke."
+  },
+  "domainLabel": {
+    "message": "Doména alebo URL webovej stránky"
+  },
+  "domainPlaceholder": {
+    "message": "Napríklad: example.com"
+  },
+  "addDomain": {
+    "message": "Pridať webovú stránku"
+  },
+  "deleteDomain": {
+    "message": "Odstrániť"
+  },
+  "deleteDomainLabel": {
+    "message": "Odstráňte $1 zo zoznamu ignorovaných webových stránok"
+  },
+  "loading": {
+    "message": "Načítavanie ignorovaných webových stránok…"
+  },
+  "noDomains": {
+    "message": "Žiadne webové stránky nie sú ignorované."
+  },
+  "invalidDomain": {
+    "message": "Zadajte platnú doménu alebo URL webovej stránky v protokole HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Táto doména je už v zozname."
+  },
+  "storageError": {
+    "message": "Nepodarilo sa prečítať ani uložiť vaše nastavenia. Skúste to prosím znova."
+  },
+  "domainAdded": {
+    "message": "Webová stránka bola pridaná. Na uplatnenie tohto nastavenia obnovte jej otvorené stránky."
+  },
+  "domainRemoved": {
+    "message": "Webová stránka bola odstránená. Na povolenie opravy vlajok znovu načítajte jej otvorené stránky."
+  },
+  "popupIgnore": {
+    "message": "Ignorovať tento web"
+  },
+  "popupEnable": {
+    "message": "Zapnúť opravu vlajok"
+  },
+  "popupActive": {
+    "message": "Oprava vlajok je na tomto webe zapnutá."
+  },
+  "popupIgnored": {
+    "message": "Tento web sa ignoruje."
+  },
+  "popupParent": {
+    "message": "Tento web sa ignoruje pre vylúčenie domény $1. Upravte túto doménu v Nastaveniach a zapnite tu opravu vlajok."
+  },
+  "popupUnavailable": {
+    "message": "Táto stránka nie je podporovaný web alebo jej adresa nie je dostupná."
+  },
+  "popupReload": {
+    "message": "Po zmene nastavenia stránku znova načítajte. Výnimka platí pre tento názov hostiteľa a jeho subdomény."
   }
 }

@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Skrivnostne kode držav samodejno zamenja z ustrezno zastavo. Rešitev za uporabnike programa Chromium v operacijskem sistemu Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Nastavitve"
+  },
+  "ignoredHeading": {
+    "message": "Spletne strani, ki se ne upoštevajo"
+  },
+  "ignoredHelp": {
+    "message": "Popravljanje zastav je onemogočeno na domeni, ki jo dodate, in na vseh poddomenah te domene. Če vnesete URL spletne strani, se shrani le njeno ime gostitelja. Pot ne vpliva na to, katere strani so izključene."
+  },
+  "ignoredExample": {
+    "message": "<strong>Primer:</strong> <code>example.com</code> onemogoči popravljanje zastav tudi na <code>www.example.com</code> in <code>blog.example.com</code>. Če dodate samo <code>blog.example.com</code>, ostanejo <code>example.com</code> in <code>www.example.com</code> aktivni. <code>https://example.com/page</code> velja za celotno domeno <code>example.com</code>, ne le za <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Po spremembi tega seznama ponovno naložite odprte strani. Izključena je tudi vsebina, vgrajena v spletno stran, ki je izključena."
+  },
+  "domainLabel": {
+    "message": "Domena ali URL spletne strani"
+  },
+  "domainPlaceholder": {
+    "message": "Na primer: example.com"
+  },
+  "addDomain": {
+    "message": "Dodaj spletno stran"
+  },
+  "deleteDomain": {
+    "message": "Odstrani"
+  },
+  "deleteDomainLabel": {
+    "message": "Odstranite $1 iz seznama prezrtih spletnih strani"
+  },
+  "loading": {
+    "message": "Nalaganje spletnih strani, ki so izključene iz popravljanja zastav…"
+  },
+  "noDomains": {
+    "message": "Nobena spletna stran ni izključena."
+  },
+  "invalidDomain": {
+    "message": "Vnesite veljavno domeno ali URL spletne strani HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Ta domena je že na seznamu."
+  },
+  "storageError": {
+    "message": "Nastavitev ni bilo mogoče prebrati ali shraniti. Poskusite znova."
+  },
+  "domainAdded": {
+    "message": "Spletna stran je bila dodana. Za uporabo te nastavitve osvežite odprte strani."
+  },
+  "domainRemoved": {
+    "message": "Spletna stran je bila odstranjena. Ponovno naložite odprte strani, da omogočite popravljanje zastav."
+  },
+  "popupIgnore": {
+    "message": "Prezri to spletno mesto"
+  },
+  "popupEnable": {
+    "message": "Omogoči popravljanje zastav"
+  },
+  "popupActive": {
+    "message": "Popravljanje zastav je na tem spletnem mestu omogočeno."
+  },
+  "popupIgnored": {
+    "message": "To spletno mesto je prezrto."
+  },
+  "popupParent": {
+    "message": "To spletno mesto je prezrto zaradi izključitve domene $1. Spremenite to domeno v nastavitvah, da tukaj omogočite popravljanje zastav."
+  },
+  "popupUnavailable": {
+    "message": "Ta stran ni podprto spletno mesto ali njen naslov ni na voljo."
+  },
+  "popupReload": {
+    "message": "Po spremembi nastavitve znova naložite stran. Izključitev velja za to ime gostitelja in njegove poddomene."
   }
 }

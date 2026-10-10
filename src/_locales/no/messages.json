@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Erstatter mystiske landskoder automatisk med det tilsvarende flagget. Løsningen for Chromium-brukere på Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Innstillinger"
+  },
+  "ignoredHeading": {
+    "message": "Ignorerte nettsteder"
+  },
+  "ignoredHelp": {
+    "message": "Flaggkorrigering er deaktivert på domenet du legger til og alle underdomener til dette domenet. Hvis du oppgir en nettadressen til et nettsted, lagres kun vertsnavnet. Stien påvirker ikke hvilke sider som ekskluderes."
+  },
+  "ignoredExample": {
+    "message": "<strong>Eksempel:</strong> <code>example.com</code> deaktiverer også flaggjustering på <code>www.example.com</code> og <code>blog.example.com</code>. Hvis du bare legger til <code>blog.example.com</code>, forblir <code>example.com</code> og <code>www.example.com</code> aktive. <code>https://example.com/page</code> gjelder for hele <code>example.com</code>, ikke bare <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Last inn åpne sider på nytt etter at du har endret denne listen. Innebygd innhold på et ignorert nettsted blir også ekskludert."
+  },
+  "domainLabel": {
+    "message": "Domenenavn eller nettadressen til nettstedet"
+  },
+  "domainPlaceholder": {
+    "message": "For eksempel: example.com"
+  },
+  "addDomain": {
+    "message": "Legg til nettsted"
+  },
+  "deleteDomain": {
+    "message": "Fjern"
+  },
+  "deleteDomainLabel": {
+    "message": "Fjern $1 fra listen over ignorerte nettsteder"
+  },
+  "loading": {
+    "message": "Laster inn ignorerte nettsteder…"
+  },
+  "noDomains": {
+    "message": "Ingen nettsteder blir ignorert."
+  },
+  "invalidDomain": {
+    "message": "Skriv inn et gyldig domene eller en HTTP(S)-nettadresse."
+  },
+  "duplicateDomain": {
+    "message": "Dette domenet er allerede på listen."
+  },
+  "storageError": {
+    "message": "Kunne ikke lese eller lagre innstillingene dine. Prøv på nytt."
+  },
+  "domainAdded": {
+    "message": "Nettsted lagt til. Oppdater de åpne sidene for å ta denne innstillingen i bruk."
+  },
+  "domainRemoved": {
+    "message": "Nettstedet er fjernet. Last inn de åpne sidene på nytt for å aktivere flaggkorrigering."
+  },
+  "popupIgnore": {
+    "message": "Ignorer dette nettstedet"
+  },
+  "popupEnable": {
+    "message": "Aktiver flaggkorrigering"
+  },
+  "popupActive": {
+    "message": "Flaggkorrigering er aktivert på dette nettstedet."
+  },
+  "popupIgnored": {
+    "message": "Dette nettstedet ignoreres."
+  },
+  "popupParent": {
+    "message": "Dette nettstedet ignoreres fordi $1 er unntatt. Endre dette domenet i Innstillinger for å aktivere flaggkorrigering her."
+  },
+  "popupUnavailable": {
+    "message": "Denne siden er ikke et støttet nettsted, eller adressen er utilgjengelig."
+  },
+  "popupReload": {
+    "message": "Last inn siden på nytt etter at du har endret innstillingen. Unntaket gjelder dette vertsnavnet og underdomenene."
   }
 }

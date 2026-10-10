@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Automatycznie zastępuje tajemnicze kody krajów odpowiednią flagą. Rozwiązanie dla użytkowników Chromium w systemie Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Ustawienia"
+  },
+  "ignoredHeading": {
+    "message": "Ignorowane strony internetowe"
+  },
+  "ignoredHelp": {
+    "message": "Funkcja poprawiania flag jest wyłączona w dodanej domenie oraz we wszystkich jej subdomenach. W przypadku wprowadzenia adresu URL strony internetowej zapisywana jest wyłącznie jej nazwa hosta. Ścieżka nie ma wpływu na to, które strony zostaną wykluczone."
+  },
+  "ignoredExample": {
+    "message": "<strong>Przykład:</strong> <code>example.com</code> wyłącza również poprawianie flag na stronach <code>www.example.com</code> i <code>blog.example.com</code>. Dodanie tylko <code>blog.example.com</code> pozostawia aktywne strony <code>example.com</code> i <code>www.example.com</code>. <code>https://example.com/page</code> dotyczy wszystkich stron z domeny <code>example.com</code>, a nie tylko <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Po zmianie tej listy należy odświeżyć otwarte strony. Wykluczone są również treści osadzone na ignorowanych stronach internetowych."
+  },
+  "domainLabel": {
+    "message": "Domena lub adres URL strony internetowej"
+  },
+  "domainPlaceholder": {
+    "message": "Na przykład: example.com"
+  },
+  "addDomain": {
+    "message": "Dodaj stronę internetową"
+  },
+  "deleteDomain": {
+    "message": "Usuń"
+  },
+  "deleteDomainLabel": {
+    "message": "Usuń stronę $1 z listy ignorowanych stron internetowych"
+  },
+  "loading": {
+    "message": "Ładowanie ignorowanych stron internetowych…"
+  },
+  "noDomains": {
+    "message": "Żadna strona internetowa nie jest pomijana."
+  },
+  "invalidDomain": {
+    "message": "Wprowadź prawidłową domenę lub adres URL strony internetowej w formacie HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Ta domena znajduje się już na liście."
+  },
+  "storageError": {
+    "message": "Nie udało się odczytać ani zapisać ustawień. Spróbuj ponownie."
+  },
+  "domainAdded": {
+    "message": "Dodano stronę internetową. Aby zastosować to ustawienie, należy odświeżyć otwarte na niej strony."
+  },
+  "domainRemoved": {
+    "message": "Strona internetowa została usunięta. Odśwież otwarte strony, aby włączyć funkcję poprawiania flag."
+  },
+  "popupIgnore": {
+    "message": "Ignoruj tę witrynę"
+  },
+  "popupEnable": {
+    "message": "Włącz poprawianie flag"
+  },
+  "popupActive": {
+    "message": "Poprawianie flag jest włączone w tej witrynie."
+  },
+  "popupIgnored": {
+    "message": "Ta witryna jest ignorowana."
+  },
+  "popupParent": {
+    "message": "Ta witryna jest ignorowana z powodu wykluczenia $1. Zmień tę domenę w Ustawieniach, aby włączyć tutaj poprawianie flag."
+  },
+  "popupUnavailable": {
+    "message": "Ta strona nie jest obsługiwaną witryną lub jej adres jest niedostępny."
+  },
+  "popupReload": {
+    "message": "Po zmianie ustawienia odśwież tę stronę. Wykluczenie dotyczy tej nazwy hosta i jej subdomen."
   }
 }

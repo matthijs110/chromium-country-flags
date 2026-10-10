@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Asendab salapärased riigikoodid automaatselt vastava lipuga. Lahendus Chromiumi kasutajatele Windowsis!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Seaded"
+  },
+  "ignoredHeading": {
+    "message": "Ignoreeritud veebisaidid"
+  },
+  "ignoredHelp": {
+    "message": "Lipukorrigeerimine on keelatud lisatud domeenil ja kõigil selle domeeni alamdomeenidel. Kui sisestate veebisaidi URL-i, salvestatakse ainult selle hostinimi. Teekond ei mõjuta seda, millised leheküljed jäetakse välja."
+  },
+  "ignoredExample": {
+    "message": "<strong>Näide:</strong> <code>example.com</code> keelab lipu parandamise ka veebisaitidel <code>www.example.com</code> ja <code>blog.example.com</code>. Kui lisada ainult <code>blog.example.com</code>, jäävad <code>example.com</code> ja <code>www.example.com</code> aktiivseks. <code>https://example.com/page</code> kehtib kogu veebisaidile <code>example.com</code>, mitte ainult <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Pärast nimekirja muutmist laadige avatud lehed uuesti. Jäetud veebisaitidel olev sisu jäetakse samuti välja."
+  },
+  "domainLabel": {
+    "message": "Domeen või veebisaidi URL"
+  },
+  "domainPlaceholder": {
+    "message": "Näiteks: example.com"
+  },
+  "addDomain": {
+    "message": "Lisa veebisait"
+  },
+  "deleteDomain": {
+    "message": "Eemalda"
+  },
+  "deleteDomainLabel": {
+    "message": "Eemalda $1 ignoreeritud veebisaitide hulgast"
+  },
+  "loading": {
+    "message": "Laaditakse ignoreeritud veebisaite…"
+  },
+  "noDomains": {
+    "message": "Ühtegi veebisaiti ei jäeta tähelepanuta."
+  },
+  "invalidDomain": {
+    "message": "Sisestage kehtiv domeen või veebisaidi HTTP(S) URL-aadress."
+  },
+  "duplicateDomain": {
+    "message": "See domeen on juba nimekirjas."
+  },
+  "storageError": {
+    "message": "Seadeid ei õnnestunud lugeda ega salvestada. Palun proovi uuesti."
+  },
+  "domainAdded": {
+    "message": "Veebisait on lisatud. Laadige selle avatud lehed uuesti, et see seade jõustuks."
+  },
+  "domainRemoved": {
+    "message": "Veebisait on eemaldatud. Laadige selle avatud lehed uuesti, et lipu parandamine saaks toimuda."
+  },
+  "popupIgnore": {
+    "message": "Eira seda veebisaiti"
+  },
+  "popupEnable": {
+    "message": "Luba lippude parandamine"
+  },
+  "popupActive": {
+    "message": "Lippude parandamine on sellel veebisaidil lubatud."
+  },
+  "popupIgnored": {
+    "message": "Seda veebisaiti eiratakse."
+  },
+  "popupParent": {
+    "message": "Seda veebisaiti eiratakse domeeni $1 tõttu. Muuda seda domeeni seadetes, et siin lippude parandamine lubada."
+  },
+  "popupUnavailable": {
+    "message": "See leht ei ole toetatud veebisait või selle aadress pole saadaval."
+  },
+  "popupReload": {
+    "message": "Pärast sätte muutmist laadi leht uuesti. Välistus kehtib sellele hostinimele ja selle alamdomeenidele."
   }
 }

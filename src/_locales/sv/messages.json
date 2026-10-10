@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Ersätter mystiska landkoder automatiskt med motsvarande flagga. Lösningen för Chromium-användare i Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Inställningar"
+  },
+  "ignoredHeading": {
+    "message": "Ignorerade webbplatser"
+  },
+  "ignoredHelp": {
+    "message": "Flaggkorrigeringen är inaktiverad på den domän du lägger till och alla underdomäner till den domänen. Om du anger en webbadress sparas endast dess värdnamn. Sökvägen påverkar inte vilka sidor som undantas."
+  },
+  "ignoredExample": {
+    "message": "<strong>Exempel:</strong> <code>example.com</code> inaktiverar även flaggkorrigeringen på <code>www.example.com</code> och <code>blog.example.com</code>. Om endast <code>blog.example.com</code> läggs till förblir <code>example.com</code> och <code>www.example.com</code> aktiva. <code>https://example.com/page</code> gäller för hela <code>example.com</code>, inte bara <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Ladda om öppna sidor efter att du har ändrat listan. Inbäddat innehåll på en webbplats som ignoreras utesluts också."
+  },
+  "domainLabel": {
+    "message": "Domän eller webbadress"
+  },
+  "domainPlaceholder": {
+    "message": "Till exempel: example.com"
+  },
+  "addDomain": {
+    "message": "Lägg till webbplats"
+  },
+  "deleteDomain": {
+    "message": "Ta bort"
+  },
+  "deleteDomainLabel": {
+    "message": "Ta bort $1 från listan över ignorerade webbplatser"
+  },
+  "loading": {
+    "message": "Laddar ignorerade webbplatser…"
+  },
+  "noDomains": {
+    "message": "Inga webbplatser ignoreras."
+  },
+  "invalidDomain": {
+    "message": "Ange en giltig domän eller en HTTP(S)-webbadress."
+  },
+  "duplicateDomain": {
+    "message": "Denna domän finns redan med på listan."
+  },
+  "storageError": {
+    "message": "Det gick inte att läsa eller spara dina inställningar. Försök igen."
+  },
+  "domainAdded": {
+    "message": "Webbplats tillagd. Ladda om de öppna sidorna för att tillämpa denna inställning."
+  },
+  "domainRemoved": {
+    "message": "Webbplatsen har tagits bort. Ladda om de öppna sidorna för att aktivera flaggkorrigeringen."
+  },
+  "popupIgnore": {
+    "message": "Ignorera den här webbplatsen"
+  },
+  "popupEnable": {
+    "message": "Aktivera flaggkorrigering"
+  },
+  "popupActive": {
+    "message": "Flaggkorrigering är aktiverad på den här webbplatsen."
+  },
+  "popupIgnored": {
+    "message": "Den här webbplatsen ignoreras."
+  },
+  "popupParent": {
+    "message": "Den här webbplatsen ignoreras eftersom $1 är undantaget. Ändra den domänen i Inställningar för att aktivera flaggkorrigering här."
+  },
+  "popupUnavailable": {
+    "message": "Den här sidan är inte en webbplats som stöds, eller så är adressen inte tillgänglig."
+  },
+  "popupReload": {
+    "message": "Ladda om sidan efter att du har ändrat inställningen. Undantaget gäller det här värdnamnet och dess underdomäner."
   }
 }

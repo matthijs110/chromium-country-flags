@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "謎の国番号を対応する国旗に自動的に置き換える。WindowsのChromiumユーザーのためのソリューション!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "ignoredHeading": {
+    "message": "除外するウェブサイト"
+  },
+  "ignoredHelp": {
+    "message": "追加したドメインおよびそのすべてのサブドメインでは、国旗の修正が無効になります。ウェブサイトのURLを入力した場合、ホスト名のみが保存されます。パスは、どのページが除外されるかには影響しません。"
+  },
+  "ignoredExample": {
+    "message": "<strong>例：</strong> <code>example.com</code> を指定すると、<code>www.example.com</code> および <code>blog.example.com</code> でも国旗の修正が無効になります。<code>blog.example.com</code> のみを追加すると、<code>example.com</code> および <code>www.example.com</code> では国旗の修正が有効のままになります。<code>https://example.com/page</code> を指定すると、<code>/page</code> だけでなく、<code>example.com</code> の全ページに適用されます。"
+  },
+  "reloadHelp": {
+    "message": "このリストを変更した後は、開いているページを再読み込みしてください。除外対象のウェブサイト上の埋め込みコンテンツも対象外となります。"
+  },
+  "domainLabel": {
+    "message": "ドメインまたはウェブサイトのURL"
+  },
+  "domainPlaceholder": {
+    "message": "例：example.com"
+  },
+  "addDomain": {
+    "message": "ウェブサイトを追加"
+  },
+  "deleteDomain": {
+    "message": "削除"
+  },
+  "deleteDomainLabel": {
+    "message": "無視リストから「$1」を削除する"
+  },
+  "loading": {
+    "message": "無視対象のウェブサイトを読み込んでいます…"
+  },
+  "noDomains": {
+    "message": "無視されるウェブサイトはありません。"
+  },
+  "invalidDomain": {
+    "message": "有効なドメインまたはHTTP(S)のウェブサイトURLを入力してください。"
+  },
+  "duplicateDomain": {
+    "message": "このドメインはすでにリストに登録されています。"
+  },
+  "storageError": {
+    "message": "設定を読み込めませんでした、または保存できませんでした。もう一度お試しください。"
+  },
+  "domainAdded": {
+    "message": "Webサイトを追加しました。この設定を適用するには、開いているページを再読み込みしてください。"
+  },
+  "domainRemoved": {
+    "message": "ウェブサイトが削除されました。開いているページを再読み込みすると、国旗の修正機能が有効になります。"
+  },
+  "popupIgnore": {
+    "message": "このウェブサイトを除外"
+  },
+  "popupEnable": {
+    "message": "国旗の表示補正を有効にする"
+  },
+  "popupActive": {
+    "message": "このウェブサイトでは国旗の表示補正が有効です。"
+  },
+  "popupIgnored": {
+    "message": "このウェブサイトは除外されています。"
+  },
+  "popupParent": {
+    "message": "$1 の除外設定により、このウェブサイトは除外されています。ここで国旗の表示補正を有効にするには、設定でそのドメインを変更してください。"
+  },
+  "popupUnavailable": {
+    "message": "このページは対応するウェブサイトではないか、アドレスを取得できません。"
+  },
+  "popupReload": {
+    "message": "設定を変更した後、このページを再読み込みしてください。除外設定はこのホスト名とそのサブドメインに適用されます。"
   }
 }

@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Înlocuiește automat codurile de țară misterioase cu steagul corespunzător. Soluția pentru utilizatorii Chromium pe Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "ignoredHeading": {
+    "message": "Site-uri web ignorate"
+  },
+  "ignoredHelp": {
+    "message": "Corectarea steagurilor este dezactivată pe domeniul pe care îl adăugați și pe toate subdomeniile acestuia. Dacă introduceți adresa URL a unui site web, se salvează doar numele de gazdă al acestuia. Calea nu influențează paginile care sunt excluse."
+  },
+  "ignoredExample": {
+    "message": "<strong>Exemplu:</strong> <code>example.com</code> dezactivează, de asemenea, ajustarea steagurilor pe <code>www.example.com</code> și <code>blog.example.com</code>. Dacă se adaugă doar <code>blog.example.com</code>, <code>example.com</code> și <code>www.example.com</code> rămân active. <code>https://example.com/page</code> se aplică întregului domeniu <code>example.com</code>, nu doar <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Reîncarcă paginile deschise după modificarea acestei liste. Conținutul încorporat pe un site web ignorat este, de asemenea, exclus."
+  },
+  "domainLabel": {
+    "message": "Domeniu sau adresa URL a site-ului web"
+  },
+  "domainPlaceholder": {
+    "message": "De exemplu: example.com"
+  },
+  "addDomain": {
+    "message": "Adăugare site web"
+  },
+  "deleteDomain": {
+    "message": "Eliminare"
+  },
+  "deleteDomainLabel": {
+    "message": "Eliminați $1 din lista site-urilor web ignorate"
+  },
+  "loading": {
+    "message": "Se încarcă site-urile web ignorate…"
+  },
+  "noDomains": {
+    "message": "Nu sunt ignorate site-uri web."
+  },
+  "invalidDomain": {
+    "message": "Introduceți un domeniu valid sau o adresă URL a unui site web HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Acest domeniu se află deja pe listă."
+  },
+  "storageError": {
+    "message": "Nu s-au putut citi sau salva setările. Vă rugăm să încercați din nou."
+  },
+  "domainAdded": {
+    "message": "Site-ul web a fost adăugat. Reîncarcă paginile deschise pentru a aplica această setare."
+  },
+  "domainRemoved": {
+    "message": "Site-ul web a fost eliminat. Reîncarcă paginile deschise ale acestuia pentru a activa funcția de corectare a steagurilor."
+  },
+  "popupIgnore": {
+    "message": "Ignoră acest site"
+  },
+  "popupEnable": {
+    "message": "Activează corectarea steagurilor"
+  },
+  "popupActive": {
+    "message": "Corectarea steagurilor este activată pe acest site."
+  },
+  "popupIgnored": {
+    "message": "Acest site este ignorat."
+  },
+  "popupParent": {
+    "message": "Acest site este ignorat din cauza excluderii domeniului $1. Modifică acest domeniu în Setări pentru a activa corectarea steagurilor aici."
+  },
+  "popupUnavailable": {
+    "message": "Această pagină nu este un site acceptat sau adresa sa nu este disponibilă."
+  },
+  "popupReload": {
+    "message": "Reîncarcă pagina după modificarea setării. Excluderea se aplică acestui nume de gazdă și subdomeniilor sale."
   }
 }

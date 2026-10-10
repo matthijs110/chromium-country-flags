@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@source '../popup';
+
+@layer base {
+  code {
+    @apply rounded bg-slate-100 px-1 py-0.5;
+  }
+
+  button,
+  input {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  }
+  button {
+    @apply cursor-pointer disabled:cursor-wait disabled:opacity-50;
+  }
+}

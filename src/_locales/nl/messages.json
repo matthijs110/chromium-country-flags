@@ -3,8 +3,76 @@
     "message": "Vervangt mysterieuze landcodes automatisch door de overeenkomstige vlag. De oplossing voor Chromium gebruikers op Windows!",
     "description": "Chrome Web Store listing description"
   },
-  "optionsPageTitle": {
-    "message": "Instellingen",
-    "description": "The main page title of the options page"
+  "settings": {
+    "message": "Instellingen"
+  },
+  "ignoredHeading": {
+    "message": "Genegeerde websites"
+  },
+  "ignoredHelp": {
+    "message": "Vlagcorrectie wordt uitgeschakeld voor het domein dat je toevoegt en alle subdomeinen daarvan. Vul je een website-URL in, dan wordt enkel de domeinnaam bewaard. Het pad heeft geen invloed."
+  },
+  "ignoredExample": {
+    "message": "<strong>Voorbeeld:</strong> <code>example.com</code> schakelt vlagcorrectie ook uit op <code>www.example.com</code> en <code>blog.example.com</code>. Voeg je alleen <code>blog.example.com</code> toe, dan blijven <code>example.com</code> en <code>www.example.com</code> actief. <code>https://example.com/pagina</code> geldt voor heel <code>example.com</code>, niet alleen voor <code>/pagina</code>."
+  },
+  "reloadHelp": {
+    "message": "Herlaad geopende pagina's nadat je deze lijst wijzigt. Ingesloten inhoud op een genegeerde website wordt ook uitgesloten."
+  },
+  "domainLabel": {
+    "message": "Domein of website-URL"
+  },
+  "domainPlaceholder": {
+    "message": "Bijvoorbeeld: example.com"
+  },
+  "addDomain": {
+    "message": "Website toevoegen"
+  },
+  "deleteDomain": {
+    "message": "Verwijderen"
+  },
+  "deleteDomainLabel": {
+    "message": "Verwijder $1 uit genegeerde websites"
+  },
+  "loading": {
+    "message": "Genegeerde websites laden..."
+  },
+  "noDomains": {
+    "message": "Er worden geen websites genegeerd."
+  },
+  "invalidDomain": {
+    "message": "Vul een geldig domein of een HTTP(S)-website-URL in."
+  },
+  "duplicateDomain": {
+    "message": "Dit domein staat al in de lijst."
+  },
+  "storageError": {
+    "message": "Je instellingen konden niet worden gelezen of opgeslagen. Probeer het opnieuw."
+  },
+  "domainAdded": {
+    "message": "Website toegevoegd. Herlaad de geopende pagina's om deze instelling toe te passen."
+  },
+  "domainRemoved": {
+    "message": "Website verwijderd. Herlaad de geopende pagina's om vlagcorrectie in te schakelen."
+  },
+  "popupIgnored": {
+    "message": "Deze website wordt genegeerd."
+  },
+  "popupUnavailable": {
+    "message": "Deze pagina is geen ondersteunde website, of het adres is niet beschikbaar."
+  },
+  "popupIgnore": {
+    "message": "Deze website negeren"
+  },
+  "popupEnable": {
+    "message": "Vlagcorrectie inschakelen"
+  },
+  "popupActive": {
+    "message": "Vlagcorrectie is ingeschakeld op deze website."
+  },
+  "popupParent": {
+    "message": "Deze website wordt genegeerd via $1. Beheer dat domein in Instellingen om hier vlagcorrectie in te schakelen."
+  },
+  "popupReload": {
+    "message": "Herlaad deze pagina nadat je de instelling wijzigt. Een uitsluiting geldt voor deze domeinnaam en de subdomeinen daarvan."
   }
 }

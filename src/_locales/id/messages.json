@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Mengganti kode negara misterius secara otomatis dengan bendera yang sesuai. Solusi untuk pengguna Chromium di Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Pengaturan"
+  },
+  "ignoredHeading": {
+    "message": "Situs web yang diabaikan"
+  },
+  "ignoredHelp": {
+    "message": "Fitur perbaikan bendera dinonaktifkan pada domain yang Anda tambahkan dan semua subdomain dari domain tersebut. Jika Anda memasukkan URL situs web, hanya nama host-nya yang disimpan. Jalur (path) tidak memengaruhi halaman mana yang dikecualikan."
+  },
+  "ignoredExample": {
+    "message": "<strong>Contoh:</strong> <code>example.com</code> juga menonaktifkan perbaikan bendera pada <code>www.example.com</code> dan <code>blog.example.com</code>. Menambahkan hanya <code>blog.example.com</code> akan membuat <code>example.com</code> dan <code>www.example.com</code> tetap aktif. <code>https://example.com/page</code> berlaku untuk seluruh <code>example.com</code>, bukan hanya <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Muat ulang halaman yang terbuka setelah mengubah daftar ini. Konten yang disematkan di situs web yang diabaikan juga tidak akan diperbaiki."
+  },
+  "domainLabel": {
+    "message": "Domain atau URL situs web"
+  },
+  "domainPlaceholder": {
+    "message": "Contoh: example.com"
+  },
+  "addDomain": {
+    "message": "Tambahkan situs web"
+  },
+  "deleteDomain": {
+    "message": "Hapus"
+  },
+  "deleteDomainLabel": {
+    "message": "Hapus $1 dari daftar situs web yang diabaikan"
+  },
+  "loading": {
+    "message": "Memuat situs web yang diabaikan…"
+  },
+  "noDomains": {
+    "message": "Tidak ada situs web yang diabaikan."
+  },
+  "invalidDomain": {
+    "message": "Masukkan domain yang valid atau URL situs web HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Domain ini sudah ada dalam daftar."
+  },
+  "storageError": {
+    "message": "Tidak dapat membaca atau menyimpan pengaturan Anda. Silakan coba lagi."
+  },
+  "domainAdded": {
+    "message": "Situs web telah ditambahkan. Muat ulang halaman yang sedang terbuka untuk menerapkan pengaturan ini."
+  },
+  "domainRemoved": {
+    "message": "Situs web telah dihapus. Muat ulang halaman yang sedang terbuka untuk mengaktifkan perbaikan bendera."
+  },
+  "popupIgnore": {
+    "message": "Abaikan situs ini"
+  },
+  "popupEnable": {
+    "message": "Aktifkan perbaikan bendera"
+  },
+  "popupActive": {
+    "message": "Perbaikan bendera aktif di situs ini."
+  },
+  "popupIgnored": {
+    "message": "Situs ini diabaikan."
+  },
+  "popupParent": {
+    "message": "Situs ini diabaikan karena pengecualian $1. Ubah domain tersebut di Pengaturan untuk mengaktifkan perbaikan bendera di sini."
+  },
+  "popupUnavailable": {
+    "message": "Halaman ini bukan situs yang didukung, atau alamatnya tidak tersedia."
+  },
+  "popupReload": {
+    "message": "Muat ulang halaman ini setelah mengubah pengaturan. Pengecualian berlaku untuk nama host ini dan subdomainnya."
   }
 }

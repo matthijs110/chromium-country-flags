@@ -1,111 +1,79 @@
-import { generateRandomId, isValidUrlOrHostname } from "./helpers";
-import { IgnoredSite } from "./ignoredSite";
+import { generateRandomId, hostnameMatches, isValidUrlOrHostname } from './helpers';
+import { IgnoredSite } from './ignoredSite';
 
-/**
- * Storage management
- */
-const STORAGE_KEY = 'cfIgnoredSites';
+// Retain the original key and entry IDs so existing exclusions survive upgrades.
+export const STORAGE_KEY = 'cfIgnoredSites';
 
-const getStorage = () => chrome.storage.sync.get();
-export const setStorage = (data: {}) => chrome.storage.sync.set(data);
+/** Writes a key-value pair to browser storage. */
+export const setStorage = (data: Record<string, unknown>): Promise<void> =>
+  chrome.storage.sync.set(data);
 
-export const getIgnoredSites = async (): Promise<IgnoredSite[]> => 
-{
-  const storage = await getStorage();
-  const sites = storage[STORAGE_KEY] ?? [];
-  return sites.map((site: any) => new IgnoredSite(site.id, site.hostname));
-};
+/** Reads the ignored sites from browser storage. */
+export const getIgnoredSites = async (): Promise<IgnoredSite[]> => {
+  const storage = await chrome.storage.sync.get(STORAGE_KEY);
+  const sites: unknown = storage[STORAGE_KEY] ?? [];
 
-export const shouldIgnoreSite = (href: string): boolean => 
-{
-  let shouldIgnore = false;
-
-  try 
-  {
-    // Try to parse the input as a URL
-    const url = new URL(href);
-
-    getIgnoredSites()
-      .then((ignoredSites: IgnoredSite[]) => 
-      {
-        const hostname = url.hostname.replace('www.', '');
-        shouldIgnore = ignoredSites.some(site => hostname.includes(site.hostname));
-      });
-  } 
-  catch (error) 
-  {
-    console.warn('Could not validate URL, because the given location was invalid.', href);
+  if (!Array.isArray(sites)) {
+    throw new Error('storageError');
   }
 
-  return shouldIgnore;
-}
-
-export const storeSite = (url: string): Promise<IgnoredSite> => 
-{
-  return new Promise((resolve, reject) => 
-  {
-    // Check valid URL
-    const confirmedUrl = isValidUrlOrHostname(url);
-    if (! confirmedUrl.valid) 
-    {
-      reject(`The provider URL is invalid. Please provide a valid hostname or URL.`);
-      return;
+  // Browser storage contains plain objects, not IgnoredSite instances. Normalize
+  // legacy hostnames when reading without changing the saved entry's identity.
+  return sites.flatMap((site: { id?: string; hostname?: string }) => {
+    if (!site || typeof site.id !== 'string' || typeof site.hostname !== 'string') {
+      return [];
     }
 
-    // Attemp to store the site
-    getIgnoredSites()
-      .then((ignoredSites) => 
-      {
-        const id = generateRandomId();
-        const newSite = new IgnoredSite(id, confirmedUrl.hostname);
-        if (ignoredSites.some((site: IgnoredSite) => site.getUrl() === newSite.getUrl())) 
-        {
-          reject(`The website '${newSite.getUrl()}' is already being ignored. Please try another website.`);
-          return;
-        }
-    
-        // Append the site to the storage
-        setStorage({ [STORAGE_KEY]: [...ignoredSites, newSite] }).then(() => resolve(newSite));
-      })
-      .catch(() => reject('Could not get the currenly ignored sites.'));
-  });
-}
+    const parsed = isValidUrlOrHostname(site.hostname);
 
-export const deleteSite = (id: string): Promise<void> => 
-{
-  return new Promise((resolve, reject) => 
-  {
-    // Attemp to delete the site
-    getIgnoredSites()
-      .then((ignoredSites: IgnoredSite[]) => 
-      {
-        // Check if the requested site id exists
-        if (! ignoredSites.some((site: IgnoredSite) => site.id === id)) 
-        {
-          reject(`No site with id '${id}' found.`);
-          return;
-        }
-    
-        // Remove the site from the list
-        const ignoredSitesLeft = ignoredSites.filter((site: IgnoredSite) => site.id !== id);
-    
-        // Update the storage
-        setStorage({ [STORAGE_KEY]: ignoredSitesLeft }).then(resolve);
-      })
-      .catch(() => reject('Could not get the currenly ignored sites.'));
+    return parsed.valid ? [new IgnoredSite(site.id, parsed.hostname)] : [];
   });
-}
+};
 
-export const clearSites = (): Promise<void> =>
-  {
-    return new Promise((resolve, reject) => 
-    {
-      getIgnoredSites()
-        .then(() => 
-        {
-          // Clear the valuee
-          setStorage({ [STORAGE_KEY]: [] }).then(resolve);
-        })
-        .catch(reject);
-    });
+/** Determines if a site should be ignored based on its URL. */
+export const shouldIgnoreSite = async (href: string): Promise<boolean> => {
+  let hostname: string;
+
+  try {
+    hostname = new URL(href).hostname;
+  } catch {
+    return false;
   }
+
+  // Await storage: a synchronous return would always precede the exclusion check.
+  const sites = await getIgnoredSites();
+
+  return sites.some((site) => hostnameMatches(hostname, site.hostname));
+};
+
+/** Stores a new site in the ignored list. */
+export const storeSite = async (input: string): Promise<IgnoredSite> => {
+  const parsed = isValidUrlOrHostname(input);
+
+  if (!parsed.valid) {
+    throw new Error('invalidDomain');
+  }
+
+  const sites = await getIgnoredSites();
+
+  if (sites.some((site) => site.hostname === parsed.hostname)) {
+    throw new Error('duplicateDomain');
+  }
+
+  const site = new IgnoredSite(generateRandomId(), parsed.hostname);
+
+  // Await writes too: quota/network failures must reach the options page.
+  await setStorage({ [STORAGE_KEY]: [...sites, site] });
+
+  return site;
+};
+
+/** Removes a site from the ignored list. */
+export const deleteSite = async (id: string): Promise<void> => {
+  const sites = await getIgnoredSites();
+
+  await setStorage({ [STORAGE_KEY]: sites.filter((site) => site.id !== id) });
+};
+
+/** Clears all ignored sites. */
+export const clearSites = (): Promise<void> => setStorage({ [STORAGE_KEY]: [] });

@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "रहस्यमय देश कोड को स्वचालित रूप से संबंधित ध्वज के साथ बदल देता है। विंडोज़ पर क्रोमियम उपयोगकर्ताओं के लिए समाधान!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "सेटिंग्स"
+  },
+  "ignoredHeading": {
+    "message": "अनदेखी की गई वेबसाइटें"
+  },
+  "ignoredHelp": {
+    "message": "आपके द्वारा जोड़े गए डोमेन और उसके सभी उपडोमेन पर झंडा सेटिंग अक्षम कर दी जाती है। यदि आप कोई वेबसाइट URL दर्ज करते हैं, तो केवल उसका होस्टनाम सहेजा जाता है। पथ इस बात को प्रभावित नहीं करता कि कौन से पृष्ठ बहिष्कृत किए जाते हैं।"
+  },
+  "ignoredExample": {
+    "message": "<strong>उदाहरण:</strong> <code>example.com</code> <code>www.example.com</code> और <code>blog.example.com</code> पर भी झंडा सेटिंग अक्षम कर देता है। केवल <code>blog.example.com</code> जोड़ने से <code>example.com</code> और <code>www.example.com</code> सक्रिय रहते हैं। <code>https://example.com/page</code> पूरे <code>example.com</code> पर लागू होता है, न कि केवल <code>/page</code> पर।"
+  },
+  "reloadHelp": {
+    "message": "इस सूची को बदलने के बाद खुले पृष्ठों को पुनः लोड करें। अनदेखी वेबसाइट पर एम्बेडेड सामग्री भी शामिल नहीं की जाती।"
+  },
+  "domainLabel": {
+    "message": "डोमेन या वेबसाइट URL"
+  },
+  "domainPlaceholder": {
+    "message": "उदाहरण के लिए: example.com"
+  },
+  "addDomain": {
+    "message": "वेबसाइट जोड़ें"
+  },
+  "deleteDomain": {
+    "message": "हटाएँ"
+  },
+  "deleteDomainLabel": {
+    "message": "अनदेखी वेबसाइटों से $1 हटाएँ"
+  },
+  "loading": {
+    "message": "अनदेखी की गई वेबसाइटें लोड हो रही हैं…"
+  },
+  "noDomains": {
+    "message": "कोई भी वेबसाइट अनदेखी नहीं की गई है।"
+  },
+  "invalidDomain": {
+    "message": "एक वैध डोमेन या HTTP(S) वेबसाइट URL दर्ज करें।"
+  },
+  "duplicateDomain": {
+    "message": "यह डोमेन पहले से ही सूची में है।"
+  },
+  "storageError": {
+    "message": "आपकी सेटिंग्स को पढ़ने या सहेजने में असमर्थ थे। कृपया फिर से प्रयास करें।"
+  },
+  "domainAdded": {
+    "message": "वेबसाइट जोड़ी गई। इस सेटिंग को लागू करने के लिए इसके खुले पृष्ठों को पुनः लोड करें।"
+  },
+  "domainRemoved": {
+    "message": "वेबसाइट हटा दी गई। झंडा सेटिंग सक्षम करने के लिए इसके खुले पृष्ठों को पुनः लोड करें।"
+  },
+  "popupIgnore": {
+    "message": "इस वेबसाइट को अनदेखा करें"
+  },
+  "popupEnable": {
+    "message": "झंडों का सुधार चालू करें"
+  },
+  "popupActive": {
+    "message": "इस वेबसाइट पर झंडों का सुधार चालू है।"
+  },
+  "popupIgnored": {
+    "message": "इस वेबसाइट को अनदेखा किया जा रहा है।"
+  },
+  "popupParent": {
+    "message": "$1 के कारण इस वेबसाइट को अनदेखा किया जा रहा है। यहाँ झंडों का सुधार चालू करने के लिए सेटिंग में उस डोमेन को बदलें।"
+  },
+  "popupUnavailable": {
+    "message": "यह पेज समर्थित वेबसाइट नहीं है या इसका पता उपलब्ध नहीं है।"
+  },
+  "popupReload": {
+    "message": "सेटिंग बदलने के बाद इस पेज को फिर से लोड करें। अपवाद इस होस्टनाम और इसके सभी उपडोमेन पर लागू होता है।"
   }
 }

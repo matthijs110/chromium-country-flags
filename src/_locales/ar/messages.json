@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "يستبدل رموز البلد الغامضة تلقائيًا بالعلم المقابل. الحل لمستخدمي Chromium على Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "الإعدادات"
+  },
+  "ignoredHeading": {
+    "message": "مواقع الويب التي تم تجاهلها"
+  },
+  "ignoredHelp": {
+    "message": "يتم تعطيل عملية تصحيح الأعلام على النطاق الذي تضيفه وجميع النطاقات الفرعية التابعة له. إذا أدخلت عنوان URL لموقع ويب، فسيتم حفظ اسم المضيف فقط. ولا يؤثر المسار على الصفحات التي يتم استبعادها."
+  },
+  "ignoredExample": {
+    "message": "<strong>مثال:</strong> <code>example.com</code> يؤدي أيضًا إلى تعطيل عملية تحديد الأعلام على <code>www.example.com</code> و <code>blog.example.com</code>. أما إضافة <code>blog.example.com</code> فقط فتترك <code>example.com</code> و <code>www.example.com</code> نشطين. <code>https://example.com/page</code> ينطبق على جميع مواقع <code>example.com</code>، وليس فقط على <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "أعد تحميل الصفحات المفتوحة بعد تغيير هذه القائمة. يتم أيضًا استبعاد المحتوى المضمن في المواقع المهملة."
+  },
+  "domainLabel": {
+    "message": "نطاق أو عنوان URL للموقع الإلكتروني"
+  },
+  "domainPlaceholder": {
+    "message": "على سبيل المثال: example.com"
+  },
+  "addDomain": {
+    "message": "إضافة موقع ويب"
+  },
+  "deleteDomain": {
+    "message": "إزالة"
+  },
+  "deleteDomainLabel": {
+    "message": "إزالة $1 من قائمة المواقع المهملة"
+  },
+  "loading": {
+    "message": "جاري تحميل المواقع المهملة…"
+  },
+  "noDomains": {
+    "message": "لا يتم تجاهل أي مواقع ويب."
+  },
+  "invalidDomain": {
+    "message": "أدخل نطاقًا صالحًا أو عنوان URL لموقع ويب HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "هذا النطاق موجود بالفعل في القائمة."
+  },
+  "storageError": {
+    "message": "تعذر قراءة الإعدادات أو حفظها. يرجى المحاولة مرة أخرى."
+  },
+  "domainAdded": {
+    "message": "تمت إضافة موقع ويب. أعد تحميل صفحاته المفتوحة لتطبيق هذا الإعداد."
+  },
+  "domainRemoved": {
+    "message": "تمت إزالة الموقع. أعد تحميل صفحاته المفتوحة لتمكين عملية إصلاح الأعلام."
+  },
+  "popupIgnore": {
+    "message": "تجاهل هذا الموقع"
+  },
+  "popupEnable": {
+    "message": "تفعيل تصحيح الأعلام"
+  },
+  "popupActive": {
+    "message": "تصحيح الأعلام مفعّل على هذا الموقع."
+  },
+  "popupIgnored": {
+    "message": "هذا الموقع مُتجاهَل."
+  },
+  "popupParent": {
+    "message": "هذا الموقع مُتجاهَل بسبب $1. عدّل هذا النطاق في الإعدادات لتفعيل تصحيح الأعلام هنا."
+  },
+  "popupUnavailable": {
+    "message": "هذه الصفحة ليست موقعًا مدعومًا، أو عنوانها غير متاح."
+  },
+  "popupReload": {
+    "message": "أعد تحميل هذه الصفحة بعد تغيير الإعداد. ينطبق الاستثناء على اسم المضيف هذا ونطاقاته الفرعية."
   }
 }

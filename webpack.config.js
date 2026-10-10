@@ -1,52 +1,34 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
-  mode: 'development',
+module.exports = (_env, argv) => ({
+  mode: argv.mode || 'production',
   entry: {
-    content: { import: './src/content/content.ts', filename: '[name].js' },
-    contentHead: { import: './src/content/contentHead.ts', filename: '[name].js' },
-    options: { import: './src/options/options.ts', filename: 'options/[name].js' },
-    utils: { import: './src/utils/storageManager.ts', filename: 'utils/storageManager.js' }
+    content: './src/content/content.ts',
+    contentHead: './src/content/contentHead.ts',
+    background: './src/background.ts',
+    options: { import: './src/options/options.ts', filename: 'options/options.js' },
+    popup: { import: './src/popup/popup.ts', filename: 'popup/popup.js' },
   },
-  devtool: 'inline-source-map',
-  module: {
-    rules: [
-      {
-        test: /\.ts?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/i,
-        use:
-        [
-          'css-loader',
-          'postcss-loader'
-        ]
-      }      
-    ],
-  },
+  devtool: false,
+  module: { rules: [{ test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ }] },
   plugins: [
-    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { 
-          from: 'public', 
-          globOptions: { 
-            ignore: ['**/css/main.css'],
-          } 
-        },
-        { from: 'src/options/options.html', to: 'options' }
-      ]
-    })
+        // Public contains only files that can be copied without compilation.
+        { from: 'public' },
+        { from: 'src/manifest.json', to: 'manifest.json' },
+        { from: 'src/_locales', to: '_locales' },
+        { from: 'src/options/options.html', to: 'options/options.html' },
+        { from: 'src/popup/popup.html', to: 'popup/popup.html' },
+      ],
+    }),
   ],
-  resolve: {
-    extensions: ['.ts', '.js'],
-  },
+  resolve: { extensions: ['.ts', '.js'] },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    // CSS is generated after webpack, so every build can start clean.
+    clean: true,
   },
-};
+});

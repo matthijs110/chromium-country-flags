@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Substitui automaticamente os misteriosos códigos de países pela bandeira correspondente. A solução para os utilizadores de Crómio no Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Definições"
+  },
+  "ignoredHeading": {
+    "message": "Sites ignorados"
+  },
+  "ignoredHelp": {
+    "message": "A correção de bandeiras fica desativada no domínio que adicionar e em todos os subdomínios desse domínio. Se introduzir o URL de um site, apenas o nome do host é guardado. O caminho não afeta as páginas que são excluídas."
+  },
+  "ignoredExample": {
+    "message": "<strong>Exemplo:</strong> <code>example.com</code> também desativa a correção de bandeiras em <code>www.example.com</code> e <code>blog.example.com</code>. Adicionar apenas <code>blog.example.com</code> mantém <code>example.com</code> e <code>www.example.com</code> ativos. <code>https://example.com/page</code> aplica-se a todo o domínio <code>example.com</code>, e não apenas a <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Atualize as páginas abertas após alterar esta lista. O conteúdo incorporado num site ignorado também é excluído."
+  },
+  "domainLabel": {
+    "message": "Domínio ou URL do site"
+  },
+  "domainPlaceholder": {
+    "message": "Por exemplo: example.com"
+  },
+  "addDomain": {
+    "message": "Adicionar site"
+  },
+  "deleteDomain": {
+    "message": "Remover"
+  },
+  "deleteDomainLabel": {
+    "message": "Remova $1 da lista de sites ignorados"
+  },
+  "loading": {
+    "message": "A carregar sites ignorados…"
+  },
+  "noDomains": {
+    "message": "Nenhum site é ignorado."
+  },
+  "invalidDomain": {
+    "message": "Introduza um domínio válido ou o URL de um site HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Este domínio já consta da lista."
+  },
+  "storageError": {
+    "message": "Não foi possível ler ou guardar as suas definições. Por favor, tente novamente."
+  },
+  "domainAdded": {
+    "message": "Site adicionado. Atualize as páginas abertas para aplicar esta configuração."
+  },
+  "domainRemoved": {
+    "message": "Site removido. Atualize as páginas abertas para ativar a correção das bandeiras."
+  },
+  "popupIgnore": {
+    "message": "Ignorar este site"
+  },
+  "popupEnable": {
+    "message": "Ativar correção de bandeiras"
+  },
+  "popupActive": {
+    "message": "A correção de bandeiras está ativada neste site."
+  },
+  "popupIgnored": {
+    "message": "Este site está a ser ignorado."
+  },
+  "popupParent": {
+    "message": "Este site está a ser ignorado porque $1 foi excluído. Altere esse domínio nas Definições para ativar a correção de bandeiras aqui."
+  },
+  "popupUnavailable": {
+    "message": "Esta página não é um site suportado ou o seu endereço não está disponível."
+  },
+  "popupReload": {
+    "message": "Recarregue esta página após alterar a definição. A exclusão aplica-se a este nome de anfitrião e aos seus subdomínios."
   }
 }

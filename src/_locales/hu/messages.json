@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "A rejtélyes országkódokat automatikusan helyettesíti a megfelelő zászlóval. A megoldás a Chromium felhasználók számára Windowson!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Beállítások"
+  },
+  "ignoredHeading": {
+    "message": "Figyelmen kívül hagyott webhelyek"
+  },
+  "ignoredHelp": {
+    "message": "A zászlók kijavítása le van tiltva az Ön által hozzáadott domainen és annak összes aldomainjén. Ha megad egy weboldal URL-jét, csak annak gazdanevét menti el a rendszer. Az elérési út nem befolyásolja, hogy mely oldalak kerülnek kizárásra."
+  },
+  "ignoredExample": {
+    "message": "<strong>Példa:</strong> <code>example.com</code> esetén a zászlók javítása a <code>www.example.com</code> és a <code>blog.example.com</code> webhelyeken is le van tiltva. Ha csak a <code>blog.example.com</code>-t adjuk hozzá, akkor a <code>example.com</code> és a <code>www.example.com</code> továbbra is aktív marad. A <code>https://example.com/page</code> beállítás a <code>example.com</code> teljes tartalmára vonatkozik, nem csak a <code>/page</code>-ra."
+  },
+  "reloadHelp": {
+    "message": "A lista módosítása után frissítse a megnyitott oldalakat. A figyelmen kívül hagyott webhelyeken található beágyazott tartalmak szintén kizárásra kerülnek."
+  },
+  "domainLabel": {
+    "message": "Domain vagy weboldal URL-je"
+  },
+  "domainPlaceholder": {
+    "message": "Például: example.com"
+  },
+  "addDomain": {
+    "message": "Weboldal hozzáadása"
+  },
+  "deleteDomain": {
+    "message": "Eltávolítás"
+  },
+  "deleteDomainLabel": {
+    "message": "Távolítsa el a $1 webhelyet az ignorált webhelyek közül"
+  },
+  "loading": {
+    "message": "Az ignorált webhelyek betöltése…"
+  },
+  "noDomains": {
+    "message": "Egyetlen webhely sem kerül figyelmen kívül hagyásra."
+  },
+  "invalidDomain": {
+    "message": "Írjon be egy érvényes domaint vagy HTTP(S) webhely-URL-t."
+  },
+  "duplicateDomain": {
+    "message": "Ez a domain már szerepel a listán."
+  },
+  "storageError": {
+    "message": "Nem sikerült beolvasni vagy elmenteni a beállításokat. Kérjük, próbálja meg újra."
+  },
+  "domainAdded": {
+    "message": "Webhely hozzáadva. A beállítás alkalmazásához frissítse a megnyitott oldalait."
+  },
+  "domainRemoved": {
+    "message": "A webhely eltávolításra került. A zászlók kijavításának engedélyezéséhez frissítse a megnyitott oldalakat."
+  },
+  "popupIgnore": {
+    "message": "Webhely figyelmen kívül hagyása"
+  },
+  "popupEnable": {
+    "message": "Zászlójavítás bekapcsolása"
+  },
+  "popupActive": {
+    "message": "A zászlójavítás be van kapcsolva ezen a webhelyen."
+  },
+  "popupIgnored": {
+    "message": "Ez a webhely figyelmen kívül van hagyva."
+  },
+  "popupParent": {
+    "message": "Ez a webhely a(z) $1 kizárása miatt figyelmen kívül van hagyva. Módosítsd ezt a domaint a Beállításokban a zászlójavítás bekapcsolásához."
+  },
+  "popupUnavailable": {
+    "message": "Ez az oldal nem támogatott webhely, vagy a címe nem érhető el."
+  },
+  "popupReload": {
+    "message": "A beállítás módosítása után töltsd újra az oldalt. A kizárás erre a gépnévre és az aldomainjeire vonatkozik."
   }
 }

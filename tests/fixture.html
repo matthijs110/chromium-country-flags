@@ -1,0 +1,36 @@
+<!doctype html>
+<!--
+  Purpose: provide deterministic initial DOM and CSS for browser regressions.
+  Covers flag text, ordinary text, icon fonts and conditional stylesheet rules.
+  browser.cjs loads this page; browser-checks.js adds the dynamic scenarios.
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flag regression fixture</title>
+
+    <!-- Conditional and important rules exercise the real computed font cascade. -->
+    <style>
+      @media screen {
+        p {
+          font-family: Georgia, serif !important;
+        }
+      }
+
+      /* Text and pseudo-element icons must retain their original font. */
+      #icon,
+      #icon::before {
+        font-family: monospace !important;
+      }
+      #icon::before {
+        content: 'search';
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The extension should modify only the flag container, leaving these controls intact. -->
+    <p id="initial">🇳🇱</p>
+    <p id="ordinary">Ordinary text</p>
+    <i id="icon">search</i>
+  </body>
+</html>

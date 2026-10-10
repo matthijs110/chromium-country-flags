@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Sostituisce automaticamente i codici paese misteriosi con la bandiera corrispondente. La soluzione per gli utenti di Chromium su Windows!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Impostazioni"
+  },
+  "ignoredHeading": {
+    "message": "Siti web ignorati"
+  },
+  "ignoredHelp": {
+    "message": "La correzione delle bandiere è disabilitata sul dominio aggiunto e su tutti i sottodomini di quel dominio. Se si inserisce l'URL di un sito web, viene salvato solo il nome host. Il percorso non influisce sulle pagine da escludere."
+  },
+  "ignoredExample": {
+    "message": "<strong>Esempio:</strong> <code>example.com</code> disattiva la correzione delle bandiere anche su <code>www.example.com</code> e <code>blog.example.com</code>. Aggiungendo solo <code>blog.example.com</code>, <code>example.com</code> e <code>www.example.com</code> rimangono attivi. <code>https://example.com/page</code> si applica a tutto il dominio <code>example.com</code>, non solo a <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Ricarica le pagine aperte dopo aver modificato questo elenco. Anche i contenuti incorporati in un sito web ignorato vengono esclusi."
+  },
+  "domainLabel": {
+    "message": "Dominio o URL del sito web"
+  },
+  "domainPlaceholder": {
+    "message": "Ad esempio: example.com"
+  },
+  "addDomain": {
+    "message": "Aggiungi sito web"
+  },
+  "deleteDomain": {
+    "message": "Rimuovi"
+  },
+  "deleteDomainLabel": {
+    "message": "Rimuovi $1 dall'elenco dei siti web ignorati"
+  },
+  "loading": {
+    "message": "Caricamento dei siti web ignorati in corso…"
+  },
+  "noDomains": {
+    "message": "Nessun sito web viene ignorato."
+  },
+  "invalidDomain": {
+    "message": "Inserisci un dominio valido o l'URL di un sito web HTTP(S)."
+  },
+  "duplicateDomain": {
+    "message": "Questo dominio è già presente nell'elenco."
+  },
+  "storageError": {
+    "message": "Impossibile leggere o salvare le impostazioni. Riprova."
+  },
+  "domainAdded": {
+    "message": "Sito web aggiunto. Ricaricare le pagine aperte per applicare questa impostazione."
+  },
+  "domainRemoved": {
+    "message": "Sito web rimosso. Ricaricare le pagine aperte per abilitare la correzione delle bandiere."
+  },
+  "popupIgnore": {
+    "message": "Ignora questo sito"
+  },
+  "popupEnable": {
+    "message": "Attiva la correzione delle bandiere"
+  },
+  "popupActive": {
+    "message": "La correzione delle bandiere è attiva su questo sito."
+  },
+  "popupIgnored": {
+    "message": "Questo sito viene ignorato."
+  },
+  "popupParent": {
+    "message": "Questo sito viene ignorato perché è escluso $1. Modifica quel dominio nelle Impostazioni per attivare qui la correzione delle bandiere."
+  },
+  "popupUnavailable": {
+    "message": "Questa pagina non è un sito supportato oppure il suo indirizzo non è disponibile."
+  },
+  "popupReload": {
+    "message": "Ricarica questa pagina dopo aver modificato l’impostazione. L’esclusione si applica a questo nome host e ai suoi sottodomini."
   }
 }

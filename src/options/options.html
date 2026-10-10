@@ -1,63 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Country Flag Fixer | Settings</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon48" href="../icons/favicon.ico" />
+    <link rel="icon" href="../icons/icon48.png" />
     <link rel="stylesheet" href="../css/dist.css" />
+    <script src="options.js" defer></script>
   </head>
-  <body class="bg-slate-50">
 
-    <header class="md:container md:mx-auto mx-6 py-6">
-      <div class="flex items-center">
-        <img src="../icons/icon48.png" alt="Country Flag Fixer logo" class="mr-4">
-        <div class="flex flex-col">
-          <h1>Country Flag Fixer</span></h1>
-          <h2 class="text-gray-500" id="options-title">Settings</span></h2>
+  <body class="bg-slate-50 text-slate-900">
+    <main class="mx-auto max-w-3xl px-4 py-10 sm:px-8">
+      <header class="mb-8 flex items-center gap-4">
+        <img src="../icons/icon48.png" width="48" height="48" alt="" />
+        <div>
+          <h1 class="text-2xl font-bold">Country Flag Fixer</h1>
+          <p id="options-title" class="text-slate-600" data-i18n="settings"></p>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="md:container md:mx-auto mx-6 px-16 py-6">
-      <!-- Section heading -->
-      <div class="flex mb-4 flex-col">
-        <div class="flex-col mb-4">
-          <!-- TODO: i18n + better text -->
-          <h2>Ignored websites</h2>
-          <p>This extention may cause some issues on certain sites.</p>
-        </div>
+      <section
+        class="rounded-xl border border-slate-200 bg-white p-5 shadow-xs sm:p-8"
+        aria-labelledby="ignored-heading"
+      >
+        <h2 id="ignored-heading" class="mb-2 text-xl font-semibold" data-i18n="ignoredHeading">Ignored websites</h2>
+        <!-- Text is localized by options.js; explain scope before requesting input. -->
+        <p id="domain-help" class="mb-3 text-slate-600" data-i18n="ignoredHelp"></p>
+        <p id="domain-example" class="mb-4 text-sm text-slate-600 leading-6" data-i18n="ignoredExample"></p>
+        <p class="mb-6 rounded-lg bg-blue-50 p-3 text-sm text-blue-900 leading-6" data-i18n="reloadHelp"></p>
 
-        <form id="add-domain-form" class="flex flex-col">
-          <div class="flex items-center w-full">
-            <input name="url" placeholder="Example: google.com" type="text" />
-            <button class="add-domain-button" type="submit">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 mr-1">
-                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-              </svg>                       
-              <span>Add</span>
-            </button>
+        <form id="add-domain-form" class="mb-6">
+          <label for="domain-input" class="mb-2 block font-medium" data-i18n="domainLabel"></label>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <input
+              id="domain-input"
+              name="url"
+              type="text"
+              required
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="domain-help domain-example form-message"
+              class="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2"
+              data-i18n-placeholder="domainPlaceholder"
+            />
+
+            <button
+              type="submit"
+              class="rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800"
+              data-i18n="addDomain"
+            ></button>
           </div>
-
-          <span id="validation-message"></span>
         </form>
-      </div>
 
-      <!-- Section content -->
-      <div id="list-view" class="p-4 bg-white border border-gray-200 rounded mb-4 hidden">
-        <table id="sites-table" class="table-auto"></table>
-      </div>
+        <!-- Separate live regions announce form feedback and list updates. -->
+        <p id="form-message" role="status" aria-live="polite" class="mb-4 text-sm"></p>
+        <p id="list-status" role="status" aria-live="polite" class="text-slate-600"></p>
 
-      <div id="no-domains-alert" class="info-alert hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 mr-3">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
-        </svg>
-        
-        <span>The list with ignored websites is empty.</span>
-      </div>
+        <!-- options.js renders saved domains and their remove buttons here. -->
+        <ul id="sites-list" class="divide-y divide-slate-200"></ul>
+      </section>
     </main>
-
-    <script src="options.js" type="module"></script>
   </body>
 </html>

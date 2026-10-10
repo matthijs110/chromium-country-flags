@@ -1,3 +1,4 @@
+/** Represents a site that is ignored by the extension. */
 export class IgnoredSite {
   public id: string;
   public hostname: string;

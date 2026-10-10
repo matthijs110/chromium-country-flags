@@ -2,5 +2,77 @@
   "extDesc": {
     "message": "Korvaa salaperäiset maakoodit automaattisesti vastaavalla lipulla. Ratkaisu Chromiumin käyttäjille Windowsissa!",
     "description": "Chrome Web Store listing description"
+  },
+  "settings": {
+    "message": "Asetukset"
+  },
+  "ignoredHeading": {
+    "message": "Ohitetut verkkosivustot"
+  },
+  "ignoredHelp": {
+    "message": "Lippujen korjaus on pois käytöstä lisäämälläsi verkkotunnuksella ja kaikilla sen aliverkkotunnuksilla. Jos syötät verkkosivuston URL-osoitteen, vain sen isäntänimi tallennetaan. Polku ei vaikuta siihen, mitkä sivut jätetään pois."
+  },
+  "ignoredExample": {
+    "message": "<strong>Esimerkki:</strong> <code>example.com</code> estää lippujen korjauksen myös sivustoilla <code>www.example.com</code> ja <code>blog.example.com</code>. Jos lisätään vain <code>blog.example.com</code>, sivustot <code>example.com</code> ja <code>www.example.com</code> jäävät aktiivisiksi. <code>https://example.com/page</code> koskee koko sivustoa <code>example.com</code>, ei vain osoitetta <code>/page</code>."
+  },
+  "reloadHelp": {
+    "message": "Lataa avoimet sivut uudelleen tämän luettelon muuttamisen jälkeen. Ohitettujen verkkosivustojen upotettu sisältö jätetään myös pois."
+  },
+  "domainLabel": {
+    "message": "Verkkotunnus tai verkkosivuston URL-osoite"
+  },
+  "domainPlaceholder": {
+    "message": "Esimerkki: example.com"
+  },
+  "addDomain": {
+    "message": "Lisää verkkosivusto"
+  },
+  "deleteDomain": {
+    "message": "Poista"
+  },
+  "deleteDomainLabel": {
+    "message": "Poista $1 ohitettujen verkkosivustojen luettelosta"
+  },
+  "loading": {
+    "message": "Ladataan ohitetut verkkosivustot…"
+  },
+  "noDomains": {
+    "message": "Mitään verkkosivustoja ei ohiteta."
+  },
+  "invalidDomain": {
+    "message": "Syötä kelvollinen verkkotunnus tai HTTP(S)-verkkosivuston URL-osoite."
+  },
+  "duplicateDomain": {
+    "message": "Tämä verkkotunnus on jo luettelossa."
+  },
+  "storageError": {
+    "message": "Asetuksia ei voitu lukea tai tallentaa. Yritä uudelleen."
+  },
+  "domainAdded": {
+    "message": "Verkkosivusto lisätty. Päivitä sen avoimet sivut, jotta tämä asetus tulee voimaan."
+  },
+  "domainRemoved": {
+    "message": "Verkkosivusto on poistettu. Lataa sen avoimet sivut uudelleen, jotta lippujen korjaus otetaan käyttöön."
+  },
+  "popupIgnore": {
+    "message": "Ohita tämä verkkosivusto"
+  },
+  "popupEnable": {
+    "message": "Ota lippujen korjaus käyttöön"
+  },
+  "popupActive": {
+    "message": "Lippujen korjaus on käytössä tällä verkkosivustolla."
+  },
+  "popupIgnored": {
+    "message": "Tämä verkkosivusto ohitetaan."
+  },
+  "popupParent": {
+    "message": "Tämä verkkosivusto ohitetaan verkkotunnuksen $1 vuoksi. Muokkaa kyseistä verkkotunnusta asetuksissa ottaaksesi lippujen korjauksen käyttöön täällä."
+  },
+  "popupUnavailable": {
+    "message": "Tämä sivu ei ole tuettu verkkosivusto tai sen osoite ei ole saatavilla."
+  },
+  "popupReload": {
+    "message": "Lataa sivu uudelleen asetuksen muuttamisen jälkeen. Poikkeus koskee tätä isäntänimeä ja sen aliverkkotunnuksia."
   }
 }

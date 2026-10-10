@@ -3,43 +3,47 @@
   "version": "2.1.0",
   "description": "Replaces mysterious abbreviations automatically with the corresponding flag. The solution for Chromium users on Windows!",
   "scripts": {
-    "build": "npm-run-all --parallel  build:webpack build:tailwind",
-    "build:tailwind": "tailwindcss -i ./public/css/main.css -o ./public/css/dist.css",
+    "build": "pnpm run build:webpack && pnpm run build:tailwind",
+    "build:tailwind": "node scripts/build-css.cjs",
     "build:webpack": "webpack --config webpack.config.js",
-    "watch": "npm-run-all --parallel watch:webpack watch:tailwind",
-    "watch:tailwind": "tailwindcss -i ./public/css/main.css -o ./public/css/dist.css --watch",
-    "watch:webpack": "webpack --watch"
+    "typecheck": "tsc --noEmit",
+    "test": "node tests/storage.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:integration": "node tests/integration.cjs",
+    "test:package": "node tests/package.cjs",
+    "verify": "pnpm run build && pnpm run typecheck && pnpm test && pnpm run test:package && pnpm run test:browser && pnpm run test:integration"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matthijs110/chrome-country-flags.git"
+    "url": "git+https://github.com/matthijs110/chromium-country-flags.git"
   },
   "author": "matthijs110",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthijs110/chrome-country-flags/issues"
+    "url": "https://github.com/matthijs110/chromium-country-flags/issues"
   },
-  "homepage": "https://github.com/matthijs110/chrome-country-flags#readme",
+  "homepage": "https://github.com/matthijs110/chromium-country-flags#readme",
   "devDependencies": {
-    "@types/chrome": "^0.0.268",
-    "autoprefixer": "^10.4.19",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^12.0.2",
-    "country-flag-emoji-polyfill": "^0.1.8",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.9.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.38",
-    "postcss-loader": "^8.1.1",
-    "sass": "^1.77.4",
-    "tailwindcss": "^3.4.4",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.4.5",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/chrome": "^0.3.4",
+    "copy-webpack-plugin": "^14.0.0",
+    "postcss": "8.5.29",
+    "tailwindcss": "4.3.3",
+    "ts-loader": "^9.6.2",
+    "typescript": "6.0.3",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3",
+    "ws": "^8.22.0"
   },
-  "dependencies": {
-    "postcss-preset-env": "^9.5.14"
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@12.10.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.13.0",
+      "onFail": "download"
+    }
   }
 }

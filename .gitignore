@@ -1,4 +1,7 @@
 Releases
 dist
 node_modules
-public/css/dist.css
+
+# Local, one-off translation tools.
+/scripts/translate-options.cjs
+/tests/translation.cjs
