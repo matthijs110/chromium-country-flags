@@ -30,7 +30,7 @@ window.testListeners = [];
 
 window.chrome = {
  tabs: { query: async () => [{url: 'https://blog.example.com/page'}] },
- runtime: { getURL: value => '/dist/' + value, sendMessage: async () => ({ignored: window.testIgnored}), openOptionsPage: async () => {} },
+ runtime: { id: 'test-extension', getURL: value => '/dist/' + value, sendMessage: async () => ({ignored: window.testIgnored}), openOptionsPage: async () => {} },
  i18n: { getUILanguage: () => 'nl', getMessage: (key, value) => {
    const entry = window.testMessages[key]; return entry ? entry.message.replace('$1', value || '') : '';
  } },
@@ -152,6 +152,25 @@ window.chrome = {
     `document.fonts.load('16px "Twemoji Country Flags"', '🇳🇱').then(fonts => fonts.length > 0)`,
   );
   results.push({ passed: fontLoaded, label: 'packaged font resource loads' });
+
+  // Simulate a toolbar reload while the tab stays open and then changes its DOM.
+  await evaluate(`
+    window.contextErrors = [];
+    window.addEventListener('error', event => contextErrors.push(event.message));
+    delete chrome.runtime.id;
+    chrome.runtime.getURL = () => { throw Error('Extension context invalidated.'); };
+    document.getElementById('country-flag-fixer-ext-head').remove();
+    const lateFlag = document.createElement('p');
+    lateFlag.id = 'after-reload';
+    lateFlag.textContent = '🇳🇱';
+    document.body.append(lateFlag);
+  `);
+  await delay(100);
+  results.push({
+    passed: await evaluate(`contextErrors.length === 0 && !document.getElementById('after-reload').style.fontFamily && !document.getElementById('country-flag-fixer-ext-head')`),
+    label: 'invalidated extension context stops processing without uncaught errors',
+  });
+
   await call('Page.navigate', { url: base + '/tests/fixture.html' });
   await delay(150);
   await evaluate('window.testIgnored = true');

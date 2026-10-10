@@ -1,4 +1,4 @@
-import { flagFont, registerFont } from './font';
+import { flagFont, hasExtensionContext, registerFont } from './font';
 import { isPageIgnored } from './settings';
 
 // Targeted processing/restoration inspired by contributor PR #26:
@@ -160,6 +160,14 @@ const withoutFont = (css: string): string => {
 };
 
 const observer = new MutationObserver((records) => {
+  // Extension reloads do not unload this page's old script. Stop observing before
+  // using invalidated APIs or changing any further page fonts.
+  if (!hasExtensionContext()) {
+    observer.disconnect();
+    active.clear();
+    return;
+  }
+
   const pending = new Set<Node>();
   const elements = new Set<HTMLElement | SVGElement>();
   let refresh = false;
@@ -222,7 +230,7 @@ const observer = new MutationObserver((records) => {
 });
 
 function observeRoot(root: Document | ShadowRoot): void {
-  if (roots.has(root)) {
+  if (!hasExtensionContext() || roots.has(root)) {
     return;
   }
 

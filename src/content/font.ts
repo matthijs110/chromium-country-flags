@@ -2,11 +2,24 @@
 export const flagFont = 'Twemoji Country Flags';
 export const fontStyleId = 'country-flag-fixer-ext-head';
 
+/** Reloaded/disabled extensions leave old content scripts alive in existing tabs. */
+export const hasExtensionContext = (): boolean => {
+  try {
+    return Boolean(chrome.runtime?.id);
+  } catch {
+    return false;
+  }
+};
+
 /**
  * Register the packaged font once per document or discovered shadow root.
  * Registration makes the font available; it does not apply it to page text.
  */
 export const registerFont = (root: Document | ShadowRoot): void => {
+  if (!hasExtensionContext()) {
+    return;
+  }
+
   if (root.getElementById(fontStyleId)) {
     return;
   }
@@ -18,7 +31,18 @@ export const registerFont = (root: Document | ShadowRoot): void => {
   }
 
   const style = document.createElement('style');
-  const url = chrome.runtime.getURL('fonts/TwemojiCountryFlags.woff2');
+  let url: string;
+
+  try {
+    url = chrome.runtime.getURL('fonts/TwemojiCountryFlags.woff2');
+  } catch (error) {
+    // The context can be invalidated between the guard and the API call.
+    if (!hasExtensionContext() || (error instanceof Error && error.message.includes('Extension context invalidated'))) {
+      return;
+    }
+
+    throw error;
+  }
 
   style.id = fontStyleId;
 
